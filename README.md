@@ -6,8 +6,8 @@ ahead, what safeguards it needs, who should be accountable, and how to record th
 
 Live: https://alphabazulu.github.io/Navi/
 
-- **Ask NAVI** — plain-language questions, answered from a documented rule set (not generative AI)
-- **Assess an AI use case** — a guided five-step assessment with an explained outcome
+- **Ask NAVI** — plain-language questions with targeted follow-up questions, answered from a documented rule set (not generative AI)
+- **Assess an AI use case** — a guided five-step assessment: requirements that may apply, inherent and residual risk, control gaps, actions, and a 12-section Decision & Action Report
 - **My decisions** — saved assessments on your device: reopen, download, delete
 - **Explore governance** — a searchable guide, board reflection scenarios and your own reference library
 - **NAVI Enterprise** — planned; see the Enterprise page in the app
@@ -20,7 +20,8 @@ organisational approval.
 - One static page. No server, no accounts, no tracking, no third-party scripts.
 - Everything you save stays in your browser's local storage on that device. Download a copy
   from *My decisions* or *About NAVI → Your data and privacy*.
-- The risk method is documented in [docs/RISK-METHOD.md](docs/RISK-METHOD.md).
+- The risk method is documented in [docs/RISK-METHOD.md](docs/RISK-METHOD.md); the knowledge base,
+  how to update it and the verification log are in [docs/KNOWLEDGE-BASE.md](docs/KNOWLEDGE-BASE.md).
 
 ## Repository layout
 
@@ -28,16 +29,19 @@ organisational approval.
 index.html          Built site served by GitHub Pages (do not edit by hand)
 src/index.html      Page structure
 src/styles.css      Styles and brand tokens
-src/app.js          Application logic, assessment engine and content
+src/engine.js       Assessment engine: risk rules, knowledge-base evaluator, residual risk
+src/app.js          User interface, guide and reflection content
+src/knowledge/      Governance knowledge base (frameworks, obligations, controls) as JSON
 build.py            Inlines src/ into index.html
 tests/              Engine tests and browser end-to-end tests
-docs/               Technical assessment, risk method, implementation plan
+docs/               Technical assessment, risk method, knowledge base, data model, plan
 CHANGELOG.md        Release notes
 ```
 
 ## Making a change
 
-1. Edit the files in `src/`.
+1. Edit the files in `src/`. To update regulatory content, edit `src/knowledge/*.json` only
+   (see [docs/KNOWLEDGE-BASE.md](docs/KNOWLEDGE-BASE.md)); no code changes are needed.
 2. Build: `python3 build.py` (Python 3, standard library only).
 3. Test: `npm install`, then `npx playwright install chromium` (first time only), then `npm test`.
 4. Commit both `src/` and the rebuilt `index.html`.
@@ -57,8 +61,11 @@ replace it), upload the newly built file, and commit. Upload the changed `src/`,
 
 - **Engine tests** — all 35,000 input combinations match the recorded baseline; determinism;
   hard rules; labels never claim permission or approval.
+- **Knowledge-base tests** — every entry sourced, dated and consistent; voluntary standards never
+  mandatory; applicability across eight sector and jurisdiction scenarios; every residual-risk rule.
 - **Browser tests** (Chromium) — free access with no registration, landing page, navigation and
-  the Back button, a full assessment saved to My decisions, reports, Ask NAVI behaviour, migration
+  the Back button, the five-step assessment, jurisdiction-aware requirements, residual risk, the
+  12-section report and JSON record, Ask NAVI follow-up questions, migration
   of pre-2.0 data, export and deletion, persistence, honest dashboard, feedback, enterprise
   interest, layouts at 320–1440px, and accessibility (skip link, accessible names, WCAG AA text
   contrast).
@@ -75,9 +82,8 @@ replace it), upload the newly built file, and commit. Upload the changed `src/`,
 
 ## Roadmap
 
-See [docs/IMPLEMENTATION-PLAN.md](docs/IMPLEMENTATION-PLAN.md). Next up (Phase 2): a verified,
-source-referenced regulatory knowledge base with jurisdiction-aware applicability, a deeper
-assessment (inherent vs residual risk, control gaps), clarifying questions in Ask NAVI, and a
-full decision report.
+See [docs/IMPLEMENTATION-PLAN.md](docs/IMPLEMENTATION-PLAN.md). Phases 1 and 2 are complete. Next
+(Phase 3): edit saved decisions, notes, action tracking, import of exported records, a rebuilt
+personal dashboard, and an optional governance maturity questionnaire.
 
 © Orvendi Group. Feedback: use the Feedback page in the app.

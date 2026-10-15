@@ -709,6 +709,135 @@ input[type="email"]{font-family:var(--font);}
 canvas{max-width:100%;height:auto;}
 @media (max-width:400px){ .assistant-input{padding:12px;gap:8px;} .chip{white-space:normal;text-align:left;} }
 
+/* =====================================================================
+   NAVI 2.0 — PHASE 2 COMPONENTS
+   ===================================================================== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+/* Wizard forms */
+.wiz-form .field-row,.impact-q{margin-bottom:18px;}
+.wiz-form label,.wiz-form legend,.legend-like{display:block;font-size:13.5px;font-weight:600;color:var(--grey-900);margin:0 0 8px;}
+.wiz-form fieldset{border:none;padding:0;margin:0 0 18px;}
+.wiz-form input[type="text"],.wiz-form textarea,.wiz-form select,.custom-field textarea{
+  width:100%;padding:10px 12px;border-radius:8px;border:1.5px solid var(--grey-300);font-size:14px;background:var(--white);color:var(--grey-900);font-family:var(--font);}
+.wiz-form .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.wiz-form .option-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
+.custom-field label{display:block;font-size:13px;color:var(--grey-700);margin-bottom:6px;}
+.check-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.check-pill{display:inline-flex !important;align-items:center;gap:8px;font-weight:500 !important;border:1.5px solid var(--grey-300);border-radius:100px;
+  padding:7px 14px;background:var(--white);cursor:pointer;margin:0 !important;}
+.check-pill:has(input:checked){border-color:var(--teal-text);background:var(--blue-light);}
+.check-pill input{accent-color:var(--teal-text);width:16px;height:16px;}
+.wiz-sub{font-size:14.5px;color:var(--grey-900);margin:22px 0 10px;}
+.wiz-sub:first-of-type{margin-top:6px;}
+.impact-q{border:1px solid var(--grey-300);border-radius:12px;padding:14px 16px;background:var(--white);}
+.impact-q legend{font-size:14.5px;font-weight:700;color:var(--grey-900);padding:0 4px;}
+.impact-help{font-size:13px;color:var(--grey-500);margin:0 0 10px;}
+.seg{display:flex;gap:8px;flex-wrap:wrap;}
+.seg label{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--grey-300);border-radius:8px;padding:8px 14px;font-size:14px;cursor:pointer;background:var(--white);}
+.seg label:has(input:checked){border-color:var(--teal-text);background:var(--blue-light);font-weight:600;}
+.seg input{accent-color:var(--teal-text);}
+.safeguard-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.safeguard-item{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--grey-300);border-radius:10px;padding:12px 14px;cursor:pointer;background:var(--white);}
+.safeguard-item:has(input:checked){border-color:var(--teal-text);background:var(--blue-light);}
+.safeguard-item input{margin-top:3px;width:18px;height:18px;flex-shrink:0;accent-color:var(--teal-text);}
+.safeguard-item strong{display:block;font-size:14px;color:var(--grey-900);}
+.sg-help{display:block;font-size:12.5px;color:var(--grey-500);margin-top:2px;line-height:1.45;}
+#wizardError{margin-top:16px;}
+
+/* Result */
+.verdict-kicker{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;opacity:.9;margin-bottom:2px;}
+.conf-small{font-size:19px !important;}
+.summary-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.sum-tile{background:var(--white);border:1px solid var(--grey-300);border-top:4px solid var(--grey-300);border-radius:12px;padding:14px 16px;}
+.sum-tile h4{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--grey-500);margin-bottom:6px;}
+.sum-tile p{margin:0 0 6px;color:var(--grey-900);font-size:14px;}
+.sum-tile ul{margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--grey-700);}
+.sum-tile.green{border-top-color:var(--green);} .sum-tile.amber{border-top-color:var(--amber);} .sum-tile.red{border-top-color:var(--red);}
+.table-title{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--grey-500);margin:16px 0 4px;}
+.req-table td{vertical-align:top;font-size:13px;}
+.req-table td:first-child{min-width:170px;}
+.req-table td:nth-child(4){min-width:220px;}
+.req-title{color:var(--grey-700);}
+.cell-note{font-size:12px;color:var(--grey-500);}
+.mini-flag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;background:var(--amber-light);color:var(--amber);border-radius:100px;padding:1px 7px;vertical-align:1px;}
+.vb{display:inline-block;font-size:10.5px;font-weight:700;border-radius:100px;padding:1px 7px;margin-top:4px;white-space:nowrap;}
+.vb-official{background:var(--green-light);color:var(--green);}
+.vb-secondary{background:#E6EEF8;color:#1F4E8C;}
+.vb-pending{background:var(--amber-light);color:var(--amber);}
+.uncertain{font-size:12px;color:var(--grey-900);background:var(--amber-light);border-radius:6px;padding:6px 8px;margin:8px 0 0;}
+.req-more summary,.voluntary-block summary,.legacy-exports summary,.assumption-box summary{cursor:pointer;color:var(--teal-text);font-weight:600;font-size:13px;}
+.req-more p{font-size:12.5px;margin:6px 0 0;color:var(--grey-700);}
+.voluntary-block{margin-top:16px;}
+.voluntary-block summary{font-size:14px;}
+.empty-note{font-size:13.5px;color:var(--grey-700);background:var(--grey-100);border-radius:8px;padding:10px 12px;}
+.mini-head{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--grey-500);margin:10px 0 4px !important;}
+.tick-list,.gap-list{margin:0;padding-left:0;list-style:none;}
+.tick-list li::before{content:"\2713";color:var(--green);font-weight:800;margin-right:8px;}
+.gap-list li::before{content:"\25CB";color:var(--amber);font-weight:800;margin-right:8px;}
+.prio{display:inline-block;font-size:11px;font-weight:700;border-radius:100px;padding:2px 9px;white-space:nowrap;}
+.prio-critical{background:var(--red-light);color:var(--red);} .prio-high{background:var(--amber-light);color:var(--amber);} .prio-medium{background:var(--grey-100);color:var(--grey-700);border:1px solid var(--grey-300);}
+details.explain-panel > summary{list-style:none;cursor:pointer;}
+details.explain-panel > summary::-webkit-details-marker{display:none;}
+details.explain-panel > summary h3{display:inline;margin:0;}
+details.explain-panel > summary::after{content:" \25BE";color:var(--teal-text);}
+details.explain-panel[open] > summary{margin-bottom:16px;}
+.legacy-exports{margin-top:12px;}
+.legacy-exports .export-row{margin-top:10px;}
+
+/* Ask NAVI follow-ups */
+.fu-progress{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--teal-text);margin:0 0 4px;}
+.fu-question{margin:0 0 10px;color:var(--grey-900);}
+.fu-options{display:flex;flex-wrap:wrap;gap:8px;}
+.fu-chip.chosen{border-color:var(--teal-text);background:var(--blue-light);color:var(--grey-900);font-weight:600;}
+.fu-chip:disabled{cursor:default;opacity:.75;}
+.fu-chip.chosen:disabled{opacity:1;}
+.fu-skip{border-style:dashed;}
+.fu-hint{font-size:12px;color:var(--grey-500);margin:8px 0 0;}
+.bot-card.wide{grid-column:1 / -1;}
+.bot-card.perm-red{border-left:4px solid var(--red);} .bot-card.perm-amber{border-left:4px solid var(--amber);} .bot-card.perm-green{border-left:4px solid var(--green);}
+.assumption-box{margin-top:10px;font-size:13px;}
+.assumption-box ul{margin:8px 0 0;padding-left:18px;color:var(--grey-700);}
+
+/* Report */
+.report-table,.report-kv{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0 14px;}
+.report-table th,.report-table td,.report-kv th,.report-kv td{border:1px solid var(--grey-300);padding:6px 8px;text-align:left;vertical-align:top;}
+.report-table thead th{background:var(--grey-100);font-weight:700;}
+.report-kv th{width:30%;background:var(--grey-100);font-weight:600;}
+.report-table.sign-off td{height:30px;}
+.url-cell{word-break:break-all;font-size:11px;}
+.print-doc .muted,.muted{color:var(--grey-500);font-size:12px;}
+.print-doc h3{font-size:14px;margin-top:14px;}
+@media print{
+  .print-doc h2{page-break-after:avoid;}
+  .report-table tr,.report-kv tr{page-break-inside:avoid;}
+}
+
+@media (max-width:860px){
+  .summary-tiles{grid-template-columns:1fr;}
+  .safeguard-list{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  .wiz-form .two-col{grid-template-columns:1fr;}
+  .req-table td:first-child,.req-table td:nth-child(4){min-width:160px;}
+}
+
+.result-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--white);border:1px solid var(--grey-300);border-radius:12px;padding:10px 14px;}
+.result-toolbar p{margin:0;font-size:13.5px;}
+.result-toolbar .link-btn{font-size:13.5px;padding:0;text-decoration:underline;}
+.result-toolbar .export-row{margin:0;}
+/* Wide tables scroll inside their card on small screens instead of widening the page */
+.result-shell > *,.detail-body > *,.result-shell details,.chat-msg{min-width:0;max-width:100%;}
+.table-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+@media (max-width:700px){
+  .print-root{padding:16px;}
+  .print-doc{max-width:100%;}
+  .report-table,.report-kv{display:block;overflow-x:auto;max-width:100%;}
+  .print-close{flex-wrap:wrap;}
+}
+/* Keep visually-hidden text inside its scroll container */
+.table-wrap,.card,.answer-card,.chat-msg,.sum-tile{position:relative;}
+
 </style>
 </head>
 <body>
@@ -1237,25 +1366,17 @@ canvas{max-width:100%;height:auto;}
         <ul class="plain-list">
           <li>NAVI gives general guidance, not legal advice. It does not give formal legal clearance or organisational approval.</li>
           <li>Results depend on the options you choose. Unusual or complex cases need specialist legal, privacy or cyber-security advice.</li>
-          <li>Regulatory references are being expanded and verified with source links and review dates in the next release. Always confirm current requirements with a qualified adviser.</li>
+          <li>Each framework and requirement shows its source, when it was last checked and how it was verified. Laws change: always confirm current requirements with a qualified adviser.</li>
         </ul>
       </div>
       <div class="card">
         <h3>Frameworks NAVI refers to</h3>
+        <p class="cell-note" id="kbVersionNote"></p>
         <p class="field-note" style="margin-top:0;margin-bottom:12px;">Whether a framework applies depends on who you are, where you operate and whose data you process. Foreign laws don't automatically apply to South African organisations, and voluntary standards are not legally binding.</p>
         <div class="table-wrap">
           <table class="data-table framework-table">
             <thead><tr><th scope="col">Framework</th><th scope="col">Jurisdiction</th><th scope="col">Status</th></tr></thead>
-            <tbody>
-              <tr><td>POPIA (Protection of Personal Information Act)</td><td>South Africa</td><td><span class="status-tag law">Law</span></td></tr>
-              <tr><td>Employment law (incl. Employment Equity Act)</td><td>South Africa</td><td><span class="status-tag law">Law</span></td></tr>
-              <tr><td>King V Code on Corporate Governance</td><td>South Africa</td><td><span class="status-tag voluntary">Voluntary code</span></td></tr>
-              <tr><td>GDPR</td><td>European Union</td><td><span class="status-tag law">Law</span> applies outside the EU only in specific cases, e.g. offering services to, or monitoring, people in the EU</td></tr>
-              <tr><td>EU AI Act</td><td>European Union</td><td><span class="status-tag law">Law</span> phased in; can reach non-EU organisations whose AI is placed on the EU market or used there</td></tr>
-              <tr><td>ISO/IEC 42001 (AI management systems)</td><td>International</td><td><span class="status-tag voluntary">Voluntary standard</span></td></tr>
-              <tr><td>NIST AI Risk Management Framework</td><td>United States</td><td><span class="status-tag voluntary">Voluntary framework</span></td></tr>
-              <tr><td>OECD AI Principles</td><td>International</td><td><span class="status-tag voluntary">Non-binding principles</span></td></tr>
-            </tbody>
+            <tbody id="frameworkTableBody"></tbody>
           </table>
         </div>
       </div>
@@ -1274,7 +1395,7 @@ canvas{max-width:100%;height:auto;}
         </div>
       </div>
     </div>
-    <p class="version-note">NAVI Free 2.0 &middot; Phase 1 release &middot; an Orvendi Group product</p>
+    <p class="version-note">NAVI Free 2.0 &middot; Phase 2 release &middot; an Orvendi Group product</p>
   </section>
 
 </main>
@@ -1287,194 +1408,17 @@ canvas{max-width:100%;height:auto;}
   <p><button class="link-btn" data-nav="about">About NAVI</button> &middot; <button class="link-btn" data-nav="about" data-anchor="about-privacy">Privacy &amp; your data</button> &middot; <button class="link-btn" data-nav="enterprise">NAVI Enterprise</button> &middot; <button class="link-btn" data-nav="feedback">Feedback</button></p>
 </footer>
 
+<script id="navi-knowledge" type="application/json">{"knowledgeBaseVersion":"2026.10.15","frameworks":[{"id":"popia","name":"Protection of Personal Information Act 4 of 2013 (POPIA)","short":"POPIA","jurisdiction":"South Africa","type":"law","typeLabel":"Law","status":"In force. Most provisions commenced on 1 July 2020, with a 12-month transition period that ended on 30 June 2021. Enforced by the Information Regulator.","source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text","version":"Act 4 of 2013 (as published by the Department of Justice)"},{"id":"paia","name":"Promotion of Access to Information Act 2 of 2000 (PAIA)","short":"PAIA","jurisdiction":"South Africa","type":"law","typeLabel":"Law","status":"In force. Gives a right of access to records held by public and private bodies, subject to grounds for refusal. The Information Regulator oversees PAIA compliance, including PAIA manuals.","source":"https://www.gov.za/documents/promotion-access-information-act","verified":"2026-10-15","verification":"secondary","version":"Act 2 of 2000, as amended"},{"id":"eea","name":"Employment Equity Act 55 of 1998","short":"Employment Equity Act","jurisdiction":"South Africa","type":"law","typeLabel":"Law","status":"In force. Section 8(d) (certification of tests) was deleted with effect from 1 January 2025.","source":"https://source.acts.co.za/employment-equity-act-1998/8__psychological_testing_and_other_similar_assessments.php","verified":"2026-10-15","verification":"official-text","version":"Act 55 of 1998, as amended (incl. amendments effective 1 January 2025)"},{"id":"cpa","name":"Consumer Protection Act 68 of 2008","short":"Consumer Protection Act","jurisdiction":"South Africa","type":"law","typeLabel":"Law","status":"In force. Protects consumers in transactions within its scope, including against false, misleading or deceptive representations. Administered by the National Consumer Commission.","source":"https://www.gov.za/documents/consumer-protection-act","verified":"2026-10-15","verification":"secondary","version":"Act 68 of 2008"},{"id":"cybercrimes","name":"Cybercrimes Act 19 of 2020","short":"Cybercrimes Act","jurisdiction":"South Africa","type":"law","typeLabel":"Law (partly in force)","status":"Most provisions commenced on 1 December 2021. Some sections, including section 54 (reporting by electronic communications service providers and financial institutions), were excluded from that commencement. NAVI could not confirm whether section 54 has since commenced: check before relying on it.","source":"https://cliffedekkerhofmeyr.com/news/publications/2021/technology/technology-and-communications-alert-6-december-The-beginning-of-an-era-Certain-sections-of-South-Africas-Cybercrimes-Act-have-commenced-and-heres-what-you-need-to-know.html","verified":"2026-10-15","verification":"secondary","version":"Act 19 of 2020; commencement per Proclamation in Government Gazette 45562 (30 November 2021)"},{"id":"kingv","name":"King V Code on Corporate Governance for South Africa","short":"King V","jurisdiction":"South Africa","type":"voluntary","typeLabel":"Voluntary code","status":"Released on 31 October 2025; applies to financial years starting on or after 1 January 2026 and replaces King IV. Voluntary and principle-based; organisations that claim to apply it must make disclosures under its Disclosure Framework. Listed companies should check how JSE Listings Requirements refer to it.","source":"https://www.bizcommunity.com/article/new-king-v-code-takes-the-throne-what-to-expect-848663a","verified":"2026-10-15","verification":"secondary","version":"King V (2025)"},{"id":"za-ai-policy","name":"South Africa National Artificial Intelligence Policy (draft)","short":"SA National AI Policy (draft)","jurisdiction":"South Africa","type":"policy","typeLabel":"Draft policy, not in force","status":"Not in force. A draft published for comment in 2026 was withdrawn; a revised draft is expected to be published for public comment in January 2027. It is a policy document, not law.","source":"https://techcabal.com/2026/05/26/south-africa-ai-policy-delayed-to-2027/","verified":"2026-10-15","verification":"secondary","version":"Draft (withdrawn 2026)"},{"id":"gdpr","name":"General Data Protection Regulation (EU) 2016/679 (GDPR)","short":"GDPR","jurisdiction":"European Union","type":"law","typeLabel":"Law (EU regulation)","status":"Applies since 25 May 2018. Applies to organisations established in the EU and, under Article 3(2), to organisations outside the EU that offer goods or services to, or monitor the behaviour of, people in the EU. Amendments proposed under the EU's 2025 Digital Omnibus package should be checked for current status.","source":"https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng","verified":"2026-10-15","verification":"secondary","version":"Regulation (EU) 2016/679"},{"id":"euaiact","name":"EU Artificial Intelligence Act, Regulation (EU) 2024/1689, as amended by Regulation (EU) 2026/1744","short":"EU AI Act","jurisdiction":"European Union","type":"law","typeLabel":"Law (EU regulation, phased application)","status":"In force since 1 August 2024 and applying in phases: prohibited practices and AI literacy from 2 February 2025; general-purpose AI obligations from 2 August 2025; Article 50 transparency from 2 August 2026; high-risk requirements for Annex III uses (e.g. employment, credit) from 2 December 2027 and for Annex I products from 2 August 2028, as amended by the Digital Omnibus on AI, Regulation (EU) 2026/1744 (dated 8 July 2026, in force 27 July 2026). Can apply to providers and deployers outside the EU where the AI system's output is used in the EU.","source":"https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng","verified":"2026-10-15","verification":"official-text","version":"Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744"},{"id":"iso42001","name":"ISO/IEC 42001:2023 Artificial intelligence — Management system","short":"ISO/IEC 42001","jurisdiction":"International","type":"voluntary","typeLabel":"Voluntary standard (certifiable)","status":"Published December 2023. Voluntary; organisations can choose to be certified.","source":"https://www.iso.org/standard/81230.html","verified":"2026-10-15","verification":"pending","version":"2023 edition"},{"id":"iso23894","name":"ISO/IEC 23894:2023 Artificial intelligence — Guidance on risk management","short":"ISO/IEC 23894","jurisdiction":"International","type":"voluntary","typeLabel":"Voluntary guidance standard","status":"Published 2023. Voluntary guidance; not certifiable.","source":"https://www.iso.org/standard/77304.html","verified":"2026-10-15","verification":"pending","version":"2023 edition"},{"id":"nistairmf","name":"NIST AI Risk Management Framework (AI RMF 1.0)","short":"NIST AI RMF","jurisdiction":"United States","type":"voluntary","typeLabel":"Voluntary framework","status":"Released January 2023; version 1.0 remains the current framework, supplemented by profiles and guidance. Voluntary.","source":"https://www.nist.gov/itl/ai-risk-management-framework","verified":"2026-10-15","verification":"secondary","version":"AI RMF 1.0 (NIST AI 100-1)"},{"id":"oecd","name":"OECD Recommendation of the Council on Artificial Intelligence (OECD AI Principles)","short":"OECD AI Principles","jurisdiction":"International","type":"voluntary","typeLabel":"Non-binding principles","status":"Adopted May 2019; updated May 2024. Non-binding intergovernmental standard.","source":"https://oecd.ai/en/principles","verified":"2026-10-15","verification":"secondary","version":"2024 update"},{"id":"unesco","name":"UNESCO Recommendation on the Ethics of Artificial Intelligence","short":"UNESCO Recommendation","jurisdiction":"International","type":"voluntary","typeLabel":"Non-binding recommendation","status":"Adopted November 2021 by UNESCO member states. Non-binding.","source":"https://www.unesco.org/en/artificial-intelligence/recommendation-ethics","verified":"2026-10-15","verification":"pending","version":"2021"}],"obligations":[{"id":"popia-conditions","framework":"popia","provision":"Chapter 3 (sections 8–25)","title":"Conditions for lawful processing","summary":"Personal information must be processed under eight conditions: accountability, processing limitation (including minimality and a lawful justification such as consent or legitimate interest), purpose specification, further-processing limitation, information quality, openness, security safeguards and data-subject participation.","appliesWhen":{"all":["za","personal"]},"why":"The use case processes personal information and has a South African connection.","kind":"mandatory","controls":["C-PURPOSE","C-MINIMISE","C-NOTICE"],"critical":["C-PURPOSE"],"source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"popia-s71","framework":"popia","provision":"Section 71","title":"Automated decision making","summary":"A person may not be subject to a decision that has legal consequences for them, or affects them to a substantial degree, if it is based solely on automated processing intended to profile them (e.g. performance at work, creditworthiness, reliability, location, health, personal preferences or conduct), unless an exception in s71(2) applies. Where the contract exception relies on appropriate measures, the person must be able to make representations and be given sufficient information about the underlying logic.","appliesWhen":{"all":["za","personal",{"any":["solelyAutomated","automatedUse"]}]},"why":"Personal information is used for automated scoring, prediction or decision support under South African law.","kind":"mandatory","restricts":true,"controls":["C-HUMAN","C-CONTEST","C-NOTICE"],"critical":["C-HUMAN"],"uncertainty":"Whether a decision is 'based solely' on automated processing depends on how meaningful the human involvement is. If the human role is limited or nominal, get legal advice.","source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"popia-s19-22","framework":"popia","provision":"Sections 19–22","title":"Security safeguards, operators and breach notification","summary":"Take appropriate, reasonable technical and organisational measures to secure personal information (s19); ensure operators such as AI providers process it only with authorisation and under a written contract with security measures (ss20–21); notify the Information Regulator and affected people of security compromises (s22).","appliesWhen":{"all":["za","personal"]},"why":"Personal information will be handled by an AI system under South African law.","kind":"mandatory","controls":["C-SECURITY","C-INCIDENT","C-VENDOR"],"critical":[],"controlsWhen":{"C-VENDOR":"thirdPartyTool"},"source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"popia-s26","framework":"popia","provision":"Sections 26–27","title":"Special personal information","summary":"Processing special personal information (e.g. health, biometrics, race or ethnic origin, religious beliefs, trade union membership, political persuasion, sex life, criminal behaviour) is prohibited unless a general authorisation in s27 applies (e.g. explicit consent, or necessity for establishing a right or obligation in law).","appliesWhen":{"all":["za","special"]},"why":"The use case involves special personal information (such as health data) under South African law.","kind":"mandatory","restricts":true,"controls":["C-PURPOSE","C-DPIA","C-SECURITY"],"critical":["C-PURPOSE","C-DPIA"],"uncertainty":"Which s27 authorisation applies depends on your context; confirm with your Information Officer or legal adviser.","source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"popia-s34","framework":"popia","provision":"Sections 34–35","title":"Personal information of children","summary":"Processing children's personal information is prohibited unless a general authorisation in s35 applies, such as prior consent of a competent person (e.g. a parent or guardian).","appliesWhen":{"all":["za","children"]},"why":"Children may be affected, or their information processed, under South African law.","kind":"mandatory","restricts":true,"controls":["C-CHILD","C-DPIA"],"critical":["C-CHILD"],"source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"popia-s72","framework":"popia","provision":"Section 72","title":"Transfers of personal information outside South Africa","summary":"Personal information may not be transferred to a third party in a foreign country unless one of the s72(1) conditions is met: the recipient is bound by law, binding corporate rules or a binding agreement giving adequate protection; the person consents; the transfer is necessary for a contract; or it is for the person's benefit and consent is impracticable but likely.","appliesWhen":{"all":["za","personal","crossBorderFromZA"]},"why":"Personal information subject to South African law will be processed outside South Africa.","kind":"mandatory","restricts":true,"controls":["C-TRANSFER","C-VENDOR"],"critical":["C-TRANSFER"],"uncertainty":"If the processing location is unknown, you cannot yet show that a s72 condition is met.","source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"popia-s57","framework":"popia","provision":"Section 57","title":"Prior authorisation by the Information Regulator","summary":"Certain processing needs the Information Regulator's prior authorisation, including transferring special personal information or children's personal information to a third party in a foreign country that does not provide an adequate level of protection.","appliesWhen":{"all":["za",{"any":["special","children"]},"crossBorderFromZA"]},"why":"Special or children's personal information may be sent to another country.","kind":"mandatory","restricts":true,"controls":["C-TRANSFER","C-DPIA"],"critical":["C-TRANSFER"],"uncertainty":"Applies only if the recipient country does not provide adequate protection. Confirm with your Information Officer or legal adviser.","source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"popia-s69","framework":"popia","provision":"Section 69","title":"Direct marketing by electronic communication","summary":"Direct marketing by unsolicited electronic communication (e.g. email or SMS) needs the person's consent, unless they are an existing customer who was given the chance to object.","appliesWhen":{"all":["za","personal","marketing"]},"why":"AI is used for marketing that may involve electronic communications to individuals.","kind":"mandatory","controls":["C-PURPOSE","C-NOTICE"],"critical":[],"source":"https://www.justice.gov.za/legislation/acts/2013-004.pdf","verified":"2026-10-15","verification":"official-text"},{"id":"paia-records","framework":"paia","provision":"Sections 50–51","title":"Access to records","summary":"People may request access to records held by private bodies (subject to grounds for refusal), and private bodies must publish a PAIA manual. Records of AI-assisted decisions may be requested.","appliesWhen":{"all":["za","personal",{"any":["automatedUse","employment"]}]},"why":"AI-assisted decisions about people create records that may be requested.","kind":"mandatory","controls":["C-REGISTER"],"critical":[],"uncertainty":"Requirements differ for public and private bodies; confirm which applies.","source":"https://www.gov.za/documents/promotion-access-information-act","verified":"2026-10-15","verification":"secondary"},{"id":"eea-s6","framework":"eea","provision":"Section 6","title":"Prohibition of unfair discrimination","summary":"No person may unfairly discriminate, directly or indirectly, against an employee in any employment policy or practice (section 9 extends this protection to applicants for employment) on listed grounds such as race, gender, sex, pregnancy, ethnic or social origin, colour, age, disability, religion, culture or language.","appliesWhen":{"all":["za","employment"]},"why":"AI is used in recruitment or in managing employees in South Africa.","kind":"mandatory","controls":["C-BIAS","C-HUMAN"],"critical":["C-BIAS"],"source":"https://www.gov.za/documents/employment-equity-act","verified":"2026-10-15","verification":"secondary"},{"id":"eea-s8","framework":"eea","provision":"Section 8","title":"Psychological testing and other similar assessments","summary":"Psychological testing and other similar assessments of an employee are prohibited unless the test or assessment has been scientifically shown to be valid and reliable, can be applied fairly to all employees, and is not biased against any employee or group.","appliesWhen":{"all":["za","employment","automatedUse"]},"why":"AI scores, ranks or predicts things about applicants or employees in South Africa.","kind":"mandatory","restricts":true,"controls":["C-BIAS","C-HUMAN"],"critical":["C-BIAS"],"uncertainty":"Whether an AI screening or scoring tool is an 'other similar assessment' is not settled. Treat it as one unless advised otherwise.","source":"https://source.acts.co.za/employment-equity-act-1998/8__psychological_testing_and_other_similar_assessments.php","verified":"2026-10-15","verification":"official-text"},{"id":"cpa-s41","framework":"cpa","provision":"Section 41","title":"False, misleading or deceptive representations","summary":"Suppliers must not make false, misleading or deceptive representations to consumers. AI-generated marketing or chatbot answers are the supplier's own representations.","appliesWhen":{"all":["za",{"any":["marketing","publicFacing"]}]},"why":"AI produces content or answers that consumers will rely on.","kind":"mandatory","controls":["C-HUMAN","C-LABEL"],"critical":[],"uncertainty":"Applies to transactions within the Consumer Protection Act's scope; some transactions are excluded.","source":"https://www.gov.za/documents/consumer-protection-act","verified":"2026-10-15","verification":"secondary"},{"id":"cyber-s54","framework":"cybercrimes","provision":"Section 54","title":"Reporting of cybercrime by financial institutions and communications providers","summary":"Requires electronic communications service providers and financial institutions to report, within 72 hours of becoming aware, offences under the Act involving their systems, and to preserve related information.","appliesWhen":{"all":["za",{"any":["finance","telecom"]}]},"why":"Your organisation is in financial services or telecommunications in South Africa.","kind":"mandatory","controls":["C-INCIDENT"],"critical":[],"uncertainty":"Section 54 was not part of the 1 December 2021 commencement. NAVI could not confirm whether it has since commenced; check its status before relying on it.","source":"https://cliffedekkerhofmeyr.com/news/publications/2021/technology/technology-and-communications-alert-6-december-The-beginning-of-an-era-Certain-sections-of-South-Africas-Cybercrimes-Act-have-commenced-and-heres-what-you-need-to-know.html","verified":"2026-10-15","verification":"secondary"},{"id":"kingv-tech","framework":"kingv","provision":"Data, information and technology governance","title":"Board oversight of data, information, technology and AI","summary":"King V expects the governing body to govern data, information and technology, including oversight of emerging technologies such as AI with attention to transparency, explainability and human-centred design, and risks from outsourced technology.","appliesWhen":"za","why":"Your organisation has a South African connection. King V applies if your organisation chooses (or is required by listing rules) to apply it.","kind":"voluntary","controls":["C-REGISTER","C-MONITOR"],"critical":[],"uncertainty":"Principle and practice numbering is based on secondary summaries; check the King V text for exact wording.","source":"https://www.michalsons.com/blog/difference-between-king-iv-and-v/82119","verified":"2026-10-15","verification":"secondary"},{"id":"za-ai-policy","framework":"za-ai-policy","provision":"Draft policy","title":"National AI Policy (watch list)","summary":"South Africa does not yet have a national AI policy in force. A revised draft is expected for public comment in January 2027. Monitor it; it creates no obligations today.","appliesWhen":"za","why":"Your organisation has a South African connection.","kind":"watch","controls":[],"critical":[],"source":"https://techcabal.com/2026/05/26/south-africa-ai-policy-delayed-to-2027/","verified":"2026-10-15","verification":"secondary"},{"id":"gdpr-core","framework":"gdpr","provision":"Articles 3, 5 and 6","title":"Scope, principles and lawful basis","summary":"Personal data must be processed lawfully, fairly and transparently, for specified purposes, minimised, accurate, kept no longer than necessary and secured, with a lawful basis under Article 6.","appliesWhen":{"all":["eu","personal"]},"why":"Your organisation is in the EU, or offers services to or monitors people in the EU, and processes their personal data.","kind":"mandatory","controls":["C-PURPOSE","C-MINIMISE","C-NOTICE"],"critical":["C-PURPOSE"],"uncertainty":"For organisations outside the EU, the GDPR applies only in the Article 3(2) situations. Confirm whether it applies to you.","source":"https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng","verified":"2026-10-15","verification":"secondary"},{"id":"gdpr-art9","framework":"gdpr","provision":"Article 9","title":"Special categories of personal data","summary":"Processing special category data (e.g. health, biometric data used for identification, racial or ethnic origin) is prohibited unless an Article 9(2) condition applies.","appliesWhen":{"all":["eu","special"]},"why":"Special category data of people covered by the GDPR is involved.","kind":"mandatory","restricts":true,"controls":["C-PURPOSE","C-DPIA"],"critical":["C-DPIA"],"source":"https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng","verified":"2026-10-15","verification":"secondary"},{"id":"gdpr-art22","framework":"gdpr","provision":"Article 22","title":"Automated individual decision-making","summary":"People have the right not to be subject to a decision based solely on automated processing, including profiling, that produces legal or similarly significant effects, unless an exception applies with safeguards (at least human intervention, the ability to express a view and to contest).","appliesWhen":{"all":["eu","personal",{"any":["solelyAutomated","automatedUse"]}]},"why":"Automated scoring, prediction or decisions affect people covered by the GDPR.","kind":"mandatory","restricts":true,"controls":["C-HUMAN","C-CONTEST","C-NOTICE"],"critical":["C-HUMAN"],"uncertainty":"Applies only to solely automated decisions with legal or similarly significant effects; meaningful human involvement takes a decision outside Article 22.","source":"https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng","verified":"2026-10-15","verification":"secondary"},{"id":"gdpr-art35","framework":"gdpr","provision":"Article 35","title":"Data protection impact assessment (DPIA)","summary":"A DPIA is required before processing likely to result in a high risk to people, including systematic and extensive automated evaluation, large-scale special category data, and new technologies.","appliesWhen":{"all":["eu","personal",{"any":["automatedUse","special","employment","children"]}]},"why":"The processing has features that commonly make a DPIA mandatory.","kind":"mandatory","controls":["C-DPIA"],"critical":["C-DPIA"],"source":"https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng","verified":"2026-10-15","verification":"secondary"},{"id":"gdpr-processor","framework":"gdpr","provision":"Article 28","title":"Using a processor","summary":"Processors such as AI providers must be engaged under a binding contract with the terms set out in Article 28.","appliesWhen":{"all":["eu","personal","thirdPartyTool"]},"why":"An external AI provider will process personal data covered by the GDPR.","kind":"mandatory","controls":["C-VENDOR"],"critical":["C-VENDOR"],"source":"https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng","verified":"2026-10-15","verification":"secondary"},{"id":"gdpr-transfers","framework":"gdpr","provision":"Articles 44–49","title":"International transfers","summary":"Transfers of personal data outside the EU/EEA need an adequacy decision, appropriate safeguards (e.g. standard contractual clauses) or a specific derogation.","appliesWhen":{"all":["eu","personal","crossBorderFromEU"]},"why":"Personal data covered by the GDPR will be processed outside the EU.","kind":"mandatory","restricts":true,"controls":["C-TRANSFER"],"critical":["C-TRANSFER"],"source":"https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng","verified":"2026-10-15","verification":"secondary"},{"id":"aia-art4","framework":"euaiact","provision":"Article 4 (as amended by Regulation (EU) 2026/1744)","title":"AI literacy","summary":"Providers and deployers of AI systems must take measures to support the development of AI literacy among their staff and others operating AI systems on their behalf. Applies since 2 February 2025.","appliesWhen":"eu","why":"The EU AI Act may apply because the AI or its outputs are used in the EU.","kind":"mandatory","controls":["C-LITERACY"],"critical":[],"uncertainty":"Whether the EU AI Act applies to a non-EU organisation depends on whether you place AI on the EU market or its output is used in the EU.","source":"https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng","verified":"2026-10-15","verification":"official-text"},{"id":"aia-art5","framework":"euaiact","provision":"Article 5","title":"Prohibited AI practices","summary":"Certain practices are banned, including: manipulative or deceptive techniques causing significant harm; exploiting vulnerabilities; social scoring; inferring emotions in the workplace or education (except for medical or safety reasons); untargeted scraping of facial images; biometric categorisation to infer sensitive traits; and, from 2 December 2026, AI generating non-consensual intimate imagery or child sexual abuse material. Applies since 2 February 2025.","appliesWhen":{"all":["eu","prohibitedPractice"]},"why":"You indicated the AI may perform a practice on the EU AI Act's prohibited list.","kind":"mandatory","restricts":true,"prohibits":true,"controls":[],"critical":[],"uncertainty":"Each prohibition has precise conditions and exceptions. Stop and get legal advice.","source":"https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng","verified":"2026-10-15","verification":"official-text"},{"id":"aia-highrisk-employment","framework":"euaiact","provision":"Article 6(2) and Annex III, point 4; Article 26","title":"High-risk AI: employment and worker management","summary":"AI used for recruitment or selection (e.g. filtering applications, evaluating candidates) or for decisions on promotion, termination, task allocation or monitoring and evaluating workers is high-risk. Deployers must use it according to instructions, assign competent human oversight, monitor it, keep logs and inform workers' representatives and affected workers. High-risk requirements for Annex III uses apply from 2 December 2027.","appliesWhen":{"all":["eu","employment","automatedUse"]},"why":"AI evaluates, ranks or decides about candidates or workers, and the EU AI Act may apply.","kind":"mandatory","controls":["C-HUMAN","C-MONITOR","C-NOTICE","C-LITERACY","C-BIAS"],"critical":["C-HUMAN"],"uncertainty":"Article 6(3) exempts some Annex III systems that do not pose a significant risk (e.g. narrow preparatory tasks). Obligations apply from 2 December 2027 under Regulation (EU) 2026/1744.","source":"https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng","verified":"2026-10-15","verification":"official-text"},{"id":"aia-highrisk-credit","framework":"euaiact","provision":"Article 6(2) and Annex III, point 5(b)","title":"High-risk AI: creditworthiness","summary":"AI used to evaluate the creditworthiness of natural persons or establish their credit score (other than for detecting financial fraud) is high-risk. High-risk requirements for Annex III uses apply from 2 December 2027.","appliesWhen":{"all":["eu","credit"]},"why":"AI scores or predicts something about individuals in financial services, and the EU AI Act may apply.","kind":"mandatory","controls":["C-HUMAN","C-BIAS","C-MONITOR","C-NOTICE"],"critical":["C-HUMAN"],"uncertainty":"Applies only if the AI evaluates creditworthiness or credit scores of individuals.","source":"https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng","verified":"2026-10-15","verification":"official-text"},{"id":"aia-art50","framework":"euaiact","provision":"Article 50","title":"Transparency for AI interactions and generated content","summary":"People must be informed when they interact with an AI system (unless obvious); synthetic audio, image, video or text content must be marked as AI-generated by providers; deployers must disclose deep fakes and AI-generated text published to inform the public on matters of public interest. Applies from 2 August 2026.","appliesWhen":{"all":["eu",{"any":["chatbot","generative"]}]},"why":"The AI interacts with people or generates content, and the EU AI Act may apply.","kind":"mandatory","controls":["C-LABEL"],"critical":[],"uncertainty":"Generative systems placed on the market before 2 August 2026 have until 2 December 2026 for machine-readable marking.","source":"https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng","verified":"2026-10-15","verification":"official-text"},{"id":"iso42001-aims","framework":"iso42001","provision":"Clauses 4–10 and Annex A","title":"AI management system","summary":"A management-system approach: AI policy, roles and responsibilities, AI risk and impact assessment, lifecycle controls, monitoring and continual improvement.","appliesWhen":"always","why":"Good practice for any organisation using AI; optional unless your organisation has committed to it.","kind":"voluntary","controls":["C-REGISTER","C-DPIA","C-MONITOR"],"critical":[],"source":"https://www.iso.org/standard/81230.html","verified":"2026-10-15","verification":"pending"},{"id":"iso23894-risk","framework":"iso23894","provision":"Guidance","title":"AI risk management","summary":"Guidance on identifying, analysing, evaluating and treating AI-specific risks across the lifecycle, building on ISO 31000.","appliesWhen":{"not":"lowRisk"},"why":"Recommended where AI risk is elevated or high.","kind":"voluntary","controls":["C-DPIA","C-MONITOR"],"critical":[],"source":"https://www.iso.org/standard/77304.html","verified":"2026-10-15","verification":"pending"},{"id":"nist-rmf","framework":"nistairmf","provision":"Govern, Map, Measure, Manage","title":"AI risk management functions","summary":"Govern (culture, roles, policies), Map (context and impacts), Measure (test and track risks, including bias) and Manage (prioritise and act on risks).","appliesWhen":"always","why":"A widely used voluntary framework for structuring AI risk management.","kind":"voluntary","controls":["C-BIAS","C-MONITOR","C-REGISTER"],"critical":[],"source":"https://www.nist.gov/itl/ai-risk-management-framework","verified":"2026-10-15","verification":"secondary"},{"id":"oecd-principles","framework":"oecd","provision":"Principles 1.1–1.5","title":"Trustworthy AI principles","summary":"Inclusive growth and well-being; human rights and democratic values including fairness and privacy; transparency and explainability; robustness, security and safety; accountability.","appliesWhen":"always","why":"Internationally agreed, non-binding principles for trustworthy AI.","kind":"voluntary","controls":["C-NOTICE","C-HUMAN"],"critical":[],"source":"https://oecd.ai/en/principles","verified":"2026-10-15","verification":"secondary"},{"id":"unesco-ethics","framework":"unesco","provision":"Values and principles","title":"Ethics of AI, including environmental sustainability","summary":"Human rights and dignity, fairness and non-discrimination, human oversight, transparency, privacy, and environmental and ecosystem flourishing across the AI lifecycle.","appliesWhen":{"any":["highCompute","publicFacing"]},"why":"Relevant where AI has a significant environmental footprint or affects the public.","kind":"voluntary","controls":["C-MONITOR"],"critical":[],"source":"https://www.unesco.org/en/artificial-intelligence/recommendation-ethics","verified":"2026-10-15","verification":"pending"}],"controls":[{"id":"C-PURPOSE","label":"Purpose and lawful basis documented","help":"The reason for using the AI and the legal justification for any personal information are written down.","action":"Document the purpose of the AI use case and the lawful justification for processing personal information.","owner":"Business owner with the Information Officer / DPO"},{"id":"C-MINIMISE","label":"Only necessary data is used","help":"Inputs are limited to what the use case needs; personal details are removed or masked where possible.","action":"Limit inputs to the minimum information needed; remove or mask personal details where possible.","owner":"Business owner"},{"id":"C-NOTICE","label":"Affected people are told","help":"Customers, staff or applicants are informed that AI is used and how.","action":"Tell affected people that AI is used, for what, and how to raise concerns (update privacy notices).","owner":"Information Officer / DPO"},{"id":"C-DPIA","label":"Impact assessment completed","help":"A data protection / AI impact assessment has been done and signed off.","action":"Complete and sign off a data protection or AI impact assessment before go-live.","owner":"Information Officer / DPO"},{"id":"C-HUMAN","label":"Meaningful human review","help":"A competent person reviews AI outputs and can override them before they affect anyone.","action":"Put a competent person in the loop who reviews and can override AI outputs before they take effect.","owner":"Business owner"},{"id":"C-CONTEST","label":"People can query or contest outcomes","help":"Affected people can ask for an explanation and challenge a decision.","action":"Give affected people a route to request an explanation and to contest AI-influenced decisions.","owner":"Business owner"},{"id":"C-VENDOR","label":"Contract with the AI provider","help":"A contract or data processing agreement covers security, confidentiality and no training on your data.","action":"Put a written contract / data processing agreement in place with the AI provider covering security, confidentiality, sub-processors and no training on your data.","owner":"Procurement with Legal"},{"id":"C-TRANSFER","label":"Cross-border transfer safeguard","help":"A lawful basis exists for sending data to another country (adequate protection, binding agreement, consent, etc.).","action":"Confirm a lawful basis for sending personal information across borders (e.g. adequate protection or a binding agreement) before transfer.","owner":"Information Officer / DPO with Legal"},{"id":"C-SECURITY","label":"Security controls and logging","help":"Access control, logging and a security review of the AI tool are in place.","action":"Apply access controls and logging, and complete a security review of the AI tool and its integrations.","owner":"CISO / IT security"},{"id":"C-INCIDENT","label":"Incident response covers AI","help":"Incident and breach procedures include AI failures and data leaks.","action":"Extend incident and breach-response procedures to cover AI failures, misuse and data leaks.","owner":"CISO / IT security"},{"id":"C-BIAS","label":"Bias and accuracy testing","help":"Outputs have been tested for accuracy and for unfair differences between groups.","action":"Test outputs for accuracy and for unfair differences between groups before go-live and after changes.","owner":"Data / AI team"},{"id":"C-LITERACY","label":"Users are trained","help":"People using the AI understand its limits and their responsibilities.","action":"Train users on the tool's limits, verification of outputs and their responsibilities.","owner":"Business owner with HR / Learning"},{"id":"C-REGISTER","label":"Recorded in an AI register with an owner","help":"The use case is logged with a named accountable owner.","action":"Record the use case in an AI register with a named accountable owner and review date.","owner":"AI governance lead"},{"id":"C-MONITOR","label":"Ongoing monitoring","help":"Accuracy, complaints and drift are monitored after go-live.","action":"Monitor accuracy, complaints and drift after go-live, with a scheduled review.","owner":"Business owner"},{"id":"C-LABEL","label":"AI interaction and content are disclosed","help":"People know when they are dealing with AI or AI-generated content.","action":"Disclose to people when they are interacting with AI or viewing AI-generated content.","owner":"Business owner"},{"id":"C-CHILD","label":"Safeguards for children's information","help":"Parental consent or another lawful basis and extra protections are in place for children.","action":"Obtain a lawful basis such as competent-person (parental) consent and apply extra protections for children's information.","owner":"Information Officer / DPO"}]}</script>
 <script>
 /* =========================================================================
-   AI GOVERNANCE DECISION TOOLKIT — script.js
-   Single-file application logic. No frameworks, no external dependencies.
+   NAVI — engine.js
+   The assessment engine: option data, inherent-risk classification, the
+   governance knowledge-base evaluator, control-gap and residual-risk
+   analysis. Pure functions, no DOM access, so it can be tested in Node.
+   The knowledge base itself lives in src/knowledge/*.json (see
+   docs/KNOWLEDGE-BASE.md); build.py embeds it in the page.
    ========================================================================= */
-
-(function(){
 "use strict";
-
-/* ---------------------------------------------------------------------- */
-/* UTILITIES                                                              */
-/* ---------------------------------------------------------------------- */
-const qs  = (sel, el) => (el||document).querySelector(sel);
-const qsa = (sel, el) => Array.from((el||document).querySelectorAll(sel));
-const escapeHtml = (s) => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const uid = () => Math.random().toString(36).slice(2,10);
-const fmtDate = (iso) => { const d = new Date(iso); return d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) + ' ' + d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}); };
-
-/* ---------------------------------------------------------------------- */
-/* NAVIGATION                                                             */
-/* NAVI Free has no registration or access gating: every view is open.    */
-/* Views are addressable by URL hash (#assessment, #decisions, ...) so    */
-/* they can be bookmarked and the browser Back button works.              */
-/* ---------------------------------------------------------------------- */
-const VIEWS = ['landing','assistant','assessment','decisions','guide','dashboard','reflection','documents','enterprise','about','feedback'];
-const VIEW_TITLES = {
-  landing:'Home', assistant:'Ask NAVI', assessment:'Assess a use case', decisions:'My decisions',
-  guide:'Explore governance', dashboard:'Dashboard', reflection:'Board Reflection', documents:'Reference Library',
-  enterprise:'NAVI Enterprise', about:'About NAVI', feedback:'Feedback'
-};
-let currentView = null;
-
-function navigate(viewId, opts){
-  opts = opts || {};
-  if(!VIEWS.includes(viewId)) viewId = 'landing';
-  qsa('[data-view]').forEach(v => v.hidden = (v.id !== 'view-' + viewId));
-  qsa('.topnav-link, .subnav-link').forEach(b => {
-    const on = b.dataset.nav === viewId;
-    b.classList.toggle('active', on);
-    if(on) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
-  });
-  closeMenu();
-  try { document.title = (viewId === 'landing' ? '' : VIEW_TITLES[viewId] + ' · ') + 'NAVI — From AI ambition to responsible action'; } catch(e){}
-  if(!opts.fromHistory && currentView !== null && location.hash.slice(1) !== viewId){
-    try { history.pushState({view:viewId}, '', '#' + viewId); } catch(e){}
-  }
-  currentView = viewId;
-
-  if(viewId === 'guide') renderGuide();
-  if(viewId === 'reflection') renderReflectionList();
-  if(viewId === 'dashboard') renderDashboard();
-  if(viewId === 'assessment' && !wizardStarted) initWizard();
-  if(viewId === 'feedback') renderFeedback();
-  if(viewId === 'documents') renderDocuments();
-  if(viewId === 'landing') renderLandingSnapshot();
-  if(viewId === 'decisions') renderDecisions();
-  if(viewId === 'about') renderDataInventory();
-
-  if(opts.anchor){
-    const target = document.getElementById(opts.anchor);
-    if(target){ target.scrollIntoView({block:'start'}); return; }
-  }
-  window.scrollTo({top:0, behavior:'auto'});
-  // Move keyboard / screen-reader focus to the new view's heading.
-  if(!opts.initial){
-    const heading = qs('#view-' + viewId + ' h1, #view-' + viewId + ' h2');
-    if(heading){
-      if(!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
-      try { heading.focus({preventScroll:true}); } catch(e){ heading.focus(); }
-    }
-  }
-}
-document.addEventListener('click', (e) => {
-  const nav = e.target.closest('[data-nav]');
-  if(nav){ e.preventDefault(); navigate(nav.dataset.nav, {anchor: nav.dataset.anchor}); }
-});
-window.addEventListener('popstate', () => navigate(location.hash.slice(1) || 'landing', {fromHistory:true}));
-
-function closeMenu(){
-  const bar = qs('#topbar');
-  if(!bar) return;
-  bar.classList.remove('menu-open');
-  const t = qs('#menuToggle');
-  if(t){ t.setAttribute('aria-expanded', 'false'); t.setAttribute('aria-label', 'Open menu'); }
-}
-qs('#menuToggle').addEventListener('click', () => {
-  const bar = qs('#topbar');
-  const open = !bar.classList.contains('menu-open');
-  bar.classList.toggle('menu-open', open);
-  qs('#menuToggle').setAttribute('aria-expanded', String(open));
-  qs('#menuToggle').setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-});
-document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeMenu(); });
-
-/* ---------------------------------------------------------------------- */
-/* LOCAL DATA: inventory, download, deletion                              */
-/* Everything NAVI stores lives under these localStorage keys. The legacy */
-/* sign-up record from the earlier gated version is never read for access */
-/* decisions any more, and is only deleted when the person chooses to.    */
-/* ---------------------------------------------------------------------- */
-const LEGACY_USER_KEY = 'aigov_user_v1';
-const DATA_KEYS = {
-  aigov_assessments_v1: 'Saved assessments and decisions',
-  aigov_documents_v1: 'Reference Library documents',
-  aigov_feedback_v1: 'Feedback you submitted',
-  aigov_user_v1: 'Sign-up details from an earlier version'
-};
-function readKey(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }
-function storageAvailable(){ try { const k='__navi_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; } catch(e){ return false; } }
-
-function renderDataInventory(){
-  const ul = qs('#dataInventory');
-  if(!ul) return;
-  if(!storageAvailable()){
-    ul.innerHTML = '<li>Browser storage is unavailable here (for example, a private window or blocked site data), so nothing can be saved between visits.</li>';
-  } else {
-    ul.innerHTML = Object.entries(DATA_KEYS).map(([k,label]) => {
-      const v = readKey(k);
-      const n = Array.isArray(v) ? v.length : (v ? 1 : 0);
-      return `<li>${escapeHtml(label)}: <strong>${n}</strong> ${n===1?'item':'items'}</li>`;
-    }).join('');
-  }
-  const legacy = qs('#legacySignup');
-  if(legacy) legacy.hidden = !readKey(LEGACY_USER_KEY);
-}
-function downloadJson(filename, data){
-  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = filename;
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-}
-function exportAllData(){
-  const out = {app:'NAVI Free', exportVersion:1, exportedAt:new Date().toISOString(), data:{}};
-  Object.keys(DATA_KEYS).forEach(k => { const v = readKey(k); if(v) out.data[k] = v; });
-  return out;
-}
-qs('#downloadAllData')?.addEventListener('click', () => downloadJson('navi-data-' + new Date().toISOString().slice(0,10) + '.json', exportAllData()));
-qs('#deleteAllData')?.addEventListener('click', () => {
-  if(!confirm('Delete all NAVI data stored in this browser: saved decisions, documents, feedback and any old sign-up details? This cannot be undone. You may want to download a copy first.')) return;
-  Object.keys(DATA_KEYS).forEach(k => { try { localStorage.removeItem(k); } catch(e){} });
-  renderDataInventory();
-  renderLandingSnapshot();
-  alert('All NAVI data has been deleted from this browser.');
-});
-qs('#deleteLegacySignup')?.addEventListener('click', () => {
-  try { localStorage.removeItem(LEGACY_USER_KEY); } catch(e){}
-  renderDataInventory();
-});
-
-/* ---------------------------------------------------------------------- */
-/* NAVI ENTERPRISE — consent-based interest (user-initiated email only)   */
-/* ---------------------------------------------------------------------- */
-const CONTACT_EMAIL = 'molebogeng.lekala@gmail.com';
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-qs('#entInterestBtn')?.addEventListener('click', () => {
-  const email = qs('#entEmail').value.trim();
-  const name = qs('#entName').value.trim();
-  const org = qs('#entOrg').value.trim();
-  const areas = qsa('input[name="entArea"]:checked').map(c => c.value);
-  const consent = qs('#entConsent').checked;
-  const err = qs('#entError');
-  const problems = [];
-  if(!EMAIL_RE.test(email)) problems.push('Enter a valid work email address.');
-  if(!consent) problems.push('Tick the consent box so we know you’re happy to be contacted.');
-  if(problems.length){
-    err.textContent = problems.join(' ');
-    err.hidden = false;
-    qs('#entInterestResult').hidden = true;
-    (EMAIL_RE.test(email) ? qs('#entConsent') : qs('#entEmail')).focus();
-    return;
-  }
-  err.hidden = true;
-  const subject = encodeURIComponent('NAVI Enterprise interest' + (org ? ': ' + org : ''));
-  const body = encodeURIComponent(
-    'I would like to hear about NAVI Enterprise.\n\n' +
-    'Email: ' + email + '\n' +
-    'Name: ' + (name || '-') + '\n' +
-    'Organisation: ' + (org || '-') + '\n' +
-    'Areas of interest: ' + (areas.length ? areas.join(', ') : '-') + '\n\n' +
-    'Consent: I agree that Orvendi Group may contact me by email about NAVI Enterprise, for that purpose only.'
-  );
-  qs('#entInterestLink').href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
-  qs('#entInterestResult').hidden = false;
-  qs('#entInterestLink').focus();
-});
-
 /* ---------------------------------------------------------------------- */
 /* OPTION DATA                                                            */
 /* ---------------------------------------------------------------------- */
@@ -1621,20 +1565,13 @@ function computeSecurity(tool, useCase, dataType, location){
   return {level, reasons, recommendations};
 }
 
-const STEPS = [
-  {key:'scenario', title:'Choose the scenario', hint:'What kind of information or business process does this involve?', options: SCENARIOS},
-  {key:'useCase', title:'Choose the AI use case', hint:'What will the AI system actually do?', options: USE_CASES},
-  {key:'dataType', title:'Choose the data type', hint:'What is the most sensitive category of data involved?', options: DATA_TYPES},
-  {key:'tool', title:'Choose the AI tool', hint:'Which system will process the data?', options: TOOLS},
-  {key:'location', title:'Where is the data processed?', hint:'Where is the AI tool hosted / where is data sent?', options: LOCATIONS}
-];
 
 /* ---------------------------------------------------------------------- */
 /* DECISION ENGINE                                                        */
 /* ---------------------------------------------------------------------- */
 function findOpt(list, id){ return list.find(o => o.id === id); }
 
-function computeDecision(ctxIds){
+function computeDecision(ctxIds, profile){
   const scenario = findOpt(SCENARIOS, ctxIds.scenario) || SCENARIOS[0];
   const useCase  = findOpt(USE_CASES, ctxIds.useCase) || USE_CASES[0];
   const dataType = findOpt(DATA_TYPES, ctxIds.dataType) || DATA_TYPES[0];
@@ -1649,12 +1586,8 @@ function computeDecision(ctxIds){
   const documents = new Set();
   const boardQuestions = [];
   let forceLevel = null;
-  // Minimum governance baseline for every assessment: GDPR and King V, plus the AI-specific
-  // standards that apply regardless of use case (ISO 42001 management-system requirements,
-  // the NIST AI RMF's "Secure and Resilient" characteristic, and the OECD AI Principles, which
-  // include sustainable development). POPIA is added as the South African data-protection
-  // anchor alongside GDPR. More specific regulations are layered in below based on risk.
-  const regs = new Set(['GDPR','King V','POPIA','ISO 42001','NIST AI RMF','OECD AI Principles']);
+  // Frameworks are no longer a fixed list: they come from the knowledge base, evaluated against
+  // the use case and the organisation's jurisdictions (see frameworksToConsider below).
 
   const isPersonal = dataType.personal || ['customer_emails','employee_performance','recruitment','medical_records'].includes(scenario.id);
   const isSpecial  = dataType.special || scenario.health;
@@ -1672,22 +1605,18 @@ function computeDecision(ctxIds){
   if(isPersonal){
     documents.add('Data Protection Impact Assessment (DPIA)');
     documents.add('Record of Processing Activities entry');
-    regs.add('POPIA');
   }
   if(isSpecial){
     risks.push('Processing of special personal information / health data without explicit statutory justification.');
-    regs.add('POPIA'); regs.add('GDPR');
   }
   if(isEmployment){
     risks.push('Employment-related automated processing may constitute an unfair labour practice if not subject to human review.');
-    regs.add('Employment Law'); regs.add('EU AI Act');
     safeguards.push('Ensure a qualified human reviews and can overturn any AI-influenced employment decision before it is actioned.');
     boardQuestions.push('Has the AI-influenced HR decision been reviewed by a competent human decision-maker, and is that review documented?');
     documents.add('Employment Equity / Fair Process Assessment');
   }
   if(isAutomated){
     risks.push('Automated decision-making without meaningful human oversight may breach data subject rights to contest automated decisions.');
-    regs.add('EU AI Act');
     safeguards.push('Implement a documented human-in-the-loop checkpoint before any output influences a real-world decision.');
   }
   if(isExternalTool){
@@ -1701,7 +1630,6 @@ function computeDecision(ctxIds){
   if(isForeignHosting && isPersonal){
     risks.push('Cross-border transfer of personal information without a POPIA/GDPR-compliant transfer mechanism.');
     safeguards.push('Put a Standard Contractual Clause, adequacy finding, or binding corporate rules in place before transfer.');
-    regs.add('GDPR');
   }
   if(location.id === 'unknown'){
     risks.push('Processing location is unknown — data residency and applicable law cannot currently be determined.');
@@ -1716,7 +1644,6 @@ function computeDecision(ctxIds){
   risks.push('Bias risk: model outputs may reflect training data bias, particularly in scoring or classification tasks.');
   if(useCase.id === 'content_generation' || useCase.id === 'image_generation'){
     risks.push('Generated content may inadvertently reproduce copyrighted material or third-party intellectual property.');
-    regs.add('EU AI Act');
   }
   if(isExternalTool || tool.id === 'custom_model'){
     risks.push('Data exfiltration risk: information submitted may be logged, cached or retained outside organisational control, with no enterprise security assurance.');
@@ -1802,18 +1729,23 @@ function computeDecision(ctxIds){
   }
   safeguards.push(...security.recommendations.slice(0,1));
 
-  return {
+  const decision = {
     scenario, useCase, dataType, tool, location, score, level, confidence,
     reasons, risks: [...new Set(risks)], safeguards: [...new Set(safeguards)],
-    documents: [...documents], approvers, regulations: [...regs],
+    documents: [...documents], approvers,
     personalData: isPersonal, special: isSpecial, crossBorder: isForeignHosting,
     humanOversight: isAutomated || isEmployment, retention, monitoring, nextAction,
     boardQuestions: [...new Set(boardQuestions)],
     maturityContribution: level === 'green' ? 100 : level === 'amber' ? 60 : 25,
     sustainability, security,
     ruleOverride: forceLevel,
+    hardRuleExternalPersonal: isExternalTool && (isPersonal || isSpecial),
     ctx: {scenario: scenario.id, useCase: useCase.id, dataType: dataType.id, tool: tool.id, location: location.id}
   };
+  decision.profile = normaliseProfile(profile);
+  decision.facts = deriveFacts(decision, decision.profile);
+  decision.regulations = frameworksToConsider(decision.facts);
+  return decision;
 }
 
 // Outcome labels describe governance RISK, never legal permission: NAVI must not imply that an
@@ -1825,256 +1757,886 @@ const SCORE_MAX = 16, THRESHOLD_AMBER = 5, THRESHOLD_RED = 10;
 const DISCLAIMER = 'Decision support only. This is general, rules-based guidance \u2014 not legal advice, legal clearance or organisational approval. The accountable people in your organisation make the final decision.';
 
 /* ---------------------------------------------------------------------- */
-/* WIZARD                                                                 */
+/* GOVERNANCE KNOWLEDGE BASE                                              */
 /* ---------------------------------------------------------------------- */
-let wizardStarted = false;
-let currentStep = 0;
-let wizardAnswers = {};
-let customScenarioText = '';
+// The knowledge base is embedded by build.py as <script id="navi-knowledge" type="application/json">.
+// Tests (and any other host) can supply it by setting globalThis.NAVI_KB before use.
+let _kbCache = null;
+function getKB(){
+  if(_kbCache) return _kbCache;
+  if(typeof globalThis !== 'undefined' && globalThis.NAVI_KB){ _kbCache = globalThis.NAVI_KB; }
+  else if(typeof document !== 'undefined'){
+    const el = document.getElementById('navi-knowledge');
+    _kbCache = el ? JSON.parse(el.textContent) : null;
+  }
+  if(!_kbCache) throw new Error('NAVI knowledge base not loaded');
+  _kbCache.frameworkById = Object.fromEntries(_kbCache.frameworks.map(f => [f.id, f]));
+  _kbCache.controlById = Object.fromEntries(_kbCache.controls.map(c => [c.id, c]));
+  return _kbCache;
+}
 
-function initWizard(){
+const JURISDICTIONS = [
+  {id:'za', label:'South Africa'}, {id:'eu', label:'European Union'}, {id:'uk', label:'United Kingdom'},
+  {id:'us', label:'United States'}, {id:'other', label:'Other country'}
+];
+const COVERED_JURISDICTIONS = ['za', 'eu'];   // jurisdictions the knowledge base currently covers in depth
+const SECTORS = [
+  {id:'finance', label:'Financial services'}, {id:'health', label:'Healthcare'}, {id:'public', label:'Public sector'},
+  {id:'education', label:'Education'}, {id:'retail', label:'Retail & consumer'}, {id:'telecom', label:'Telecommunications'},
+  {id:'professional', label:'Professional services'}, {id:'manufacturing', label:'Manufacturing & industry'}, {id:'other', label:'Other'}
+];
+const AUTONOMY = [
+  {id:'assist', label:'Assists people', tag:'Drafts, summarises or suggests; people do the work'},
+  {id:'recommend', label:'Recommends; a person decides', tag:'A competent person reviews every outcome before it takes effect'},
+  {id:'auto', label:'Decides or acts automatically', tag:'Outcomes take effect without case-by-case human review'}
+];
+const STAGES = [{id:'idea', label:'Idea or proposal'}, {id:'pilot', label:'Pilot or testing'}, {id:'live', label:'Live / in use'}];
+const STAKEHOLDERS = [
+  {id:'customers', label:'Customers'}, {id:'employees', label:'Employees'}, {id:'applicants', label:'Job applicants'},
+  {id:'patients', label:'Patients'}, {id:'children', label:'Children (under 18)'}, {id:'public', label:'General public'},
+  {id:'suppliers', label:'Suppliers / partners'}
+];
+const IMPACT_QUESTIONS = [
+  {id:'significantEffect', label:'Could the outcome have a legal effect on people, or affect them significantly?', help:'For example: hiring, dismissal, credit, insurance, access to services, or anything that is hard to reverse.'},
+  {id:'children', label:'Could children’s information be involved, or children be affected?', help:'People under 18.'},
+  {id:'bias', label:'Could outputs treat some groups of people less favourably?', help:'For example by race, gender, age, disability, language or location.'},
+  {id:'prohibited', label:'Does the AI do any of the following?', help:'Infer emotions of employees or students; score people’s social behaviour; categorise people by sensitive traits from biometric data; use manipulative techniques that exploit vulnerabilities; scrape facial images from the internet or CCTV; generate intimate or sexual imagery of real people.'}
+];
+
+function normaliseProfile(profile){
+  const p = Object.assign({jurisdictions:[], stakeholders:[], impact:{}}, profile || {});
+  p.assumed = [];
+  if(!p.jurisdictions || !p.jurisdictions.length){
+    p.jurisdictions = ['za'];
+    p.assumed.push('Assumed a South African organisation with no EU connection, because no jurisdiction was given.');
+  }
+  p.impact = Object.assign({}, p.impact || {});
+  return p;
+}
+
+// Assessment "facts": the vocabulary used by appliesWhen conditions in obligations.json.
+function deriveFacts(d, p){
+  const j = id => p.jurisdictions.includes(id);
+  const unsureOrYes = v => v === 'yes' || v === 'unsure';
+  const loc = d.location.id;
+  const generative = ['content_generation','image_generation','chatbot'].includes(d.useCase.id);
+  const st = id => (p.stakeholders || []).includes(id);
+  const f = {
+    always: true,
+    za: j('za'), eu: j('eu'), uk: j('uk'), us: j('us'), otherJur: j('other'),
+    personal: !!d.personalData, special: !!d.special,
+    children: unsureOrYes(p.impact.children) || st('children'),
+    employment: !!d.scenario.employment || st('applicants'),
+    automatedUse: !!d.useCase.automated,
+    solelyAutomated: p.autonomy === 'auto',
+    significantEffect: unsureOrYes(p.impact.significantEffect),
+    biasConcern: unsureOrYes(p.impact.bias),
+    prohibitedPractice: unsureOrYes(p.impact.prohibited),
+    thirdPartyTool: d.tool.id !== 'internal_ai',
+    externalTool: d.tool.id === 'external_public',
+    crossBorderFromZA: j('za') && loc !== 'za',
+    crossBorderFromEU: j('eu') && loc !== 'eu',
+    marketing: d.scenario.id === 'marketing',
+    chatbot: d.useCase.id === 'chatbot',
+    generative,
+    publicFacing: d.useCase.id === 'chatbot' || (generative && (st('customers') || st('public'))),
+    finance: p.sector === 'finance',
+    telecom: p.sector === 'telecom',
+    highCompute: d.sustainability && d.sustainability.level === 'High',
+    lowRisk: d.level === 'green'
+  };
+  f.credit = f.finance && f.automatedUse && f.personal;
+  return f;
+}
+
+function evalCondition(cond, facts){
+  if(typeof cond === 'string') return !!facts[cond];
+  if(cond.all) return cond.all.every(c => evalCondition(c, facts));
+  if(cond.any) return cond.any.some(c => evalCondition(c, facts));
+  if(cond.not) return !evalCondition(cond.not, facts);
+  return false;
+}
+
+function applicableObligations(facts){
+  const kb = getKB();
+  return kb.obligations.filter(o => evalCondition(o.appliesWhen, facts));
+}
+
+// Short framework names for quick displays: mandatory frameworks first, then voluntary.
+function frameworksToConsider(facts){
+  const kb = getKB();
+  const obs = applicableObligations(facts).filter(o => o.kind !== 'watch');
+  const order = o => o.kind === 'mandatory' ? 0 : 1;
+  const names = [];
+  obs.sort((a,b) => order(a) - order(b)).forEach(o => {
+    const n = kb.frameworkById[o.framework].short;
+    if(!names.includes(n)) names.push(n);
+  });
+  return names;
+}
+
+const LEVEL_ORDER = ['green', 'amber', 'red'];
+const BASELINE_CONTROLS = {
+  all: ['C-REGISTER', 'C-LITERACY'],
+  amber: ['C-HUMAN', 'C-MONITOR', 'C-SECURITY'],
+  red: ['C-HUMAN', 'C-MONITOR', 'C-SECURITY', 'C-INCIDENT', 'C-DPIA']
+};
+
+// Full governance evaluation of a decision: requirements, control gaps, residual risk,
+// readiness and permissibility. `inPlace` is the list of control ids already in place.
+// Method documented in docs/RISK-METHOD.md.
+function assessGovernance(d, inPlace){
+  const kb = getKB();
+  const facts = d.facts;
+  const has = new Set((inPlace || []).filter(id => kb.controlById[id]));
+  const obligations = applicableObligations(facts);
+
+  const requirements = obligations.map(o => {
+    const fw = kb.frameworkById[o.framework];
+    const controls = (o.controls || []).filter(c => !(o.controlsWhen && o.controlsWhen[c]) || evalCondition(o.controlsWhen[c], facts));
+    return {
+      id: o.id, framework: fw.short, frameworkName: fw.name, jurisdiction: fw.jurisdiction, frameworkType: fw.typeLabel,
+      provision: o.provision, title: o.title, summary: o.summary, why: o.why, kind: o.kind,
+      restricts: !!o.restricts, prohibits: !!o.prohibits, controls, critical: o.critical || [],
+      uncertainty: o.uncertainty || null, source: o.source, verified: o.verified, verification: o.verification
+    };
+  });
+  const mandatory = requirements.filter(r => r.kind === 'mandatory');
+  const voluntary = requirements.filter(r => r.kind === 'voluntary');
+  const watch = requirements.filter(r => r.kind === 'watch');
+
+  // Required controls: from applicable legal obligations, plus a baseline set by risk level and use case.
+  const required = new Map();   // id -> {source labels}
+  const legallyRequired = new Set();
+  const need = (id, why) => { if(!required.has(id)) required.set(id, new Set()); required.get(id).add(why); };
+  mandatory.forEach(r => r.controls.forEach(c => { need(c, `${r.framework} ${r.provision}`); legallyRequired.add(c); }));
+  BASELINE_CONTROLS.all.forEach(c => need(c, 'NAVI baseline'));
+  (BASELINE_CONTROLS[d.level] || []).forEach(c => need(c, `NAVI baseline for ${d.level === 'red' ? 'high' : 'elevated'} risk`));
+  if(facts.thirdPartyTool) need('C-VENDOR', 'Third-party AI provider');
+  if(facts.personal){ need('C-PURPOSE', 'Personal information'); need('C-MINIMISE', 'Personal information'); }
+  if(facts.automatedUse || facts.biasConcern) need('C-BIAS', facts.automatedUse ? 'Automated scoring or prediction' : 'Possible unfair outcomes');
+  if(facts.generative) need('C-LABEL', 'AI-generated content or interaction');
+  if(facts.children) need('C-CHILD', 'Children');
+
+  const critical = new Set(mandatory.flatMap(r => r.critical).filter(c => required.has(c)));
+  const requiredIds = [...required.keys()];
+  const gaps = requiredIds.filter(c => !has.has(c));
+  const criticalGaps = gaps.filter(c => critical.has(c));
+  const coverage = requiredIds.length ? (requiredIds.length - gaps.length) / requiredIds.length : 1;
+
+  // Residual risk
+  const inherent = d.level;
+  let residual, residualReason;
+  const prohibitedFlag = mandatory.some(r => r.prohibits);
+  if(d.hardRuleExternalPersonal){
+    residual = 'red';
+    residualReason = 'Safeguards cannot reduce this: personal information should not go into an unmanaged public AI tool. Use an approved enterprise or internal tool instead.';
+  } else if(prohibitedFlag){
+    residual = 'red';
+    residualReason = 'A possible prohibited practice was flagged. Safeguards do not make a prohibited practice acceptable.';
+  } else if(gaps.length === 0){
+    residual = LEVEL_ORDER[Math.max(0, LEVEL_ORDER.indexOf(inherent) - 1)];
+    residualReason = inherent === 'green' ? 'All required safeguards are in place.' : 'All required safeguards are in place, which reduces the risk by one level.';
+  } else if(criticalGaps.length){
+    residual = inherent === 'green' ? 'amber' : inherent;
+    residualReason = `Critical safeguards are missing (${criticalGaps.map(c => kb.controlById[c].label).join('; ')}).`;
+  } else {
+    residual = inherent;
+    residualReason = `${gaps.length} required safeguard${gaps.length === 1 ? ' is' : 's are'} not yet in place.`;
+  }
+
+  const readiness = gaps.length === 0 ? 'ready' : (!criticalGaps.length && coverage >= 0.5 ? 'partial' : 'not-ready');
+
+  // Permissibility indicator (never a legal clearance)
+  const restricting = mandatory.filter(r => r.restricts);
+  let permissibility;
+  if(prohibitedFlag){
+    permissibility = {level:'prohibited-check', label:'Possible prohibited practice — stop and get legal advice', items: mandatory.filter(r => r.prohibits).map(r => `${r.framework} ${r.provision}`)};
+  } else if(restricting.length || d.hardRuleExternalPersonal){
+    permissibility = {level:'restricted', label:'Allowed only if specific legal conditions are met', items: restricting.map(r => `${r.framework} ${r.provision}: ${r.title}`)};
+    if(d.hardRuleExternalPersonal) permissibility.items.unshift('NAVI hard rule: no personal information in unmanaged public AI tools');
+  } else {
+    permissibility = {level:'none-identified', label:'No prohibition or restriction identified in NAVI’s knowledge base', items: []};
+  }
+
+  // Actions for each gap
+  // Critical: its absence blocks risk reduction. High: required by a legal obligation. Medium: good practice baseline.
+  const priorityOf = c => critical.has(c) ? 'Critical' : legallyRequired.has(c) ? 'High' : 'Medium';
+  const rank = {Critical:0, High:1, Medium:2};
+  const actions = gaps.map(c => ({
+    control: c, label: kb.controlById[c].label, action: kb.controlById[c].action, owner: kb.controlById[c].owner,
+    priority: priorityOf(c), because: [...required.get(c)]
+  })).sort((a,b) => rank[a.priority] - rank[b.priority]);
+
+  // Reviews and approvals
+  const reviews = [];
+  if(facts.personal) reviews.push('Information Officer / Data Protection Officer review of the impact assessment');
+  if(restricting.length || prohibitedFlag) reviews.push('Legal review of the restricted provisions listed under requirements');
+  if(d.security.level === 'High' || facts.thirdPartyTool) reviews.push('Cyber security review of the AI tool and its integrations');
+  if(requirements.some(r => r.id === 'aia-highrisk-employment')) reviews.push('Inform workers’ representatives and affected workers before workplace use (EU AI Act Article 26)');
+  if(facts.employment) reviews.push('HR / employment law review of fairness and process');
+  const approvalByResidual = {
+    green: 'Approval by the data / process owner',
+    amber: 'Approval by the business unit head and Compliance / Information Officer',
+    red: 'Approval by the executive committee or risk committee, with board visibility'
+  };
+  reviews.push(approvalByResidual[residual]);
+  if(inherent === 'red' && residual !== 'red') reviews.push('Board or board committee visibility, because the inherent risk is high');
+
+  // When to seek specialist advice
+  const specialists = [];
+  if(prohibitedFlag || restricting.length || (facts.employment && facts.automatedUse) || p_multi(d.profile)) specialists.push({who:'Legal', why: prohibitedFlag ? 'possible prohibited practice' : restricting.length ? 'restricted legal provisions apply' : (facts.employment && facts.automatedUse) ? 'automated decisions about applicants or employees' : 'more than one jurisdiction'});
+  if(facts.special || facts.children || facts.crossBorderFromZA || facts.crossBorderFromEU || facts.solelyAutomated) specialists.push({who:'Privacy (Information Officer / DPO)', why: facts.special ? 'special personal information' : facts.children ? 'children’s information' : facts.solelyAutomated ? 'solely automated decisions' : 'cross-border transfer'});
+  if(d.security.level === 'High' || facts.externalTool || d.tool.id === 'custom_model') specialists.push({who:'Cyber security', why: d.security.level === 'High' ? 'high cyber security risk' : facts.externalTool ? 'unmanaged public AI tool' : 'custom model supply chain'});
+
+  // Assumptions and limitations
+  const assumptions = [...(d.profile.assumed || [])];
+  Object.entries(d.profile.impact || {}).forEach(([k,v]) => {
+    if(v === 'unsure'){ const q = IMPACT_QUESTIONS.find(q => q.id === k); if(q) assumptions.push(`"${q.label}" was answered "not sure", so NAVI assumed yes.`); }
+  });
+  const uncovered = d.profile.jurisdictions.filter(j => !COVERED_JURISDICTIONS.includes(j));
+  if(uncovered.length) assumptions.push(`NAVI's knowledge base covers South African and EU requirements in depth. It does not yet cover ${uncovered.map(j => (JURISDICTIONS.find(x => x.id === j) || {label:j}).label).join(', ')}; get local advice.`);
+  if(facts.eu && !d.profile.euEstablished) assumptions.push('EU requirements are included because an EU connection was indicated. Whether they apply to an organisation outside the EU depends on specific scope rules; confirm with a legal adviser.');
+  if(d.location.id === 'unknown') assumptions.push('The processing location is unknown, so cross-border rules are assumed to apply.');
+
+  // References
+  const seen = new Set(); const references = [];
+  requirements.forEach(r => { const fw = kb.frameworkById[obligations.find(o => o.id === r.id).framework];
+    if(!seen.has(fw.id)){ seen.add(fw.id); references.push({name: fw.name, type: fw.typeLabel, status: fw.status, source: fw.source, verified: fw.verified, verification: fw.verification}); } });
+
+  // Next steps
+  const nextSteps = [];
+  if(permissibility.level === 'prohibited-check') nextSteps.push('Pause the use case and get legal advice on the possible prohibited practice before doing anything else.');
+  if(d.hardRuleExternalPersonal) nextSteps.push('Stop sending personal information to the public AI tool; move the use case to an approved enterprise or internal tool, then reassess.');
+  actions.filter(a => a.priority === 'Critical').forEach(a => nextSteps.push(`Put in place: ${a.label.toLowerCase()} (${a.owner}).`));
+  if(actions.some(a => a.priority !== 'Critical')) nextSteps.push(`Close the remaining ${actions.filter(a => a.priority !== 'Critical').length} safeguard gap${actions.filter(a => a.priority !== 'Critical').length === 1 ? '' : 's'} in the action plan.`);
+  if(specialists.length) nextSteps.push(`Get specialist input: ${specialists.map(s => s.who).join(', ')}.`);
+  nextSteps.push(`Obtain the approvals listed (${approvalByResidual[residual].toLowerCase()}) and record the decision.`);
+  nextSteps.push('Reassess if the data, tool, autonomy or scope changes, and at least annually.');
+
+  return {
+    knowledgeBaseVersion: kb.knowledgeBaseVersion,
+    requirements, mandatory, voluntary, watch,
+    requiredControls: requiredIds, inPlace: requiredIds.filter(c => has.has(c)), extraInPlace: [...has].filter(c => !required.has(c)),
+    gaps, criticalGaps, coverage, inherent, residual, residualReason, readiness, permissibility,
+    actions, reviews, specialists, assumptions, references, nextSteps
+  };
+}
+function p_multi(profile){ return profile && profile.jurisdictions && profile.jurisdictions.length > 1; }
+
+const READINESS_LABEL = {'ready':'Ready — required safeguards in place', 'partial':'Partly ready — some safeguards missing', 'not-ready':'Not ready — key safeguards missing'};
+
+</script>
+<script>
+/* =========================================================================
+   AI GOVERNANCE DECISION TOOLKIT — script.js
+   Single-file application logic. No frameworks, no external dependencies.
+   ========================================================================= */
+
+(function(){
+"use strict";
+
+/* ---------------------------------------------------------------------- */
+/* UTILITIES                                                              */
+/* ---------------------------------------------------------------------- */
+const qs  = (sel, el) => (el||document).querySelector(sel);
+const qsa = (sel, el) => Array.from((el||document).querySelectorAll(sel));
+const escapeHtml = (s) => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const uid = () => Math.random().toString(36).slice(2,10);
+const fmtDate = (iso) => { const d = new Date(iso); return d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) + ' ' + d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}); };
+
+/* ---------------------------------------------------------------------- */
+/* NAVIGATION                                                             */
+/* NAVI Free has no registration or access gating: every view is open.    */
+/* Views are addressable by URL hash (#assessment, #decisions, ...) so    */
+/* they can be bookmarked and the browser Back button works.              */
+/* ---------------------------------------------------------------------- */
+const VIEWS = ['landing','assistant','assessment','decisions','guide','dashboard','reflection','documents','enterprise','about','feedback'];
+const VIEW_TITLES = {
+  landing:'Home', assistant:'Ask NAVI', assessment:'Assess a use case', decisions:'My decisions',
+  guide:'Explore governance', dashboard:'Dashboard', reflection:'Board Reflection', documents:'Reference Library',
+  enterprise:'NAVI Enterprise', about:'About NAVI', feedback:'Feedback'
+};
+let currentView = null;
+
+function navigate(viewId, opts){
+  opts = opts || {};
+  if(!VIEWS.includes(viewId)) viewId = 'landing';
+  qsa('[data-view]').forEach(v => v.hidden = (v.id !== 'view-' + viewId));
+  qsa('.topnav-link, .subnav-link').forEach(b => {
+    const on = b.dataset.nav === viewId;
+    b.classList.toggle('active', on);
+    if(on) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+  });
+  closeMenu();
+  try { document.title = (viewId === 'landing' ? '' : VIEW_TITLES[viewId] + ' · ') + 'NAVI — From AI ambition to responsible action'; } catch(e){}
+  if(!opts.fromHistory && currentView !== null && location.hash.slice(1) !== viewId){
+    try { history.pushState({view:viewId}, '', '#' + viewId); } catch(e){}
+  }
+  currentView = viewId;
+
+  if(viewId === 'guide') renderGuide();
+  if(viewId === 'reflection') renderReflectionList();
+  if(viewId === 'dashboard') renderDashboard();
+  if(viewId === 'assessment' && !wizardStarted) initWizard();
+  if(viewId === 'feedback') renderFeedback();
+  if(viewId === 'documents') renderDocuments();
+  if(viewId === 'landing') renderLandingSnapshot();
+  if(viewId === 'decisions') renderDecisions();
+  if(viewId === 'about') renderDataInventory();
+
+  if(opts.anchor){
+    const target = document.getElementById(opts.anchor);
+    if(target){ target.scrollIntoView({block:'start'}); return; }
+  }
+  window.scrollTo({top:0, behavior:'auto'});
+  // Move keyboard / screen-reader focus to the new view's heading.
+  if(!opts.initial){
+    const heading = qs('#view-' + viewId + ' h1, #view-' + viewId + ' h2');
+    if(heading){
+      if(!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
+      try { heading.focus({preventScroll:true}); } catch(e){ heading.focus(); }
+    }
+  }
+}
+document.addEventListener('click', (e) => {
+  const nav = e.target.closest('[data-nav]');
+  if(nav){ e.preventDefault(); navigate(nav.dataset.nav, {anchor: nav.dataset.anchor}); }
+});
+window.addEventListener('popstate', () => navigate(location.hash.slice(1) || 'landing', {fromHistory:true}));
+
+function closeMenu(){
+  const bar = qs('#topbar');
+  if(!bar) return;
+  bar.classList.remove('menu-open');
+  const t = qs('#menuToggle');
+  if(t){ t.setAttribute('aria-expanded', 'false'); t.setAttribute('aria-label', 'Open menu'); }
+}
+qs('#menuToggle').addEventListener('click', () => {
+  const bar = qs('#topbar');
+  const open = !bar.classList.contains('menu-open');
+  bar.classList.toggle('menu-open', open);
+  qs('#menuToggle').setAttribute('aria-expanded', String(open));
+  qs('#menuToggle').setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeMenu(); });
+
+/* ---------------------------------------------------------------------- */
+/* LOCAL DATA: inventory, download, deletion                              */
+/* Everything NAVI stores lives under these localStorage keys. The legacy */
+/* sign-up record from the earlier gated version is never read for access */
+/* decisions any more, and is only deleted when the person chooses to.    */
+/* ---------------------------------------------------------------------- */
+const LEGACY_USER_KEY = 'aigov_user_v1';
+const DATA_KEYS = {
+  aigov_assessments_v1: 'Saved assessments and decisions',
+  aigov_documents_v1: 'Reference Library documents',
+  aigov_feedback_v1: 'Feedback you submitted',
+  aigov_user_v1: 'Sign-up details from an earlier version'
+};
+function readKey(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }
+function storageAvailable(){ try { const k='__navi_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; } catch(e){ return false; } }
+
+function renderFrameworkTable(){
+  const body = qs('#frameworkTableBody');
+  if(!body) return;
+  const kb = getKB();
+  qs('#kbVersionNote').textContent = `Knowledge base version ${kb.knowledgeBaseVersion}. Sources were checked on the dates shown.`;
+  const cls = t => t === 'law' ? 'law' : 'voluntary';
+  body.innerHTML = kb.frameworks.map(f => `<tr>
+    <td>${extLink(f.source, f.name)}<br>${verifBadge(f.verification)} <span class="cell-note">checked ${escapeHtml(f.verified)}</span></td>
+    <td>${escapeHtml(f.jurisdiction)}</td>
+    <td><span class="status-tag ${cls(f.type)}">${escapeHtml(f.typeLabel)}</span><p class="cell-note">${escapeHtml(f.status)}</p></td></tr>`).join('');
+}
+function renderDataInventory(){
+  renderFrameworkTable();
+  const ul = qs('#dataInventory');
+  if(!ul) return;
+  if(!storageAvailable()){
+    ul.innerHTML = '<li>Browser storage is unavailable here (for example, a private window or blocked site data), so nothing can be saved between visits.</li>';
+  } else {
+    ul.innerHTML = Object.entries(DATA_KEYS).map(([k,label]) => {
+      const v = readKey(k);
+      const n = Array.isArray(v) ? v.length : (v ? 1 : 0);
+      return `<li>${escapeHtml(label)}: <strong>${n}</strong> ${n===1?'item':'items'}</li>`;
+    }).join('');
+  }
+  const legacy = qs('#legacySignup');
+  if(legacy) legacy.hidden = !readKey(LEGACY_USER_KEY);
+}
+function downloadJson(filename, data){
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+function exportAllData(){
+  const out = {app:'NAVI Free', exportVersion:1, exportedAt:new Date().toISOString(), data:{}};
+  Object.keys(DATA_KEYS).forEach(k => { const v = readKey(k); if(v) out.data[k] = v; });
+  return out;
+}
+qs('#downloadAllData')?.addEventListener('click', () => downloadJson('navi-data-' + new Date().toISOString().slice(0,10) + '.json', exportAllData()));
+qs('#deleteAllData')?.addEventListener('click', () => {
+  if(!confirm('Delete all NAVI data stored in this browser: saved decisions, documents, feedback and any old sign-up details? This cannot be undone. You may want to download a copy first.')) return;
+  Object.keys(DATA_KEYS).forEach(k => { try { localStorage.removeItem(k); } catch(e){} });
+  renderDataInventory();
+  renderLandingSnapshot();
+  alert('All NAVI data has been deleted from this browser.');
+});
+qs('#deleteLegacySignup')?.addEventListener('click', () => {
+  try { localStorage.removeItem(LEGACY_USER_KEY); } catch(e){}
+  renderDataInventory();
+});
+
+/* ---------------------------------------------------------------------- */
+/* NAVI ENTERPRISE — consent-based interest (user-initiated email only)   */
+/* ---------------------------------------------------------------------- */
+const CONTACT_EMAIL = 'molebogeng.lekala@gmail.com';
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+qs('#entInterestBtn')?.addEventListener('click', () => {
+  const email = qs('#entEmail').value.trim();
+  const name = qs('#entName').value.trim();
+  const org = qs('#entOrg').value.trim();
+  const areas = qsa('input[name="entArea"]:checked').map(c => c.value);
+  const consent = qs('#entConsent').checked;
+  const err = qs('#entError');
+  const problems = [];
+  if(!EMAIL_RE.test(email)) problems.push('Enter a valid work email address.');
+  if(!consent) problems.push('Tick the consent box so we know you’re happy to be contacted.');
+  if(problems.length){
+    err.textContent = problems.join(' ');
+    err.hidden = false;
+    qs('#entInterestResult').hidden = true;
+    (EMAIL_RE.test(email) ? qs('#entConsent') : qs('#entEmail')).focus();
+    return;
+  }
+  err.hidden = true;
+  const subject = encodeURIComponent('NAVI Enterprise interest' + (org ? ': ' + org : ''));
+  const body = encodeURIComponent(
+    'I would like to hear about NAVI Enterprise.\n\n' +
+    'Email: ' + email + '\n' +
+    'Name: ' + (name || '-') + '\n' +
+    'Organisation: ' + (org || '-') + '\n' +
+    'Areas of interest: ' + (areas.length ? areas.join(', ') : '-') + '\n\n' +
+    'Consent: I agree that Orvendi Group may contact me by email about NAVI Enterprise, for that purpose only.'
+  );
+  qs('#entInterestLink').href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
+  qs('#entInterestResult').hidden = false;
+  qs('#entInterestLink').focus();
+});
+
+/* ---------------------------------------------------------------------- */
+/* ASSESSMENT WIZARD                                                      */
+/* Five guided steps: define the use case, what the AI does, data and     */
+/* technology, impact on people, and safeguards already in place. The     */
+/* engine then derives requirements, inherent and residual risk.          */
+/* ---------------------------------------------------------------------- */
+const WIZ_STEPS = [
+  {key:'define', title:'Define the use case', short:'Use case'},
+  {key:'use', title:'What will the AI do?', short:'AI use'},
+  {key:'data', title:'Data and technology', short:'Data & tech'},
+  {key:'impact', title:'Impact on people', short:'Impact'},
+  {key:'safeguards', title:'Safeguards already in place', short:'Safeguards'}
+];
+let wizardStarted = false;
+let wiz = null;
+
+function freshWizardState(prefill){
+  const p = prefill || {};
+  return {
+    step: 0,
+    profile: Object.assign({name:'', description:'', objective:'', sector:'', jurisdictions:[], autonomy:'', stage:'', users:'', stakeholders:[], impact:{}}, p.profile || {}),
+    ctx: Object.assign({}, p.ctx || {}),
+    inPlace: [...(p.inPlace || [])],
+    customScenarioText: p.customScenarioText || ''
+  };
+}
+function initWizard(prefill){
   wizardStarted = true;
-  currentStep = 0;
-  wizardAnswers = {};
-  customScenarioText = '';
+  wiz = freshWizardState(prefill);
   qs('#assessmentResult').hidden = true;
   qs('#assessmentResult').innerHTML = '';
-  renderStepper();
+  qs('.wizard-shell').hidden = false;
   renderWizardStep();
 }
-qs('#resetAssessment').addEventListener('click', initWizard);
+// Opens the assessment pre-filled (e.g. from an Ask NAVI conversation).
+function startAssessmentWith(prefill){
+  navigate('assessment');
+  initWizard(prefill);
+}
+qs('#resetAssessment').addEventListener('click', () => initWizard());
 
 function renderStepper(){
-  const stepper = qs('#stepper');
-  stepper.innerHTML = STEPS.map((s,i) => `
-    <li class="${i===currentStep?'active':i<currentStep?'done':''}">
-      <span class="num">${i<currentStep?'✓':i+1}</span> ${s.title.replace('Choose ','').replace('the ','')}
+  qs('#stepper').innerHTML = WIZ_STEPS.map((s,i) => `
+    <li class="${i===wiz.step?'active':i<wiz.step?'done':''}" ${i===wiz.step?'aria-current="step"':''}>
+      <span class="num" aria-hidden="true">${i<wiz.step?'✓':i+1}</span> ${s.short}<span class="sr-only">${i<wiz.step?' (completed)':''}</span>
     </li>`).join('');
 }
 
-function renderWizardStep(){
-  const step = STEPS[currentStep];
-  const body = qs('#wizardBody');
-  const selected = wizardAnswers[step.key];
-  body.innerHTML = `
-    <h3>Step ${currentStep+1} of ${STEPS.length} — ${step.title}</h3>
-    <p class="step-hint">${step.hint}</p>
-    <div class="option-grid">
-      ${step.options.map(o => `
-        <button type="button" class="option-card ${selected===o.id?'selected':''}" data-opt="${o.id}">
-          ${escapeHtml(o.label)}
-          ${o.tag ? `<span class="opt-tag">${escapeHtml(o.tag)}</span>` : ''}
-        </button>`).join('')}
-    </div>
-    ${ (step.key==='scenario') ? `
-    <div class="custom-field" id="customScenarioWrap" style="${selected==='custom' ? '' : 'display:none'}">
-      <label for="customScenarioInput" style="font-size:13px;color:var(--grey-500);display:block;margin-bottom:6px;">Describe the scenario</label>
-      <textarea id="customScenarioInput" rows="2" placeholder="e.g. AI reviewing supplier onboarding forms">${escapeHtml(customScenarioText)}</textarea>
-    </div>` : ''}
-  `;
-  qsa('.option-card', body).forEach(btn => {
-    btn.addEventListener('click', () => {
-      wizardAnswers[step.key] = btn.dataset.opt;
-      renderWizardStep();
-    });
-  });
-  const customInput = qs('#customScenarioInput', body);
-  if(customInput) customInput.addEventListener('input', (e) => customScenarioText = e.target.value);
+const optionCards = (name, list, selected, labelledBy) => `
+  <div class="option-grid" role="radiogroup" aria-labelledby="${labelledBy}">
+    ${list.map(o => `
+      <button type="button" class="option-card ${selected===o.id?'selected':''}" role="radio" aria-checked="${selected===o.id}" data-group="${name}" data-opt="${escapeHtml(o.id)}">
+        ${escapeHtml(o.label)}${o.tag ? `<span class="opt-tag">${escapeHtml(o.tag)}</span>` : ''}
+      </button>`).join('')}
+  </div>`;
+const checkGroup = (name, list, selected) => list.map(o => `
+  <label class="check-pill"><input type="checkbox" name="${name}" value="${escapeHtml(o.id)}" ${selected.includes(o.id)?'checked':''}> ${escapeHtml(o.label)}</label>`).join('');
 
-  qs('#wizardBack').style.visibility = currentStep === 0 ? 'hidden' : 'visible';
-  qs('#wizardNext').textContent = currentStep === STEPS.length - 1 ? 'Get recommendation' : 'Continue';
+function renderWizardStep(){
+  const step = WIZ_STEPS[wiz.step];
+  const body = qs('#wizardBody');
+  const p = wiz.profile;
+  let html = `<h3 id="wizStepTitle" tabindex="-1">Step ${wiz.step+1} of ${WIZ_STEPS.length} — ${step.title}</h3>`;
+  if(step.key === 'define'){
+    html += `<p class="step-hint">Describe the AI use case so the assessment and report make sense to someone reading them later. Avoid entering confidential details.</p>
+      <div class="wiz-form">
+        <div class="field-row"><label for="wzName">Use-case name <span class="req">(required)</span></label>
+          <input type="text" id="wzName" data-field="name" value="${escapeHtml(p.name)}" placeholder="e.g. AI shortlisting for graduate recruitment" maxlength="140"></div>
+        <div class="field-row"><label for="wzDesc">Short description</label>
+          <textarea id="wzDesc" data-field="description" rows="2" maxlength="1000" placeholder="What will the AI do, for whom, and how will its output be used?">${escapeHtml(p.description)}</textarea></div>
+        <div class="field-row two-col">
+          <div><label for="wzObjective">Business objective</label><input type="text" id="wzObjective" data-field="objective" value="${escapeHtml(p.objective)}" maxlength="300" placeholder="e.g. Reduce time-to-hire"></div>
+          <div><label for="wzSector">Industry or sector</label><select id="wzSector" data-field="sector"><option value="">Choose…</option>${SECTORS.map(s => `<option value="${s.id}" ${p.sector===s.id?'selected':''}>${escapeHtml(s.label)}</option>`).join('')}</select></div>
+        </div>
+        <fieldset class="field-row"><legend id="wzJurLabel">Where does your organisation operate, or where are the people affected? <span class="req">(required, choose all that apply)</span></legend>
+          <div class="check-pills">${checkGroup('wzJur', JURISDICTIONS, p.jurisdictions)}</div></fieldset>
+        <div class="field-row"><p class="legend-like" id="wzAutoLabel">How much does the AI decide on its own? <span class="req">(required)</span></p>
+          ${optionCards('autonomy', AUTONOMY, p.autonomy, 'wzAutoLabel')}</div>
+        <div class="field-row"><p class="legend-like" id="wzStageLabel">Deployment stage</p>
+          ${optionCards('stage', STAGES, p.stage, 'wzStageLabel')}</div>
+        <div class="field-row"><label for="wzUsers">Who will use it?</label>
+          <input type="text" id="wzUsers" data-field="users" value="${escapeHtml(p.users)}" maxlength="200" placeholder="e.g. Recruitment team"></div>
+        <fieldset class="field-row"><legend>Who could be affected?</legend>
+          <div class="check-pills">${checkGroup('wzStake', STAKEHOLDERS, p.stakeholders)}</div></fieldset>
+      </div>`;
+  } else if(step.key === 'use'){
+    html += `<p class="step-hint">Choose the closest match for each.</p>
+      <h4 class="wiz-sub" id="wzScenLabel">Which business process or information is involved?</h4>
+      ${optionCards('scenario', SCENARIOS, wiz.ctx.scenario, 'wzScenLabel')}
+      <div class="custom-field" id="customScenarioWrap" ${wiz.ctx.scenario==='custom' ? '' : 'hidden'}>
+        <label for="customScenarioInput">Describe the scenario</label>
+        <textarea id="customScenarioInput" rows="2" maxlength="300" placeholder="e.g. AI reviewing supplier onboarding forms">${escapeHtml(wiz.customScenarioText)}</textarea>
+      </div>
+      <h4 class="wiz-sub" id="wzUseLabel">What will the AI system do?</h4>
+      ${optionCards('useCase', USE_CASES, wiz.ctx.useCase, 'wzUseLabel')}`;
+  } else if(step.key === 'data'){
+    html += `<p class="step-hint">Choose the most sensitive data involved, the tool, and where the data is processed.</p>
+      <h4 class="wiz-sub" id="wzDataLabel">Most sensitive data involved</h4>${optionCards('dataType', DATA_TYPES, wiz.ctx.dataType, 'wzDataLabel')}
+      <h4 class="wiz-sub" id="wzToolLabel">Which AI tool will process it?</h4>${optionCards('tool', TOOLS, wiz.ctx.tool, 'wzToolLabel')}
+      <h4 class="wiz-sub" id="wzLocLabel">Where is the data processed or hosted?</h4>${optionCards('location', LOCATIONS, wiz.ctx.location, 'wzLocLabel')}`;
+  } else if(step.key === 'impact'){
+    if(p.stakeholders.includes('children') && !p.impact.children) p.impact.children = 'yes';
+    html += `<p class="step-hint">Answer "Not sure" if you don't know — NAVI will take the cautious view and list it as an assumption.</p>
+      ${IMPACT_QUESTIONS.map(q => `
+        <fieldset class="impact-q"><legend>${escapeHtml(q.label)}</legend>
+          <p class="impact-help">${escapeHtml(q.help)}</p>
+          <div class="seg">${['yes','no','unsure'].map(v => `<label><input type="radio" name="imp-${q.id}" value="${v}" ${p.impact[q.id]===v?'checked':''}> ${v==='unsure'?'Not sure':v[0].toUpperCase()+v.slice(1)}</label>`).join('')}</div>
+        </fieldset>`).join('')}`;
+  } else if(step.key === 'safeguards'){
+    html += `<p class="step-hint">Tick only what is actually in place today. NAVI compares this with what your use case needs to show the gaps and the remaining (residual) risk. Leave everything unticked if you're at the idea stage.</p>
+      <div class="safeguard-list">${getKB().controls.map(c => `
+        <label class="safeguard-item"><input type="checkbox" name="wzCtl" value="${c.id}" ${wiz.inPlace.includes(c.id)?'checked':''}>
+          <span><strong>${escapeHtml(c.label)}</strong><span class="sg-help">${escapeHtml(c.help)}</span></span></label>`).join('')}</div>`;
+  }
+  html += `<p class="form-error" id="wizardError" role="alert" hidden></p>`;
+  body.innerHTML = html;
+  // Clear the validation message as soon as the person starts correcting the step.
+  ['input','change','click'].forEach(ev => body.addEventListener(ev, e => { if(e.target.closest('input,select,textarea,.option-card')) qs('#wizardError').hidden = true; }));
+
+  // Wire inputs to wizard state
+  qsa('[data-field]', body).forEach(el => el.addEventListener('input', () => { wiz.profile[el.dataset.field] = el.value; }));
+  qsa('input[name="wzJur"]', body).forEach(el => el.addEventListener('change', () => { wiz.profile.jurisdictions = qsa('input[name="wzJur"]:checked', body).map(i => i.value); }));
+  qsa('input[name="wzStake"]', body).forEach(el => el.addEventListener('change', () => { wiz.profile.stakeholders = qsa('input[name="wzStake"]:checked', body).map(i => i.value); }));
+  qsa('input[name="wzCtl"]', body).forEach(el => el.addEventListener('change', () => { wiz.inPlace = qsa('input[name="wzCtl"]:checked', body).map(i => i.value); }));
+  IMPACT_QUESTIONS.forEach(q => qsa(`input[name="imp-${q.id}"]`, body).forEach(el => el.addEventListener('change', () => { wiz.profile.impact[q.id] = el.value; })));
+  qsa('.option-card', body).forEach(btn => btn.addEventListener('click', () => {
+    const g = btn.dataset.group;
+    if(g === 'autonomy' || g === 'stage') wiz.profile[g] = btn.dataset.opt; else wiz.ctx[g] = btn.dataset.opt;
+    qsa(`.option-card[data-group="${g}"]`, body).forEach(b => { const on = b === btn; b.classList.toggle('selected', on); b.setAttribute('aria-checked', String(on)); });
+    if(g === 'scenario'){ const w = qs('#customScenarioWrap', body); if(w) w.hidden = btn.dataset.opt !== 'custom'; }
+  }));
+  const customInput = qs('#customScenarioInput', body);
+  if(customInput) customInput.addEventListener('input', e => wiz.customScenarioText = e.target.value);
+
+  qs('#wizardBack').style.visibility = wiz.step === 0 ? 'hidden' : 'visible';
+  qs('#wizardNext').textContent = wiz.step === WIZ_STEPS.length - 1 ? 'Get assessment' : 'Continue';
   renderStepper();
 }
 
+function validateStep(){
+  const k = WIZ_STEPS[wiz.step].key, p = wiz.profile, missing = [];
+  if(k === 'define'){
+    if(!p.name.trim()) missing.push(['a use-case name', '#wzName']);
+    if(!p.jurisdictions.length) missing.push(['at least one country or region', 'input[name="wzJur"]']);
+    if(!p.autonomy) missing.push(['how much the AI decides on its own', '.option-card[data-group="autonomy"]']);
+  } else if(k === 'use'){
+    if(!wiz.ctx.scenario) missing.push(['the business process', '.option-card[data-group="scenario"]']);
+    if(!wiz.ctx.useCase) missing.push(['what the AI will do', '.option-card[data-group="useCase"]']);
+  } else if(k === 'data'){
+    if(!wiz.ctx.dataType) missing.push(['the data involved', '.option-card[data-group="dataType"]']);
+    if(!wiz.ctx.tool) missing.push(['the AI tool', '.option-card[data-group="tool"]']);
+    if(!wiz.ctx.location) missing.push(['where data is processed', '.option-card[data-group="location"]']);
+  } else if(k === 'impact'){
+    IMPACT_QUESTIONS.forEach(q => { if(!p.impact[q.id]) missing.push([`an answer to "${q.label}"`, `input[name="imp-${q.id}"]`]); });
+  }
+  const err = qs('#wizardError');
+  if(missing.length){
+    err.textContent = 'Please add ' + missing.map(m => m[0]).join(', ') + '.';
+    err.hidden = false;
+    const first = qs(missing[0][1], qs('#wizardBody'));
+    if(first) first.focus();
+    return false;
+  }
+  err.hidden = true;
+  return true;
+}
 qs('#wizardBack').addEventListener('click', () => {
-  if(currentStep > 0){ currentStep--; renderWizardStep(); }
+  if(wiz.step > 0){ wiz.step--; renderWizardStep(); qs('#wizStepTitle').focus(); }
 });
 qs('#wizardNext').addEventListener('click', () => {
-  const step = STEPS[currentStep];
-  if(!wizardAnswers[step.key]){
-    flashRequired();
-    return;
-  }
-  if(currentStep < STEPS.length - 1){
-    currentStep++;
-    renderWizardStep();
-  } else {
-    finishWizard();
-  }
+  if(!validateStep()) return;
+  if(wiz.step < WIZ_STEPS.length - 1){ wiz.step++; renderWizardStep(); qs('#wizStepTitle').focus(); }
+  else finishWizard();
 });
-function flashRequired(){
-  const body = qs('#wizardBody');
-  body.style.boxShadow = '0 0 0 2px ' + getComputedStyle(document.documentElement).getPropertyValue('--red');
-  setTimeout(()=> body.style.boxShadow = '', 400);
-}
 
 function finishWizard(){
-  const decision = computeDecision(wizardAnswers);
-  const label = wizardAnswers.scenario === 'custom' && customScenarioText
-    ? customScenarioText : decision.scenario.label;
-  renderResult(decision, qs('#assessmentResult'), label, true);
-  qs('#assessmentResult').hidden = false;
-  saveAssessment(decision, label, 'assessment');
-  qs('#assessmentResult').scrollIntoView({behavior:'smooth', block:'start'});
+  const profile = JSON.parse(JSON.stringify(wiz.profile));
+  if(wiz.ctx.scenario === 'custom' && wiz.customScenarioText.trim()) profile.customScenario = wiz.customScenarioText.trim();
+  const rec = buildRecord(wiz.ctx, profile, wiz.inPlace, {source:'assessment'});
+  const container = qs('#assessmentResult');
+  renderResult(rec, container, {withExport:true});
+  const bar = document.createElement('div');
+  bar.className = 'result-toolbar';
+  bar.innerHTML = `<p>Saved to <button class="link-btn" data-nav="decisions">My decisions</button>.</p>
+    <div class="export-row"><button class="btn btn-ghost btn-sm" id="editAnswers">Edit answers</button><button class="btn btn-ghost btn-sm" id="newAssessment">New assessment</button></div>`;
+  container.prepend(bar);
+  qs('#editAnswers', bar).addEventListener('click', () => {
+    container.hidden = true; qs('.wizard-shell').hidden = false; wiz.step = 0; renderWizardStep(); qs('#wizStepTitle').focus();
+  });
+  qs('#newAssessment', bar).addEventListener('click', () => { initWizard(); qs('#wizStepTitle').focus(); });
+  qs('.wizard-shell').hidden = true;
+  container.hidden = false;
+  rec.id = saveAssessment(rec);
+  container.scrollIntoView({behavior:'smooth', block:'start'});
+  const h = qs('.verdict-title', container); if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }
 }
 
 /* ---------------------------------------------------------------------- */
-/* RESULT RENDERING (shared by wizard + assistant + export)               */
+/* DECISION RECORDS                                                       */
+/* A record is everything needed to reproduce, report and export a        */
+/* decision: inputs (ctx, profile, safeguards) plus derived results.      */
 /* ---------------------------------------------------------------------- */
-function renderResult(d, container, scenarioLabel, withExport){
+function buildRecord(ctx, profile, inPlace, meta){
+  const decision = computeDecision(ctx, profile);
+  const governance = assessGovernance(decision, inPlace || []);
+  const p = decision.profile;
+  const label = (p.name && p.name.trim()) || p.customScenario || (meta && meta.label) || decision.scenario.label;
+  return Object.assign({
+    id: null, name: label, createdAt: new Date().toISOString(), source: 'assessment',
+    ctx: decision.ctx, profile: p, inPlace: [...(inPlace || [])], decision, governance
+  }, meta || {}, {name: label});
+}
+
+const optLabel = (list, id) => (list.find(o => o.id === id) || {}).label || '—';
+const verifBadge = v => v === 'official-text' ? '<span class="vb vb-official" title="Checked against the official text">Verified: official text</span>'
+  : v === 'secondary' ? '<span class="vb vb-secondary" title="Confirmed via a reputable secondary source">Verified: secondary source</span>'
+  : '<span class="vb vb-pending" title="Not yet independently verified">Pending verification</span>';
+const safeUrl = u => /^https:\/\//.test(u) ? u : '#';
+const extLink = (url, text) => `<a href="${escapeHtml(safeUrl(url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(text)}<span class="sr-only"> (opens in a new tab)</span></a>`;
+
+/* ---------------------------------------------------------------------- */
+/* RESULT RENDERING                                                       */
+/* ---------------------------------------------------------------------- */
+const PERMISSIBILITY_CLASS = {'prohibited-check':'red', 'restricted':'amber', 'none-identified':'green'};
+const READINESS_CLASS = {'ready':'green', 'partial':'amber', 'not-ready':'red'};
+
+function requirementRows(list){
+  return list.map(r => `
+    <tr>
+      <td><strong>${escapeHtml(r.framework)}</strong> ${escapeHtml(r.provision)}<br><span class="req-title">${escapeHtml(r.title)}</span>${r.restricts ? ' <span class="mini-flag">Restricts</span>' : ''}</td>
+      <td>${escapeHtml(r.jurisdiction)}</td>
+      <td><span class="status-tag ${r.kind==='mandatory'?'law':'voluntary'}">${r.kind==='mandatory'?'Mandatory where it applies':'Voluntary'}</span><br><span class="cell-note">${escapeHtml(r.frameworkType)}</span></td>
+      <td>${escapeHtml(r.why)}<details class="req-more"><summary>What it requires</summary><p>${escapeHtml(r.summary)}</p></details></td>
+      <td>${r.controls.length ? r.controls.map(c => escapeHtml(getKB().controlById[c].label)).join('; ') : '—'}</td>
+      <td>${extLink(r.source, 'Source')}<br>${verifBadge(r.verification)}<br><span class="cell-note">Checked ${escapeHtml(r.verified)}</span>${r.uncertainty ? `<p class="uncertain"><strong>Expert review:</strong> ${escapeHtml(r.uncertainty)}</p>` : ''}</td>
+    </tr>`).join('');
+}
+
+function renderResult(rec, container, opts){
+  opts = opts || {};
+  const d = rec.decision, g = rec.governance, p = rec.profile, kb = getKB();
   const id = 'res-' + uid();
+  const scope = [d.scenario.label, d.useCase.label, d.dataType.label, d.tool.label, d.location.label].join(' · ');
   container.innerHTML = `
-    <div class="verdict-card ${d.level}">
-      <div class="verdict-light"><span class="dot"></span></div>
+    <div class="verdict-card ${g.residual}">
+      <div class="verdict-light" aria-hidden="true"><span class="dot"></span></div>
       <div class="verdict-text">
-        <div class="verdict-title">${LEVEL_LABEL[d.level]}</div>
-        <div class="verdict-sub">${escapeHtml(scenarioLabel)} · ${d.useCase.label} · ${d.dataType.label} · ${d.tool.label} · ${d.location.label}</div>
+        <div class="verdict-kicker">Residual risk after your safeguards</div>
+        <div class="verdict-title">${LEVEL_LABEL[g.residual]}</div>
+        <div class="verdict-sub">${escapeHtml(rec.name)} · ${escapeHtml(scope)}</div>
       </div>
-      <div class="confidence" title="Sum of the five factor weights. ${THRESHOLD_AMBER}+ is elevated, ${THRESHOLD_RED}+ is high. Hard rules can raise the outcome regardless of score.">
-        <div class="conf-label">Rule score</div>
-        <div class="conf-value">${d.score} <span class="conf-of">/ ${SCORE_MAX}</span></div>
-        <div class="confidence-bar"><div class="confidence-bar-fill" style="width:${Math.round(d.score/SCORE_MAX*100)}%"></div></div>
-        <div class="conf-note">${d.ruleOverride ? 'Hard rule applied' : 'Elevated at ' + THRESHOLD_AMBER + ', high at ' + THRESHOLD_RED}</div>
+      <div class="confidence" title="Inherent rule score: sum of the five factor weights. ${THRESHOLD_AMBER}+ is elevated, ${THRESHOLD_RED}+ is high.">
+        <div class="conf-label">Inherent risk</div>
+        <div class="conf-value conf-small">${LEVEL_SHORT[g.inherent]}</div>
+        <div class="conf-note">Rule score ${d.score}/${SCORE_MAX}${d.ruleOverride ? ' · hard rule applied' : ''}</div>
       </div>
     </div>
     <p class="result-disclaimer" role="note">${escapeHtml(DISCLAIMER)}</p>
 
-    <div class="answer-grid">
-      <div class="answer-card">
-        <h4>Can we do this?</h4>
-        <p><strong>${LEVEL_LABEL[d.level]}.</strong> ${escapeHtml(d.nextAction)}</p>
-      </div>
-      <div class="answer-card">
-        <h4>Frameworks that may apply</h4>
-        <p class="card-note">Applicability depends on your jurisdiction and circumstances. See About NAVI for which are laws and which are voluntary.</p>
-        <div class="tag-row">${d.regulations.map(r=>`<span class="tag reg">${escapeHtml(r)}</span>`).join('')}</div>
-      </div>
-      <div class="answer-card">
-        <h4>Key risks</h4>
-        <ul>${d.risks.map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="answer-card">
-        <h4>Required safeguards</h4>
-        <ul>${d.safeguards.map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="answer-card">
-        <h4>Documents required</h4>
-        <ul>${d.documents.map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="answer-card">
-        <h4>Who is accountable? (suggested)</h4>
-        <ul>${d.approvers.map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="answer-card">
-        <h4>Personal data &amp; cross-border</h4>
-        <p>Personal data involved: <span class="${d.personalData?'badge-yes':'badge-no'}">${d.personalData?'Yes':'No'}</span>${d.special ? ' (special / health category)' : ''}</p>
-        <p>Cross-border implications: <span class="${d.crossBorder?'badge-yes':'badge-no'}">${d.crossBorder?'Yes':'No'}</span></p>
-        <p>Human oversight required: <span class="${d.humanOversight?'badge-yes':'badge-no'}">${d.humanOversight?'Yes':'No'}</span></p>
-      </div>
-      <div class="answer-card">
-        <h4>Retention &amp; monitoring</h4>
-        <p><strong>Retention:</strong> ${escapeHtml(d.retention)}</p>
-        <p><strong>Monitoring:</strong> ${escapeHtml(d.monitoring)}</p>
-      </div>
-      <div class="answer-card">
-        <h4>Sustainability impact</h4>
-        <p><span class="sustain-pill ${d.sustainability.level}">${d.sustainability.level} resource intensity</span></p>
-        <ul>${d.sustainability.recommendations.map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="answer-card">
-        <h4>Cyber security impact</h4>
-        <p><span class="security-pill ${d.security.level}">${d.security.level} security risk</span></p>
-        <ul>${d.security.recommendations.map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
+    <div class="summary-tiles">
+      <div class="sum-tile ${PERMISSIBILITY_CLASS[g.permissibility.level]}"><h4>Can we do this?</h4><p><strong>${escapeHtml(g.permissibility.label)}</strong></p>${g.permissibility.items.length ? `<ul>${g.permissibility.items.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul>` : ''}</div>
+      <div class="sum-tile ${READINESS_CLASS[g.readiness]}"><h4>Governance readiness</h4><p><strong>${READINESS_LABEL[g.readiness]}</strong></p><p class="cell-note">${g.requiredControls.length - g.gaps.length} of ${g.requiredControls.length} required safeguards in place.</p></div>
+      <div class="sum-tile ${g.residual}"><h4>Inherent → residual risk</h4><p><strong>${LEVEL_SHORT[g.inherent]} → ${LEVEL_SHORT[g.residual]}</strong></p><p class="cell-note">${escapeHtml(g.residualReason)}</p></div>
     </div>
 
-    <div class="explain-panel">
-      <h3>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        Explain your decision
-      </h3>
-      <div class="explain-block">
-        <h4>Frameworks that may apply</h4>
-        <div class="tag-row">${d.regulations.map(r=>`<span class="tag reg">${escapeHtml(r)}</span>`).join('')}</div>
-      </div>
-      <div class="explain-block">
-        <h4>Why this decision was reached — governance rules triggered</h4>
-        <ul class="rule-list">${d.reasons.map(r=>`<li><span class="rule-dot"></span>${escapeHtml(r.text)}</li>`).join('')}</ul>
-      </div>
-      <div class="explain-block">
-        <h4>Board oversight questions</h4>
-        <ul class="rule-list">${d.boardQuestions.map(q=>`<li><span class="rule-dot"></span>${escapeHtml(q)}</li>`).join('')}</ul>
-      </div>
-      <div class="explain-block">
-        <h4>Required controls before proceeding</h4>
-        <ul class="rule-list">${d.safeguards.map(q=>`<li><span class="rule-dot"></span>${escapeHtml(q)}</li>`).join('')}</ul>
-      </div>
-      <div class="explain-block">
-        <h4>Cyber security considerations</h4>
-        <p style="margin-bottom:8px;"><span class="security-pill ${d.security.level}">${d.security.level} security risk</span></p>
-        <ul class="rule-list">${d.security.reasons.map(r=>`<li><span class="rule-dot"></span>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="explain-block">
-        <h4>Sustainability considerations</h4>
-        <p style="margin-bottom:8px;"><span class="sustain-pill ${d.sustainability.level}">${d.sustainability.level} resource intensity</span></p>
-        <ul class="rule-list">${d.sustainability.reasons.map(r=>`<li><span class="rule-dot"></span>${escapeHtml(r)}</li>`).join('')}</ul>
-      </div>
-      <div class="explain-block">
-        <h4>Indicative readiness score (Lower risk = 100, Elevated = 60, High = 25)</h4>
-        <div class="maturity-score-row">
-          <div class="maturity-score-num">${d.maturityContribution}</div>
-          <div class="maturity-score-bar"><div class="maturity-score-fill" style="width:${d.maturityContribution}%"></div></div>
-        </div>
-      </div>
+    <section class="card">
+      <h3>What must we do? Requirements that may apply</h3>
+      <p class="card-note">Based on: ${p.jurisdictions.map(j => escapeHtml(optLabel(JURISDICTIONS, j))).join(', ')}${p.assumed && p.assumed.length ? ' (assumed)' : ''}. Mandatory items are legal obligations <em>where they apply to you</em>; voluntary items are standards and good practice. Knowledge base version ${escapeHtml(g.knowledgeBaseVersion)}.</p>
+      <h4 class="table-title">Legal requirements (${g.mandatory.length})</h4>
+      ${g.mandatory.length ? `<div class="table-wrap"><table class="data-table req-table"><thead><tr><th scope="col">Requirement</th><th scope="col">Jurisdiction</th><th scope="col">Status</th><th scope="col">Why it may apply</th><th scope="col">Controls</th><th scope="col">Source</th></tr></thead><tbody>${requirementRows(g.mandatory)}</tbody></table></div>` : '<p class="empty-note">No legal requirements were triggered in NAVI’s knowledge base for these answers. That doesn’t mean none apply; see the assumptions below.</p>'}
+      <details class="voluntary-block"><summary>Standards and good practice (${g.voluntary.length})${g.watch.length ? ` and watch list (${g.watch.length})` : ''}</summary>
+        <div class="table-wrap"><table class="data-table req-table"><thead><tr><th scope="col">Framework</th><th scope="col">Jurisdiction</th><th scope="col">Status</th><th scope="col">Why it is relevant</th><th scope="col">Controls</th><th scope="col">Source</th></tr></thead><tbody>${requirementRows(g.voluntary.concat(g.watch))}</tbody></table></div>
+      </details>
+    </section>
+
+    <div class="answer-grid">
+      <section class="answer-card"><h4>Key risks and potential impacts</h4><ul>${d.risks.map(r => `<li>${escapeHtml(r)}</li>`).join('')}</ul></section>
+      <section class="answer-card"><h4>Safeguards</h4>
+        <p class="mini-head">In place (${g.inPlace.length + g.extraInPlace.length})</p>
+        ${g.inPlace.length + g.extraInPlace.length ? `<ul class="tick-list">${g.inPlace.concat(g.extraInPlace).map(c => `<li>${escapeHtml(kb.controlById[c].label)}</li>`).join('')}</ul>` : '<p class="cell-note">None recorded.</p>'}
+        <p class="mini-head">Gaps (${g.gaps.length})</p>
+        ${g.gaps.length ? `<ul class="gap-list">${g.gaps.map(c => `<li>${escapeHtml(kb.controlById[c].label)}${g.criticalGaps.includes(c) ? ' <span class="mini-flag">Critical</span>' : ''}</li>`).join('')}</ul>` : '<p class="cell-note">No gaps against the required safeguards.</p>'}
+      </section>
     </div>
+
+    ${g.actions.length ? `<section class="card"><h3>Recommended actions</h3>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Priority</th><th scope="col">Action</th><th scope="col">Suggested owner</th><th scope="col">Needed because</th></tr></thead>
+      <tbody>${g.actions.map(a => `<tr><td><span class="prio prio-${a.priority.toLowerCase()}">${a.priority}</span></td><td>${escapeHtml(a.action)}</td><td>${escapeHtml(a.owner)}</td><td class="cell-note">${a.because.map(escapeHtml).join('; ')}</td></tr>`).join('')}</tbody></table></div></section>` : ''}
+
+    <div class="answer-grid">
+      <section class="answer-card"><h4>Who is accountable? (suggested)</h4>
+        <p class="mini-head">Decision owner(s)</p><ul>${d.approvers.map(a => `<li>${escapeHtml(a)}</li>`).join('')}</ul>
+        ${g.actions.length ? `<p class="mini-head">Owners of open actions</p><ul>${[...new Set(g.actions.map(a => a.owner))].map(o => `<li>${escapeHtml(o)}</li>`).join('')}</ul>` : ''}
+      </section>
+      <section class="answer-card"><h4>Reviews and approvals</h4><ul>${g.reviews.map(r => `<li>${escapeHtml(r)}</li>`).join('')}</ul>
+        ${g.specialists.length ? `<p class="mini-head">Specialist advice recommended</p><ul>${g.specialists.map(s => `<li><strong>${escapeHtml(s.who)}</strong> — ${escapeHtml(s.why)}</li>`).join('')}</ul>` : ''}
+      </section>
+    </div>
+
+    <section class="card"><h3>Assumptions and limitations</h3>
+      <ul class="plain-list">${g.assumptions.map(a => `<li>${escapeHtml(a)}</li>`).join('')}
+        <li>The inherent risk uses NAVI’s documented rule weights; residual risk depends on the safeguards you reported, which NAVI has not verified.</li>
+        <li>NAVI gives general, rules-based guidance. It is not legal advice and does not approve the use case.</li></ul>
+    </section>
+
+    <details class="explain-panel">
+      <summary><h3>How NAVI reached this — full explanation</h3></summary>
+      <div class="explain-block"><h4>Inherent risk: the rules triggered</h4>
+        <ul class="rule-list">${d.reasons.map(r => `<li><span class="rule-dot"></span>${escapeHtml(r.text)}</li>`).join('')}</ul></div>
+      <div class="explain-block"><h4>Residual risk</h4><p>${escapeHtml(g.residualReason)}</p></div>
+      <div class="explain-block"><h4>Board oversight questions</h4>
+        <ul class="rule-list">${d.boardQuestions.map(q => `<li><span class="rule-dot"></span>${escapeHtml(q)}</li>`).join('')}</ul></div>
+      <div class="explain-block"><h4>Cyber security</h4><p><span class="security-pill ${d.security.level}">${d.security.level} security risk</span></p>
+        <ul class="rule-list">${d.security.reasons.concat(d.security.recommendations).map(r => `<li><span class="rule-dot"></span>${escapeHtml(r)}</li>`).join('')}</ul></div>
+      <div class="explain-block"><h4>Sustainability</h4><p><span class="sustain-pill ${d.sustainability.level}">${d.sustainability.level} resource intensity</span></p>
+        <ul class="rule-list">${d.sustainability.reasons.concat(d.sustainability.recommendations).map(r => `<li><span class="rule-dot"></span>${escapeHtml(r)}</li>`).join('')}</ul></div>
+      <div class="explain-block"><h4>Retention and monitoring</h4><p><strong>Retention:</strong> ${escapeHtml(d.retention)}</p><p><strong>Monitoring:</strong> ${escapeHtml(d.monitoring)}</p></div>
+    </details>
     <div id="docRefWrap-${id}"></div>
     <div id="qfWrap-${id}"></div>
 
-    ${withExport ? `
-    <div class="card">
-      <h3>Export</h3>
+    ${opts.withExport ? `
+    <section class="card">
+      <h3>Report and export</h3>
       <div class="export-row">
-        <button class="btn" data-export="assessment" data-id="${id}">Governance Assessment Report</button>
-        <button class="btn" data-export="summary" data-id="${id}">Decision Summary</button>
-        <button class="btn" data-export="risk-register" data-id="${id}">Risk Register Entry</button>
-        <button class="btn" data-export="board" data-id="${id}">Board Briefing</button>
+        <button class="btn btn-primary" data-report="${id}">Decision &amp; action report (print or save as PDF)</button>
+        <button class="btn" data-json="${id}">Download decision record (JSON)</button>
       </div>
-    </div>` : ''}
+      <details class="legacy-exports"><summary>Other formats</summary>
+        <div class="export-row">
+          <button class="btn" data-export="summary" data-id="${id}">Decision summary</button>
+          <button class="btn" data-export="risk-register" data-id="${id}">Risk register entry</button>
+          <button class="btn" data-export="board" data-id="${id}">Board briefing</button>
+        </div>
+      </details>
+    </section>` : ''}
   `;
-  if(withExport){
-    exportCache[id] = {decision: d, scenarioLabel};
-    qsa('[data-export]', container).forEach(btn => {
-      btn.addEventListener('click', () => openPrintView(exportCache[btn.dataset.id].decision, exportCache[btn.dataset.id].scenarioLabel, btn.dataset.export));
+  if(opts.withExport){
+    exportCache[id] = rec;
+    qsa('[data-export]', container).forEach(btn => btn.addEventListener('click', () => openPrintView(exportCache[btn.dataset.id].decision, exportCache[btn.dataset.id].name, btn.dataset.export)));
+    qs(`[data-report="${id}"]`, container).addEventListener('click', () => openDecisionReport(exportCache[id]));
+    qs(`[data-json="${id}"]`, container).addEventListener('click', () => {
+      const r = exportCache[id];
+      downloadJson('navi-decision-' + (r.name || 'record').toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,40) + '.json', recordToExport(r));
     });
   }
   const docRefWrap = qs('#docRefWrap-'+id, container);
-  if(docRefWrap){
-    const query = [scenarioLabel, d.scenario.label, d.useCase.label, d.dataType.label, d.tool.label, d.location.label].join(' ');
-    renderDocRefs(docRefWrap, query, {label:'assessment', limit:3});
-  }
+  if(docRefWrap) renderDocRefs(docRefWrap, [rec.name, p.description, scope].join(' '), {label:'assessment', limit:3});
   const qfWrap = qs('#qfWrap-'+id, container);
-  if(qfWrap) attachQuickFeedback(qfWrap, 'assessment', scenarioLabel);
+  if(qfWrap) attachQuickFeedback(qfWrap, 'assessment', rec.name);
 }
 const exportCache = {};
 
+// Structured export of a decision record (stable, documented shape: see docs/DATA-MODEL.md).
+function recordToExport(r){
+  const g = r.governance, d = r.decision, kb = getKB();
+  return {
+    schema: 'navi.decision-record', schemaVersion: 1, app: 'NAVI Free', exportedAt: new Date().toISOString(),
+    knowledgeBaseVersion: g.knowledgeBaseVersion,
+    record: {
+      id: r.id, name: r.name, createdAt: r.createdAt, source: r.source,
+      useCase: {
+        name: r.profile.name || r.name, description: r.profile.description || '', objective: r.profile.objective || '',
+        sector: r.profile.sector || null, jurisdictions: r.profile.jurisdictions, autonomy: r.profile.autonomy || null,
+        stage: r.profile.stage || null, users: r.profile.users || '', stakeholders: r.profile.stakeholders || [],
+        impact: r.profile.impact || {}, factors: r.ctx
+      },
+      assessment: {
+        inherentRisk: g.inherent, ruleScore: d.score, ruleScoreMax: SCORE_MAX, hardRule: d.ruleOverride || null,
+        residualRisk: g.residual, residualReason: g.residualReason, readiness: g.readiness, permissibility: g.permissibility,
+        risks: d.risks
+      },
+      requirements: g.requirements.map(q => ({id:q.id, framework:q.framework, provision:q.provision, title:q.title, jurisdiction:q.jurisdiction,
+        kind:q.kind, why:q.why, controls:q.controls, uncertainty:q.uncertainty, source:q.source, verified:q.verified, verification:q.verification})),
+      safeguardsInPlace: g.inPlace.concat(g.extraInPlace).map(c => ({id:c, label:kb.controlById[c].label})),
+      controlGaps: g.gaps.map(c => ({id:c, label:kb.controlById[c].label, critical:g.criticalGaps.includes(c)})),
+      actions: g.actions, accountableRoles: d.approvers, reviews: g.reviews, specialists: g.specialists,
+      assumptions: g.assumptions, nextSteps: g.nextSteps, references: g.references
+    }
+  };
+}
+
 /* ---------------------------------------------------------------------- */
-/* PERSISTENCE / DASHBOARD                                                */
+/* PERSISTENCE                                                            */
 /* ---------------------------------------------------------------------- */
 const STORAGE_KEY = 'aigov_assessments_v1';
 function loadAssessments(){
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch(e){ return []; }
 }
-function saveAssessment(d, scenarioLabel, source){
+// Stores inputs (to reproduce the decision with the current knowledge base) plus a summary
+// snapshot for lists and the dashboard. Backward compatible with pre-2.0 records.
+function saveAssessment(rec){
+  const d = rec.decision, g = rec.governance;
   const list = loadAssessments();
   const id = uid();
   list.unshift({
-    id, ts: new Date().toISOString(), scenarioLabel, source: source || 'assessment', ctx: d.ctx,
+    id, version: 2, ts: rec.createdAt, scenarioLabel: rec.name, source: rec.source || 'assessment',
+    ctx: rec.ctx, profile: stripProfile(rec.profile), inPlace: rec.inPlace,
     scenario: d.scenario.label, useCase: d.useCase.label, dataType: d.dataType.label,
     tool: d.tool.label, location: d.location.label, level: d.level, score: d.score,
+    residual: g.residual, readiness: g.readiness, gaps: g.gaps,
     maturity: d.maturityContribution, risks: d.risks, regulations: d.regulations
   });
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list.slice(0,200))); } catch(e){ return null; }
   return id;
+}
+function stripProfile(p){ const c = Object.assign({}, p); delete c.assumed; return c; }
+function recordFromSaved(r){
+  return Object.assign(buildRecord(ctxFromRecord(r), r.profile, r.inPlace || [], {source: r.source || 'assessment', label: r.scenarioLabel || r.scenario}),
+    {id: r.id, createdAt: r.ts, name: (r.profile && r.profile.name) || r.scenarioLabel || r.scenario});
 }
 
 /* ---------------------------------------------------------------------- */
@@ -2104,7 +2666,7 @@ function renderDecisions(){
   el.innerHTML = list.map(r => `
     <article class="decision-item">
       <div class="decision-main">
-        <span class="outcome-pill ${r.level}">${LEVEL_SHORT[r.level] || r.level}</span>
+        <span class="outcome-pill ${r.residual || r.level}">${LEVEL_SHORT[r.residual || r.level] || r.level}${r.residual ? ' (residual)' : ''}</span>
         <h3 class="decision-title">${escapeHtml(r.scenarioLabel || r.scenario)}</h3>
         <p class="decision-meta">${escapeHtml(fmtDate(r.ts))} &middot; ${r.source === 'assistant' ? 'Saved from Ask NAVI' : 'Assessment'} &middot; ${escapeHtml(r.useCase)} &middot; ${escapeHtml(r.dataType)} &middot; ${escapeHtml(r.tool)} &middot; ${escapeHtml(r.location)}</p>
       </div>
@@ -2116,10 +2678,12 @@ function renderDecisions(){
   qsa('[data-open-decision]', el).forEach(btn => btn.addEventListener('click', () => {
     const r = loadAssessments().find(x => x.id === btn.dataset.openDecision);
     if(!r) return;
-    const d = computeDecision(ctxFromRecord(r));
+    const rec = recordFromSaved(r);
     const detail = qs('#decisionDetail');
-    detail.innerHTML = `<div class="detail-head"><h3>${escapeHtml(r.scenarioLabel || r.scenario)}</h3><button class="btn btn-ghost btn-sm" id="closeDecision">Close</button></div><div class="detail-body"></div>`;
-    renderResult(d, qs('.detail-body', detail), r.scenarioLabel || r.scenario, true);
+    detail.innerHTML = `<div class="detail-head"><h3>${escapeHtml(rec.name)}</h3><button class="btn btn-ghost btn-sm" id="closeDecision">Close</button></div>
+      ${r.version === 2 ? '' : '<p class="notice" role="note">Saved before NAVI 2.0: only the five assessment factors were recorded, so jurisdiction and safeguards are assumed. Re-run the assessment for a complete result.</p>'}
+      <div class="detail-body"></div>`;
+    renderResult(rec, qs('.detail-body', detail), {withExport:true});
     detail.hidden = false;
     qs('#closeDecision').addEventListener('click', () => { detail.hidden = true; btn.focus(); });
     detail.scrollIntoView({behavior:'smooth', block:'start'});
@@ -2686,7 +3250,7 @@ const GUIDE_SECTIONS = [
     mistakes:['Rating all uses of a given AI tool identically regardless of data sensitivity.','Treating a vendor\'s security certification as sufficient risk mitigation on its own.'],
     controls:['Mandatory risk scoring at intake using a consistent methodology.','Independent second-line review of high-risk use cases.']},
   {id:'compliance', title:'Compliance', icon:'check',
-    overview:'AI use must be mapped against applicable law — POPIA, GDPR where relevant, sector regulation and the emerging EU AI Act — with clear ownership for monitoring regulatory change.',
+    overview:'AI use must be mapped against applicable law — POPIA, GDPR where relevant, sector regulation and the EU AI Act (in force since 2024 and applying in phases) — with clear ownership for monitoring regulatory change.',
     questions:['Which regulations apply to this specific use case and jurisdiction?','Who tracks regulatory change relevant to AI?','Is there a documented lawful basis for each personal-data use case?'],
     principles:['Compliance obligations follow the data and the data subject, not the vendor\'s headquarters.','Regulatory mapping must be revisited as AI-specific law matures.'],
     good:['Maintain a regulatory mapping matrix per use case.','Involve legal/compliance at intake, not only before launch.'],
@@ -2770,7 +3334,7 @@ const GUIDE_SECTIONS = [
     mistakes:['No review cadence defined after initial approval.','Monitoring system uptime but not output quality or bias drift.'],
     controls:['Monitoring plan required as part of every use case approval.','Defined suspension trigger if monitoring reveals material drift or incidents.']},
   {id:'sustainability', title:'Sustainability', icon:'leaf',
-    overview:'AI systems consume energy, water and hardware resources at every stage — training, hosting and inference. Sustainability governance treats this environmental footprint as a standing item of corporate governance and ESG reporting, alongside the King V duty to have regard for the organisation\u2019s impact on the environment and the OECD AI Principles\u2019 call for AI to support inclusive growth and sustainable development.',
+    overview:'AI systems consume energy, water and hardware resources at every stage — training, hosting and inference. Sustainability governance treats this environmental footprint as a standing item of corporate governance and ESG reporting, alongside King V\u2019s expectation (a voluntary code) that organisations have regard for the organisation\u2019s impact on the environment and the OECD AI Principles\u2019 call for AI to support inclusive growth and sustainable development.',
     questions:['What is the estimated energy, water and hardware footprint of this AI use case, and has it been disclosed?','Does the organisation prefer smaller, purpose-built models over larger general-purpose models where either would do the job?','Is AI-related resource consumption included in the organisation\u2019s broader ESG and carbon-reduction reporting?','What is the end-of-life and e-waste plan for any dedicated AI hardware?'],
     principles:['Sustainability due diligence applies to AI infrastructure exactly as it does to any other major operational investment.','The most capable model is not automatically the right choice — right-sizing the model to the task is itself a sustainability control.','Vendor transparency on energy sourcing and efficiency should be a genuine procurement criterion, not a marketing checkbox.'],
     good:['Request data-centre energy-efficiency (e.g. PUE) and renewable-energy sourcing disclosures from AI vendors during procurement.','Default to smaller or approved internal models for low-complexity tasks such as summarisation or classification.','Include AI resource consumption as a line item in annual ESG and sustainability reporting.','Batch, cache or rate-limit high-volume AI use cases to avoid unnecessary repeat computation.'],
@@ -3089,29 +3653,126 @@ function inferFromText(text){
 }
 
 const assistantChat = qs('#assistantChat');
+
+/* Ask NAVI is a guided, rules-based conversation. NAVI first works out what */
+/* it can from the question, then asks targeted follow-up questions for the  */
+/* facts that change the answer (jurisdiction, data, tool, autonomy, human   */
+/* review, fairness). Every question can be skipped; skipped answers become  */
+/* stated, cautious assumptions.                                             */
+const FOLLOW_UPS = [
+  {id:'jurisdiction', text:'Which countries are involved — where your organisation operates and where the affected people are?',
+    when: c => !c.profile.jurisdictions.length,
+    options: [
+      {label:'South Africa only', apply: c => c.profile.jurisdictions = ['za']},
+      {label:'South Africa and the EU', apply: c => c.profile.jurisdictions = ['za','eu']},
+      {label:'EU only', apply: c => c.profile.jurisdictions = ['eu']},
+      {label:'Another country', apply: c => c.profile.jurisdictions = ['other']}
+    ],
+    match: t => /south africa/i.test(t) && /\beu\b|europe/i.test(t) ? 1 : /south africa|\bsa\b|\bza\b/i.test(t) ? 0 : /\beu\b|europe/i.test(t) ? 2 : /uk|united kingdom|us\b|united states|other|elsewhere/i.test(t) ? 3 : -1,
+    skip: c => { c.profile.jurisdictions = ['za']; c.assumed.push('Assumed a South African organisation with no EU connection.'); }},
+  {id:'location', text:'Where will the data be processed or hosted?',
+    when: c => !c.matched.location,
+    options: [
+      {label:'South Africa', apply: c => c.ctx.location = 'za'}, {label:'The EU', apply: c => c.ctx.location = 'eu'},
+      {label:'United States', apply: c => c.ctx.location = 'us'}, {label:'Elsewhere', apply: c => c.ctx.location = 'other'},
+      {label:'Don’t know', apply: c => c.ctx.location = 'unknown'}
+    ],
+    match: t => /south africa|locally|\bza\b/i.test(t) ? 0 : /\beu\b|europe/i.test(t) ? 1 : /\bus\b|united states|america/i.test(t) ? 2 : /elsewhere|other|uk\b/i.test(t) ? 3 : /know|unsure|not sure/i.test(t) ? 4 : -1,
+    skip: c => { c.ctx.location = 'unknown'; c.assumed.push('Processing location unknown, so cross-border rules are assumed to apply.'); }},
+  {id:'tool', text:'Which AI tool will be used?',
+    when: c => !c.matched.tool,
+    options: [
+      {label:'A free or public AI tool (e.g. ChatGPT, Gemini)', apply: c => c.ctx.tool = 'external_public'},
+      {label:'Microsoft Copilot', apply: c => c.ctx.tool = 'copilot'},
+      {label:'ChatGPT Enterprise', apply: c => c.ctx.tool = 'chatgpt_ent'},
+      {label:'Azure OpenAI', apply: c => c.ctx.tool = 'azure_openai'},
+      {label:'An approved internal tool', apply: c => c.ctx.tool = 'internal_ai'},
+      {label:'A custom-built model', apply: c => c.ctx.tool = 'custom_model'}
+    ],
+    match: t => { const r = inferFromText(t); return r.matched.tool ? ['external_public','copilot','chatgpt_ent','azure_openai','internal_ai','custom_model'].indexOf(r.tool) : -1; },
+    skip: c => { c.ctx.tool = 'external_public'; c.assumed.push('Tool not specified, so NAVI took the cautious view that it may be a public AI tool.'); }},
+  {id:'dataType', text:'What information will the AI use?',
+    when: c => !c.matched.dataType,
+    options: [
+      {label:'Customer personal information', apply: c => c.ctx.dataType = 'customer'},
+      {label:'Employee or job-applicant information', apply: c => c.ctx.dataType = 'employee'},
+      {label:'Health or other special personal information', apply: c => c.ctx.dataType = 'special_personal'},
+      {label:'Financial data', apply: c => c.ctx.dataType = 'financial'},
+      {label:'Confidential business information', apply: c => c.ctx.dataType = 'confidential'},
+      {label:'Only public or non-personal information', apply: c => c.ctx.dataType = 'public'}
+    ],
+    match: t => /health|medical|biometric|special|race|religio/i.test(t) ? 2 : /employee|applicant|candidate|staff|cv/i.test(t) ? 1 : /customer|client|personal/i.test(t) ? 0 : /financ/i.test(t) ? 3 : /confidential/i.test(t) ? 4 : /public|non-personal|anonym/i.test(t) ? 5 : -1,
+    skip: c => { c.ctx.dataType = 'personal'; c.assumed.push('Data not specified, so NAVI assumed personal information is involved.'); }},
+  {id:'autonomy', text:'Does the AI recommend, with a person making the final decision, or does it decide on its own?',
+    when: c => c.automated || c.employment,
+    options: [
+      {label:'It recommends; a person decides', apply: c => c.profile.autonomy = 'recommend'},
+      {label:'It decides or acts automatically', apply: c => c.profile.autonomy = 'auto'},
+      {label:'It only assists (drafts, summarises)', apply: c => c.profile.autonomy = 'assist'}
+    ],
+    match: t => /automatic|on its own|decides|final decision/i.test(t) && !/person decides|human decides/i.test(t) ? 1 : /recommend|person|human|review/i.test(t) ? 0 : /assist|draft|summar/i.test(t) ? 2 : -1,
+    skip: c => { c.profile.autonomy = 'auto'; c.assumed.push('Not stated whether a person makes the final decision, so NAVI assumed the AI decides automatically.'); }},
+  {id:'review', text:'Is meaningful human review in place — a competent person who checks the AI’s output and can override it before it affects anyone?',
+    when: c => (c.automated || c.employment) && c.profile.autonomy !== 'auto',
+    options: [
+      {label:'Yes', apply: c => addOnce(c.inPlace, 'C-HUMAN')},
+      {label:'No, not yet', apply: () => {}}
+    ],
+    match: t => /^\s*(yes|yep|y)\b|in place|we do/i.test(t) ? 0 : /^\s*no\b|not yet|none/i.test(t) ? 1 : -1,
+    skip: c => c.assumed.push('Human review not confirmed, so NAVI treated it as a gap.')},
+  {id:'fairness', text:'How are fairness and discrimination risks managed?',
+    when: c => c.employment || c.automated,
+    options: [
+      {label:'Outputs are tested for bias and accuracy', apply: c => addOnce(c.inPlace, 'C-BIAS')},
+      {label:'Not yet', apply: () => {}}
+    ],
+    match: t => /test|audit|monitor|validated/i.test(t) && !/not yet|haven/i.test(t) ? 0 : /not yet|no\b|none|haven/i.test(t) ? 1 : -1,
+    skip: c => c.assumed.push('Bias testing not confirmed, so NAVI treated it as a gap.')}
+];
+function addOnce(arr, v){ if(!arr.includes(v)) arr.push(v); }
+
+function inferJurisdictions(text){
+  const j = [];
+  if(/south africa|south african|\bsa\b/i.test(text)) j.push('za');
+  if(/\beu\b|europe|european/i.test(text)) j.push('eu');
+  return j;
+}
+
+let convo = null;   // the conversation awaiting answers, if any
+
 qs('#assistantForm').addEventListener('submit', (e) => {
   e.preventDefault();
   const input = qs('#assistantInput');
   const text = input.value.trim();
   if(!text) return;
-  askAssistant(text);
   input.value = '';
+  if(convo && convo.pending) answerFollowUpByText(text);
+  else askAssistant(text);
 });
-qsa('.chip').forEach(chip => chip.addEventListener('click', () => askAssistant(chip.dataset.example)));
+qsa('.chip').forEach(chip => chip.addEventListener('click', () => { convo = null; askAssistant(chip.dataset.example); }));
+
+function postUser(text){
+  const m = document.createElement('div');
+  m.className = 'chat-msg chat-user';
+  m.textContent = text;
+  assistantChat.appendChild(m);
+}
+function postBot(html){
+  const m = document.createElement('div');
+  m.className = 'chat-msg chat-bot';
+  m.innerHTML = html;
+  assistantChat.appendChild(m);
+  assistantChat.scrollTop = assistantChat.scrollHeight;
+  return m;
+}
 
 function askAssistant(text){
-  const userMsg = document.createElement('div');
-  userMsg.className = 'chat-msg chat-user';
-  userMsg.textContent = text;
-  assistantChat.appendChild(userMsg);
-
+  postUser(text);
   const ctx = inferFromText(text);
-  const matched = ctx.matched || {};
+  const matched = Object.assign({}, ctx.matched || {});
   if(!Object.keys(matched).length){
-    // Nothing recognisable: ask for the facts instead of presenting a verdict built on defaults.
-    const ask = document.createElement('div');
-    ask.className = 'chat-msg chat-bot';
-    ask.innerHTML = `
+    convo = null;
+    postBot(`
       <p><strong>I need a bit more detail to give useful guidance.</strong> I couldn't identify an AI use case in that question. Try including:</p>
       <ul class="plain-list">
         <li>What the AI will do (e.g. summarise, score, shortlist, generate content)</li>
@@ -3119,62 +3780,130 @@ function askAssistant(text){
         <li>Which tool (e.g. ChatGPT, Microsoft Copilot, an approved internal tool)</li>
         <li>Where the data is processed (e.g. South Africa, the EU, the US)</li>
       </ul>
-      <p>For example: <em>"Can we use ChatGPT to summarise customer complaints containing personal information?"</em> Or choose each factor yourself in <button class="link-btn" data-nav="assessment">Assess a use case</button>.</p>`;
-    assistantChat.appendChild(ask);
-    assistantChat.scrollTop = assistantChat.scrollHeight;
+      <p>For example: <em>"Can we use ChatGPT to summarise customer complaints containing personal information?"</em> Or choose each factor yourself in <button class="link-btn" data-nav="assessment">Assess a use case</button>.</p>`);
     return;
   }
-  const decision = computeDecision(ctx);
-  const factor = (key, label) => matched[key]
-    ? escapeHtml(label)
-    : `<span class="assumed" title="Not mentioned in your question \u2014 NAVI assumed this default">${escapeHtml(label)} (assumed)</span>`;
-  const assumedCount = ['scenario','useCase','dataType','tool','location'].filter(k => !matched[k]).length;
+  const scen = findOpt(SCENARIOS, ctx.scenario), uc = findOpt(USE_CASES, ctx.useCase);
+  // Recruitment, performance, medical and customer-correspondence scenarios already imply the
+  // kind of data involved, so NAVI doesn't ask about it again (it's shown in "Assessed as").
+  if(!matched.dataType && matched.scenario && ['employee_performance','recruitment','medical_records','customer_emails'].includes(ctx.scenario)) matched.dataType = true;
+  convo = {
+    question: text, ctx: Object.assign({}, ctx), matched,
+    profile: {jurisdictions: inferJurisdictions(text), autonomy: '', stakeholders: [], impact: {}},
+    inPlace: [], assumed: [], answers: [],
+    automated: !!uc.automated, employment: !!scen.employment
+  };
+  if(convo.employment) convo.profile.impact.bias = 'yes';
+  if(convo.employment || convo.automated) convo.profile.impact.significantEffect = 'yes';
+  convo.queue = FOLLOW_UPS.filter(q => q.when(convo)).map(q => q.id);
+  convo.total = convo.queue.length;
+  if(!convo.queue.length) return finishConversation();
+  postBot(`<p>Thanks. To give you guidance that fits your situation, I have ${convo.total} quick question${convo.total===1?'':'s'}. You can skip any of them; I'll take the cautious view and say so.</p>`);
+  askNextFollowUp();
+}
 
-  const botMsg = document.createElement('div');
-  botMsg.className = 'chat-msg chat-bot';
-  botMsg.innerHTML = `
-    <div class="bot-verdict ${decision.level}">
-      <strong>${LEVEL_LABEL[decision.level]}</strong> — ${escapeHtml(decision.nextAction)}
+function askNextFollowUp(){
+  // Re-check conditions: earlier answers can make later questions unnecessary.
+  while(convo.queue.length && !FOLLOW_UPS.find(q => q.id === convo.queue[0]).when(convo)) convo.queue.shift();
+  if(!convo.queue.length) return finishConversation();
+  const q = FOLLOW_UPS.find(x => x.id === convo.queue[0]);
+  convo.pending = q.id;
+  const n = convo.total - convo.queue.length + 1;
+  const msg = postBot(`
+    <p class="fu-progress">Question ${Math.min(n, convo.total)} of ${convo.total}</p>
+    <p class="fu-question"><strong>${escapeHtml(q.text)}</strong></p>
+    <div class="fu-options" role="group" aria-label="${escapeHtml(q.text)}">
+      ${q.options.map((o,i) => `<button type="button" class="chip fu-chip" data-fu="${i}">${escapeHtml(o.label)}</button>`).join('')}
+      <button type="button" class="chip fu-chip fu-skip" data-fu="skip">Skip</button>
     </div>
-    <p class="interpreted">Interpreted as: ${factor('scenario', decision.scenario.label)} · ${factor('useCase', decision.useCase.label)} · ${factor('dataType', decision.dataType.label)} · ${factor('tool', decision.tool.label)} · ${factor('location', decision.location.label)}.${assumedCount ? ` <strong>${assumedCount} of 5 factors were assumed</strong>; add those details to your question, or use <button class="link-btn" data-nav="assessment">Assess a use case</button> to choose them yourself.` : ''}</p>
+    <p class="fu-hint">Or type your answer below.</p>`);
+  qsa('[data-fu]', msg).forEach(btn => btn.addEventListener('click', () => {
+    if(convo.pending !== q.id) return;
+    qsa('[data-fu]', msg).forEach(b => b.disabled = true);
+    btn.classList.add('chosen');
+    postUser(btn.dataset.fu === 'skip' ? 'Skip' : q.options[+btn.dataset.fu].label);
+    resolveFollowUp(q, btn.dataset.fu === 'skip' ? -1 : +btn.dataset.fu);
+  }));
+  const first = qs('.fu-chip', msg); if(first) first.focus({preventScroll:true});
+}
+
+function resolveFollowUp(q, idx){
+  if(idx >= 0){ q.options[idx].apply(convo); convo.answers.push({question: q.text, answer: q.options[idx].label}); }
+  else { q.skip(convo); convo.answers.push({question: q.text, answer: 'Skipped (assumed)'}); }
+  convo.pending = null;
+  convo.queue.shift();
+  askNextFollowUp();
+}
+
+function answerFollowUpByText(text){
+  const q = FOLLOW_UPS.find(x => x.id === convo.pending);
+  // A long message that names several factors is most likely a new question.
+  const fresh = inferFromText(text);
+  if(Object.keys(fresh.matched || {}).length >= 3 && q.match(text) < 0){
+    convo = null;
+    askAssistant(text);
+    return;
+  }
+  postUser(text);
+  qsa('.fu-chip').forEach(b => b.disabled = true);
+  const idx = q.match(text);
+  if(idx < 0) postBot(`<p class="fu-hint">I couldn't match that to an option, so I'll treat it as skipped.</p>`);
+  resolveFollowUp(q, idx);
+}
+
+function finishConversation(){
+  const c = convo;
+  convo = Object.assign(c, {pending: null});
+  const rec = buildRecord(c.ctx, c.profile, c.inPlace, {source:'assistant', label: c.question});
+  rec.governance.assumptions.unshift(...c.assumed.filter(a => !rec.governance.assumptions.includes(a)));
+  rec.governance.assumptions.push('Children’s information and prohibited practices were not covered in this conversation; the full assessment asks about them.');
+  const d = rec.decision, g = rec.governance, kb = getKB();
+  const permClass = PERMISSIBILITY_CLASS[g.permissibility.level];
+  const legal = g.mandatory, voluntary = g.voluntary;
+  const msg = postBot(`
+    <div class="bot-verdict ${d.level}">
+      <strong>${LEVEL_LABEL[d.level]}</strong> — ${escapeHtml(d.nextAction)}
+    </div>
+    <p class="interpreted">Assessed as: ${escapeHtml(d.scenario.label)} · ${escapeHtml(d.useCase.label)} · ${escapeHtml(d.dataType.label)} · ${escapeHtml(d.tool.label)} · processed in ${escapeHtml(d.location.label)} · ${c.profile.jurisdictions.map(j => escapeHtml(optLabel(JURISDICTIONS, j))).join(' and ')}${c.profile.autonomy ? ' · ' + escapeHtml(optLabel(AUTONOMY, c.profile.autonomy)).toLowerCase() : ''}.</p>
     <div class="bot-answer-grid">
-      <div class="bot-card"><h5>Reasoning</h5><ul>${decision.reasons.slice(0,3).map(r=>`<li>${escapeHtml(r.text)}</li>`).join('')}</ul></div>
-      <div class="bot-card"><h5>Risks</h5><ul>${decision.risks.slice(0,3).map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul></div>
-      <div class="bot-card"><h5>Controls</h5><ul>${decision.safeguards.slice(0,3).map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul></div>
-      <div class="bot-card"><h5>Frameworks that may apply</h5><p>${decision.regulations.map(escapeHtml).join(', ')}</p></div>
-      <div class="bot-card"><h5>Board implications</h5><p>${decision.level==='red' ? 'Escalation to board/exco required before proceeding.' : decision.level==='amber' ? 'Compliance and business-unit sign-off required; board visibility via AI register.' : 'Standard register logging; no escalation required.'}</p></div>
-      <div class="bot-card"><h5>Suggested accountable people</h5><p>${decision.approvers.map(escapeHtml).join(', ')}</p></div>
-      <div class="bot-card"><h5>Sustainability impact</h5><p><span class="sustain-pill ${decision.sustainability.level}">${decision.sustainability.level}</span> — ${escapeHtml(decision.sustainability.recommendations[0])}</p></div>
-      <div class="bot-card"><h5>Cyber security impact</h5><p><span class="security-pill ${decision.security.level}">${decision.security.level}</span> — ${escapeHtml(decision.security.recommendations[0])}</p></div>
+      <div class="bot-card perm-${permClass}"><h5>Can we do this?</h5><p><strong>${escapeHtml(g.permissibility.label)}</strong></p></div>
+      <div class="bot-card"><h5>Who is accountable? (suggested)</h5><p>${d.approvers.map(escapeHtml).join(', ')}</p></div>
+      <div class="bot-card wide"><h5>Legal requirements that may apply (${legal.length})</h5>
+        ${legal.length ? `<ul>${legal.slice(0,6).map(r => `<li><strong>${escapeHtml(r.framework)} ${escapeHtml(r.provision)}</strong> — ${escapeHtml(r.title)}${r.uncertainty ? ' <span class="mini-flag" title="' + escapeHtml(r.uncertainty) + '">Needs expert review</span>' : ''}</li>`).join('')}</ul>${legal.length > 6 ? `<p class="cell-note">+ ${legal.length - 6} more in the full result.</p>` : ''}` : '<p>None triggered in NAVI’s knowledge base for these answers.</p>'}
+      </div>
+      <div class="bot-card wide"><h5>Standards and good practice (voluntary)</h5><p>${[...new Set(voluntary.map(r => r.framework))].map(escapeHtml).join(', ') || '—'}</p></div>
+      <div class="bot-card"><h5>Key risks</h5><ul>${d.risks.slice(0,3).map(r => `<li>${escapeHtml(r)}</li>`).join('')}</ul></div>
+      <div class="bot-card"><h5>What to put in place first</h5>${g.actions.length ? `<ul>${g.actions.slice(0,4).map(a => `<li>${escapeHtml(a.label)}${a.priority === 'Critical' ? ' <span class="mini-flag">Critical</span>' : ''}</li>`).join('')}</ul>` : '<p>No gaps identified.</p>'}</div>
+      ${g.specialists.length ? `<div class="bot-card wide"><h5>When to get specialist advice</h5><ul>${g.specialists.map(s => `<li><strong>${escapeHtml(s.who)}</strong> — ${escapeHtml(s.why)}</li>`).join('')}</ul></div>` : ''}
     </div>
+    ${g.assumptions.length ? `<details class="assumption-box"><summary>Assumptions NAVI made (${g.assumptions.length})</summary><ul>${g.assumptions.map(a => `<li>${escapeHtml(a)}</li>`).join('')}</ul></details>` : ''}
     <p class="bot-disclaimer">Rules-based guidance, not AI-generated. Not legal advice, legal clearance or organisational approval.</p>
     <div class="export-row" style="margin-top:10px;">
-      <button class="btn" data-full-result>View full assessment &amp; explanation</button>
+      <button class="btn btn-primary" data-to-assessment>Turn this into a full assessment</button>
+      <button class="btn" data-full-result>View full result</button>
       <button class="btn btn-ghost" data-save-answer>Save to My decisions</button>
     </div>
     <div class="doc-ref-slot"></div>
-    <div id="qf-assistant-${uid()}" class="qf-slot"></div>
-  `;
-  assistantChat.appendChild(botMsg);
-  qs('[data-full-result]', botMsg).addEventListener('click', () => {
-    const wrap = document.createElement('div');
-    wrap.className = 'chat-msg chat-bot';
-    renderResult(decision, wrap, text, true);
-    assistantChat.appendChild(wrap);
+    <div class="qf-slot"></div>`);
+  qs('[data-full-result]', msg).addEventListener('click', () => {
+    const wrap = postBot('');
+    renderResult(rec, wrap, {withExport:true});
     wrap.scrollIntoView({behavior:'smooth', block:'start'});
   });
-  const docSlot = qs('.doc-ref-slot', botMsg);
-  if(docSlot) renderDocRefs(docSlot, text, {label:'question', limit:3});
-  const qfSlot = qs('.qf-slot', botMsg);
-  if(qfSlot) attachQuickFeedback(qfSlot, 'assistant', text);
-  // Answers are only saved when the person chooses to, so the dashboard reflects real decisions.
-  const saveBtn = qs('[data-save-answer]', botMsg);
+  qs('[data-to-assessment]', msg).addEventListener('click', () => {
+    startAssessmentWith({ctx: c.ctx, profile: Object.assign({}, c.profile, {name: c.question.slice(0,140)}), inPlace: c.inPlace});
+  });
+  const saveBtn = qs('[data-save-answer]', msg);
   saveBtn.addEventListener('click', () => {
-    const ok = saveAssessment(decision, text, 'assistant');
+    const ok = saveAssessment(rec);
     saveBtn.textContent = ok ? 'Saved to My decisions' : 'Could not save (browser storage unavailable)';
     saveBtn.disabled = true;
   });
-  assistantChat.scrollTop = assistantChat.scrollHeight;
+  const docSlot = qs('.doc-ref-slot', msg);
+  if(docSlot) renderDocRefs(docSlot, c.question, {label:'question', limit:3});
+  const qfSlot = qs('.qf-slot', msg);
+  if(qfSlot) attachQuickFeedback(qfSlot, 'assistant', c.question);
+  convo = null;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -3264,12 +3993,20 @@ function openPrintView(d, scenarioLabel, kind){
       <ul>${d.boardQuestions.map(q=>`<li>${escapeHtml(q)}</li>`).join('')}</ul>`;
   }
 
+  showPrintDoc(titleMap[kind], `Generated ${escapeHtml(now.toLocaleString())} &middot; Inherent risk: <strong>${LEVEL_LABEL[d.level]}</strong>`, bodyHtml);
+}
+
+// Shared printable-document shell (print, or save as PDF from the browser's print dialog).
+let printReturnFocus = null;
+function showPrintDoc(title, metaHtml, bodyHtml){
+  const root = qs('#printRoot');
+  printReturnFocus = document.activeElement;
   root.innerHTML = `
     <div class="print-close">
       <button class="btn btn-primary" id="printNow">Print / Save as PDF</button>
       <button class="btn btn-ghost" id="printClose" style="background:var(--white);color:var(--navy);border-color:var(--grey-300);">Close</button>
     </div>
-    <div class="print-doc">
+    <article class="print-doc" aria-labelledby="printTitle">
       <div class="print-brand">
         <svg width="22" height="22" viewBox="0 0 100 100" aria-hidden="true">
           <path d="M50 6 L10 90 L50 90 Z" fill="url(#naviGradLeft)"/>
@@ -3278,15 +4015,109 @@ function openPrintView(d, scenarioLabel, kind){
         </svg>
         <span>NAVI</span>
       </div>
-      <h1>${titleMap[kind]}</h1>
-      <div class="print-meta">NAVI &middot; AI Governance Decision Toolkit &middot; Generated ${now.toLocaleString()} &middot; Outcome: <strong>${LEVEL_LABEL[d.level]}</strong></div>
+      <h1 id="printTitle" tabindex="-1">${escapeHtml(title)}</h1>
+      <div class="print-meta">NAVI Free &middot; ${metaHtml}</div>
       ${bodyHtml}
       <p class="print-disclaimer">${escapeHtml(DISCLAIMER)} Generated by NAVI Free (rules-based guidance; no AI model was used).</p>
-    </div>
+    </article>
   `;
   root.hidden = false;
+  root.setAttribute('role', 'dialog');
+  root.setAttribute('aria-modal', 'true');
+  root.setAttribute('aria-labelledby', 'printTitle');
+  qs('#printTitle').focus();
   qs('#printNow').addEventListener('click', () => window.print());
-  qs('#printClose').addEventListener('click', () => root.hidden = true);
+  qs('#printClose').addEventListener('click', closePrintDoc);
+}
+function closePrintDoc(){
+  const root = qs('#printRoot');
+  if(root.hidden) return;
+  root.hidden = true;
+  if(printReturnFocus && printReturnFocus.focus) printReturnFocus.focus();
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closePrintDoc(); });
+
+/* ---------------------------------------------------------------------- */
+/* DECISION AND ACTION REPORT (12 sections)                               */
+/* ---------------------------------------------------------------------- */
+function openDecisionReport(rec){
+  const d = rec.decision, g = rec.governance, p = rec.profile, kb = getKB();
+  const list = items => items.length ? `<ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>` : '<p>None.</p>';
+  const e = escapeHtml;
+  const row = (k, v) => `<tr><th scope="row">${e(k)}</th><td>${v ? e(v) : '<span class="muted">Not provided</span>'}</td></tr>`;
+  const topActions = g.actions.slice(0, 3).map(a => `${e(a.action)} <em>(${e(a.priority)}; ${e(a.owner)})</em>`);
+  const reqRow = r => `<tr><td><strong>${e(r.framework)}</strong> ${e(r.provision)}<br>${e(r.title)}</td><td>${e(r.jurisdiction)}</td><td>${r.kind==='mandatory'?'Mandatory where it applies':r.kind==='watch'?'Watch list':'Voluntary'}</td><td>${e(r.why)}</td><td>${r.controls.map(c => e(kb.controlById[c].label)).join('; ') || '\u2014'}</td><td>${r.uncertainty ? e(r.uncertainty) : '\u2014'}</td></tr>`;
+  const reqTable = rows => rows.length ? `<table class="report-table"><thead><tr><th>Requirement</th><th>Jurisdiction</th><th>Status</th><th>Why it may apply</th><th>Required action / controls</th><th>Interpretation or uncertainty</th></tr></thead><tbody>${rows.map(reqRow).join('')}</tbody></table>` : '<p>None identified for these answers.</p>';
+
+  const body = `
+    <h2>1. Executive summary</h2>
+    <p><strong>${e(rec.name)}</strong> was assessed by NAVI on ${e(new Date(rec.createdAt).toLocaleDateString())}.</p>
+    <table class="report-kv"><tbody>
+      <tr><th scope="row">Inherent risk</th><td>${e(LEVEL_LABEL[g.inherent])} (rule score ${d.score}/${SCORE_MAX}${d.ruleOverride ? ', hard rule applied' : ''})</td></tr>
+      <tr><th scope="row">Residual risk</th><td>${e(LEVEL_LABEL[g.residual])}. ${e(g.residualReason)}</td></tr>
+      <tr><th scope="row">Governance readiness</th><td>${e(READINESS_LABEL[g.readiness])} (${g.requiredControls.length - g.gaps.length} of ${g.requiredControls.length} required safeguards in place)</td></tr>
+      <tr><th scope="row">Legal permissibility</th><td>${e(g.permissibility.label)}</td></tr>
+      <tr><th scope="row">Legal requirements identified</th><td>${g.mandatory.length}, plus ${g.voluntary.length} voluntary standards</td></tr>
+    </tbody></table>
+    ${topActions.length ? `<p><strong>Priority actions:</strong></p>${list(topActions)}` : '<p>No safeguard gaps were identified.</p>'}
+
+    <h2>2. AI use-case description</h2>
+    <table class="report-kv"><tbody>
+      ${row('Name', p.name || rec.name)}${row('Description', p.description)}${row('Business objective', p.objective)}
+      ${row('Sector', p.sector ? optLabel(SECTORS, p.sector) : '')}
+      ${row('Jurisdictions', p.jurisdictions.map(j => optLabel(JURISDICTIONS, j)).join(', ') + (p.assumed && p.assumed.length ? ' (assumed)' : ''))}
+      ${row('Level of autonomy', p.autonomy ? optLabel(AUTONOMY, p.autonomy) : '')}${row('Deployment stage', p.stage ? optLabel(STAGES, p.stage) : '')}
+      ${row('Intended users', p.users)}${row('Affected stakeholders', (p.stakeholders || []).map(s => optLabel(STAKEHOLDERS, s)).join(', '))}
+      ${row('Business process', p.customScenario || d.scenario.label)}${row('What the AI does', d.useCase.label)}
+      ${row('Most sensitive data', d.dataType.label)}${row('AI tool', d.tool.label)}${row('Processing location', d.location.label)}
+    </tbody></table>
+
+    <h2>3. Applicable governance requirements</h2>
+    <p>Mandatory items are legal obligations where they apply to you; NAVI cannot confirm applicability for your organisation. Sources and verification dates are in section 10.</p>
+    <h3>Legal requirements</h3>${reqTable(g.mandatory)}
+    <h3>Standards and good practice</h3>${reqTable(g.voluntary.concat(g.watch))}
+
+    <h2>4. Key risks and potential impacts</h2>
+    ${list(d.risks.map(e))}
+    <p><strong>Impact answers:</strong> ${IMPACT_QUESTIONS.map(q => `${e(q.label)} <em>${e(({yes:'Yes',no:'No',unsure:'Not sure'})[(p.impact||{})[q.id]] || 'Not answered')}</em>`).join(' &middot; ')}</p>
+    <p><strong>Cyber security:</strong> ${e(d.security.level)} risk. <strong>Sustainability:</strong> ${e(d.sustainability.level)} resource intensity.</p>
+
+    <h2>5. Existing safeguards</h2>
+    ${list(g.inPlace.concat(g.extraInPlace).map(c => e(kb.controlById[c].label)))}
+    <p class="muted">As reported by the person completing the assessment; not verified by NAVI.</p>
+
+    <h2>6. Identified control gaps</h2>
+    ${list(g.gaps.map(c => e(kb.controlById[c].label) + (g.criticalGaps.includes(c) ? ' <strong>(critical)</strong>' : '')))}
+
+    <h2>7. Recommended mitigation actions</h2>
+    ${g.actions.length ? `<table class="report-table"><thead><tr><th>Priority</th><th>Action</th><th>Suggested owner</th><th>Needed because</th><th>Due</th><th>Status</th></tr></thead><tbody>${g.actions.map(a => `<tr><td>${e(a.priority)}</td><td>${e(a.action)}</td><td>${e(a.owner)}</td><td>${a.because.map(e).join('; ')}</td><td></td><td>Open</td></tr>`).join('')}</tbody></table>` : '<p>No actions required against NAVI\u2019s required safeguards.</p>'}
+
+    <h2>8. Suggested accountable roles</h2>
+    <p><strong>Decision owner(s):</strong> ${d.approvers.map(e).join(', ')}</p>
+    ${g.actions.length ? `<p><strong>Action owners:</strong> ${[...new Set(g.actions.map(a => a.owner))].map(e).join(', ')}</p>` : ''}
+    <p class="muted">Your organisation\u2019s delegation of authority takes precedence over these suggestions.</p>
+
+    <h2>9. Required reviews and approvals</h2>
+    ${list(g.reviews.map(e))}
+    ${g.specialists.length ? `<p><strong>Specialist advice recommended:</strong> ${g.specialists.map(s => `${e(s.who)} (${e(s.why)})`).join('; ')}</p>` : ''}
+    <table class="report-table sign-off"><thead><tr><th>Role</th><th>Name</th><th>Decision</th><th>Date</th><th>Signature</th></tr></thead>
+      <tbody>${d.approvers.map(a => `<tr><td>${e(a)}</td><td></td><td></td><td></td><td></td></tr>`).join('')}</tbody></table>
+
+    <h2>10. Supporting references</h2>
+    <table class="report-table"><thead><tr><th>Framework</th><th>Type</th><th>Status</th><th>Source</th><th>Last checked</th></tr></thead>
+      <tbody>${g.references.map(r => `<tr><td>${e(r.name)}</td><td>${e(r.type)}</td><td>${e(r.status)}</td><td class="url-cell">${e(r.source)}</td><td>${e(r.verified)} (${r.verification === 'official-text' ? 'official text' : r.verification === 'secondary' ? 'secondary source' : 'pending'})</td></tr>`).join('')}</tbody></table>
+    <p class="muted">NAVI knowledge base version ${e(g.knowledgeBaseVersion)}.</p>
+
+    <h2>11. Limitations and assumptions</h2>
+    ${list(g.assumptions.map(e).concat([
+      'The inherent risk uses NAVI\u2019s documented rule weights (see docs/RISK-METHOD.md); residual risk depends on the safeguards reported, which NAVI has not verified.',
+      'NAVI\u2019s guidance is general and rules-based. It is not legal advice, legal clearance or organisational approval.'
+    ]))}
+
+    <h2>12. Recommended next steps</h2>
+    <ol>${g.nextSteps.map(s => `<li>${e(s)}</li>`).join('')}</ol>
+  `;
+  showPrintDoc('Decision & Action Report', `${e(rec.name)} &middot; Generated ${e(new Date().toLocaleString())} &middot; Residual risk: <strong>${e(LEVEL_SHORT[g.residual])}</strong>`, body);
 }
 
 /* ---------------------------------------------------------------------- */
