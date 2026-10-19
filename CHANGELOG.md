@@ -1,5 +1,32 @@
 # Changelog
 
+## NAVI Free 2.0 — Guided Experience (15 October 2026)
+
+**Why:** people new to AI governance should be able to get the same answer as experienced users,
+without needing to know the terms first.
+
+- New, optional **Guided NAVI**. Start from "New to NAVI? Let us guide you." → *Guide Me* on the
+  home page.
+- Welcome screen with four choices: ask a question, check an AI tool or idea, understand AI
+  governance, see previous work.
+- Guided assessment: one question at a time in plain language, with examples, *I'm not sure*,
+  Back/Continue, a progress bar, *What does this mean? / Show me an example / Why are you asking?*
+  help, and a review screen. Unfinished checks are saved on the device and can be resumed.
+- *I'm not sure* never lowers risk: each one is treated cautiously and listed as an assumption in
+  the result and report.
+- Guided Ask NAVI: five suggested questions, follow-up questions, and answers in three layers
+  (simple answer · what you should consider · full detail). States clearly that NAVI is not an AI
+  chatbot and what it can't answer.
+- Plain-language results: *What did NAVI find? · What does this mean for you? · What should you do
+  next? · Would you like more detail?*, plus the full result, the 12-section report and a simple
+  printable summary.
+- Switch between Guided and Standard NAVI at any point, both ways, without losing answers.
+- **Unchanged:** risk method (the 35,000-combination baseline still matches), knowledge base,
+  standard assessment, Ask NAVI, reports, record format (guided records add two optional fields),
+  storage and navigation.
+- 10 new browser tests (48 in total). Design, architecture and a beginner usability test plan are
+  in `docs/GUIDED-EXPERIENCE.md`.
+
 ## NAVI Free 2.0 — Phase 2 (15 October 2026)
 
 **Why:** answers should be specific to the person's situation, traceable to verified sources,

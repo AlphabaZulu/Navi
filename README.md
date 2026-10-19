@@ -6,6 +6,7 @@ ahead, what safeguards it needs, who should be accountable, and how to record th
 
 Live: https://alphabazulu.github.io/Navi/
 
+- **Guided NAVI** (optional, for beginners) — *New to NAVI? Let us guide you.* One plain-language question at a time, with help, examples and an "I'm not sure" option, layered answers and plain-language results. Same engine and records as Standard NAVI; switch either way at any point. See [docs/GUIDED-EXPERIENCE.md](docs/GUIDED-EXPERIENCE.md)
 - **Ask NAVI** — plain-language questions with targeted follow-up questions, answered from a documented rule set (not generative AI)
 - **Assess an AI use case** — a guided five-step assessment: requirements that may apply, inherent and residual risk, control gaps, actions, and a 12-section Decision & Action Report
 - **My decisions** — saved assessments on your device: reopen, download, delete
@@ -31,10 +32,11 @@ src/index.html      Page structure
 src/styles.css      Styles and brand tokens
 src/engine.js       Assessment engine: risk rules, knowledge-base evaluator, residual risk
 src/app.js          User interface, guide and reflection content
+src/guided.js       Optional Guided NAVI layer (uses the same engine via window.NAVI)
 src/knowledge/      Governance knowledge base (frameworks, obligations, controls) as JSON
 build.py            Inlines src/ into index.html
 tests/              Engine tests and browser end-to-end tests
-docs/               Technical assessment, risk method, knowledge base, data model, plan
+docs/               Technical assessment, risk method, knowledge base, data model, plan, guided experience
 CHANGELOG.md        Release notes
 ```
 
@@ -69,6 +71,9 @@ replace it), upload the newly built file, and commit. Upload the changed `src/`,
   of pre-2.0 data, export and deletion, persistence, honest dashboard, feedback, enterprise
   interest, layouts at 320–1440px, and accessibility (skip link, accessible names, WCAG AA text
   contrast).
+- **Guided tests** — guided and standard give identical results for the same answers; "I'm not
+  sure" never lowers risk; Back, review and switching keep every answer; draft resume; plain
+  results and report; guided Ask NAVI layers; keyboard-only use; 320/375px; contrast.
 
 ## Privacy and security
 

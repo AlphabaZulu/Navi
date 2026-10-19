@@ -62,6 +62,7 @@ html = (SRC / "index.html").read_text(encoding="utf-8")
 css = (SRC / "styles.css").read_text(encoding="utf-8")
 engine = (SRC / "engine.js").read_text(encoding="utf-8")
 app = (SRC / "app.js").read_text(encoding="utf-8")
+guided = (SRC / "guided.js").read_text(encoding="utf-8")
 kb = json.dumps(load_knowledge(), ensure_ascii=False, separators=(",", ":"))
 
 markers = {
@@ -69,11 +70,12 @@ markers = {
     "kb": '<!-- NAVI_KNOWLEDGE -->',
     "engine": '<script src="engine.js"></script>',
     "app": '<script src="app.js"></script>',
+    "guided": '<script src="guided.js"></script>',
 }
 for name, marker in markers.items():
     if html.count(marker) != 1:
         fail(f"expected exactly one {marker!r} in src/index.html")
-for name, code in (("engine.js", engine), ("app.js", app)):
+for name, code in (("engine.js", engine), ("app.js", app), ("guided.js", guided)):
     if "</script" in code.lower():
         fail(f"{name} contains '</script', which would break inlining")
 if "</" in kb:
@@ -83,6 +85,7 @@ html = html.replace(markers["css"], f"<style>\n{css}\n</style>")
 html = html.replace(markers["kb"], f'<script id="navi-knowledge" type="application/json">{kb}</script>')
 html = html.replace(markers["engine"], f"<script>\n{engine}\n</script>")
 html = html.replace(markers["app"], f"<script>\n{app}\n</script>")
+html = html.replace(markers["guided"], f"<script>\n{guided}\n</script>")
 
 out = ROOT / "index.html"
 out.write_text(html, encoding="utf-8")
