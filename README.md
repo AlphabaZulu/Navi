@@ -10,7 +10,7 @@ Live: https://alphabazulu.github.io/Navi/
 - **Ask NAVI** — plain-language questions with targeted follow-up questions, answered from a documented rule set (not generative AI)
 - **Assess an AI use case** — a guided five-step assessment: requirements that may apply, inherent and residual risk, control gaps, actions, and a 12-section Decision & Action Report
 - **My decisions** — saved assessments on your device: reopen, download, delete
-- **Explore governance** — a searchable guide, board reflection scenarios and your own reference library
+- **Explore governance** — a searchable guide, **NAVI Sources** (145 cited summaries of laws, regulations, standards and guidance, searchable offline), board reflection scenarios and your own reference library
 - **NAVI Enterprise** — planned; see the Enterprise page in the app
 
 NAVI's guidance is general and rules-based. It is not legal advice, legal clearance or
@@ -33,6 +33,12 @@ src/styles.css      Styles and brand tokens
 src/engine.js       Assessment engine: risk rules, knowledge-base evaluator, residual risk
 src/app.js          User interface, guide and reflection content
 src/guided.js       Optional Guided NAVI layer (uses the same engine via window.NAVI)
+src/retrieval.js    Source library search (shared with the planned AI server)
+src/sources.js      NAVI Sources page and related passages for the assistants
+src/corpus/         Source library: sources and passages beyond the knowledge base, as JSON
+corpus.json         Built source library (written by build.py; do not edit by hand)
+eval/               120-question evaluation set and the retrieval report
+worker/             NAVI API Worker (Cloudflare): src/worker.js, wrangler.toml, dist/navi-worker.js (built)
 src/knowledge/      Governance knowledge base (frameworks, obligations, controls) as JSON
 build.py            Inlines src/ into index.html
 tests/              Engine tests and browser end-to-end tests
@@ -74,6 +80,13 @@ replace it), upload the newly built file, and commit. Upload the changed `src/`,
 - **Guided tests** — guided and standard give identical results for the same answers; "I'm not
   sure" never lowers risk; Back, review and switching keep every answer; draft resume; plain
   results and report; guided Ask NAVI layers; keyboard-only use; 320/375px; contrast.
+- **Source library tests** — every passage sourced, dated, linked and classified; the knowledge
+  base included unchanged; coverage of every governance area; search finds a suitable passage
+  for at least 90% of the evaluation questions and flags off-topic ones; the NAVI Sources page,
+  related passages in Ask NAVI and Guided NAVI, no network requests, 320/375px, contrast.
+- **Worker tests** — the NAVI API server with a simulated model and a mocked model API: origin and
+  input checks, privacy masking, per-visitor limits, daily spending cap, caching, citation and
+  wording checks, prompt-injection resistance, fallbacks, and every evaluation question.
 
 ## Privacy and security
 
@@ -86,6 +99,11 @@ replace it), upload the newly built file, and commit. Upload the changed `src/`,
   from *About NAVI*.
 
 ## Roadmap
+
+The open-ended AI governance assistant is approved and being built in four phases; Phase 1 (the
+source library and offline search) is complete. See [docs/OPEN-ENDED-ASSISTANT.md](docs/OPEN-ENDED-ASSISTANT.md)
+and [docs/SOURCE-LIBRARY.md](docs/SOURCE-LIBRARY.md).
+
 
 See [docs/IMPLEMENTATION-PLAN.md](docs/IMPLEMENTATION-PLAN.md). Phases 1 and 2 are complete. Next
 (Phase 3): edit saved decisions, notes, action tracking, import of exported records, a rebuilt

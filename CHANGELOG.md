@@ -1,5 +1,47 @@
 # Changelog
 
+## NAVI API Worker — Phase 2 (20 October 2026)
+
+**Why:** AI answers need a server that keeps the API key secret, protects privacy and cost, and
+checks every answer before anyone sees it. The website itself is unchanged in this release.
+
+- New `worker/`: a Cloudflare Worker (`navi-api.orvendi.workers.dev`) built into one file,
+  `worker/dist/navi-worker.js`, with the source library and search built in.
+- Only the NAVI site may call it; questions are limited to 1,500 characters and six earlier turns.
+- Email addresses, phone numbers, SA ID numbers and card numbers are masked before anything else.
+- Per-visitor limits (20 an hour, 50 a day), a US$2 daily spending cap, and a 24-hour cache for
+  repeated questions.
+- The model must answer only from the passages retrieved for the question, in a fixed JSON format.
+  Answers that cite anything else, make uncited points, give risk scores, ratings, approvals,
+  compliance claims or legal opinions, or repeat the instructions are retried once and then
+  replaced by a sources-only answer. Legal or good-practice labels come from library metadata.
+- Starts in simulated mode (answers from the sources, no model call, no cost); `MODEL_MODE=live`
+  is switched on at the Phase 3 gate.
+- 15 new tests (73 in total). Deployment guide in `docs/WORKER-DEPLOYMENT.md`.
+
+## NAVI Free 2.0 — Source library (19 October 2026)
+
+**Why:** NAVI should give useful, cited guidance on governance questions it was never programmed
+for. This is Phase 1 of the approved open-ended assistant: the trusted material and the search
+that future AI answers will be built on, already useful without any AI.
+
+- New **NAVI Sources** page (Explore governance): search 145 passages from 28 sources: laws,
+  regulations, standards and guidance on AI strategy, development, agents, data, model risk,
+  security, privacy, regulation, testing, deployment, monitoring, third-party AI and board
+  oversight, including South African financial-sector and Information Regulator material.
+- Every passage shows whether it is a **legal requirement**, **good practice** or on the **watch
+  list** (taken from the source's metadata), who it applies to, a link to the original, and when
+  and how NAVI checked it.
+- Filters for jurisdiction, kind and topic; topic browsing; honest "may not cover this" notice.
+- Ask NAVI and Guided NAVI now show the closest source passages when a question isn't about a
+  specific use case, instead of only asking for more detail. Recognised use cases are unchanged.
+- Search runs on the device; nothing is sent anywhere.
+- 120-question evaluation set (40 held back). Search finds a suitable source in the top five for
+  99% of development questions and 97% of held-back questions.
+- **Unchanged:** risk engine (35,000-combination baseline matches), knowledge base, assessments,
+  records, reports, Guided NAVI, privacy and storage.
+- 10 new tests (58 in total).
+
 ## NAVI Free 2.0 — Guided Experience (15 October 2026)
 
 **Why:** people new to AI governance should be able to get the same answer as experienced users,

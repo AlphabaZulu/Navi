@@ -1,13 +1,14 @@
 {
   "name": "navi",
-  "version": "2.0.0-guided",
+  "version": "2.2.0-worker",
   "private": true,
   "description": "NAVI Free — AI governance decision support. Static site; no runtime dependencies.",
   "type": "module",
   "scripts": {
     "build": "python3 build.py",
     "test": "python3 build.py && node --test --test-concurrency=1 tests/*.test.mjs",
-    "test:engine": "node --test tests/engine.test.mjs"
+    "test:engine": "node --test tests/engine.test.mjs",
+    "eval:retrieval": "python3 build.py && node eval/retrieval-report.mjs && node eval/retrieval-report.mjs --heldout"
   },
   "devDependencies": {
     "playwright": "^1.48.0"
