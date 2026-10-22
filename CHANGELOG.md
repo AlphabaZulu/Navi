@@ -1,5 +1,25 @@
 # Changelog
 
+## NAVI Free 2.3 — Optional AI answers (Phase 3, 22 October 2026)
+
+**Why:** answer any legitimate AI governance question in context, from cited sources, without
+changing how NAVI's formal risk check works.
+
+- Ask NAVI: new **Answer type** choice. The rules-based check stays the default and is unchanged.
+  *AI answer from NAVI's sources* is optional and needs the privacy notice to be accepted first.
+- Answers are pitched for someone new, a developer or specialist, or an executive or board member,
+  and show labelled, numbered citations, uncertainty, more detail and the sources with links.
+- *Run NAVI's formal check* hands any question to the rules engine for a risk classification.
+- Guided NAVI offers AI answers in plain language, in its three layers.
+- Personal details are masked in the browser before sending, and again on the server. Saved
+  assessments never leave the device. AI choices are listed under Your data and privacy and can be
+  withdrawn there.
+- If the AI service is unavailable or the limit is reached, NAVI shows the closest offline sources.
+- Source library 2026.10.22: all passages verified (32 against official text, 69 against official
+  pages, 44 against reputable secondary sources); NIST, SP 800-218A and ISO 23894 wording corrected.
+- Worker 2.3.0: shorter fallback summaries.
+- 7 new tests (80 in total).
+
 ## NAVI API Worker — Phase 2 (20 October 2026)
 
 **Why:** AI answers need a server that keeps the API key secret, protects privacy and cost, and

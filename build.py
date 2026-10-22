@@ -163,6 +163,7 @@ app = (SRC / "app.js").read_text(encoding="utf-8")
 guided = (SRC / "guided.js").read_text(encoding="utf-8")
 retrieval = (SRC / "retrieval.js").read_text(encoding="utf-8")
 sources_ui = (SRC / "sources.js").read_text(encoding="utf-8")
+ai_client = (SRC / "ai-client.js").read_text(encoding="utf-8")
 kb_obj = load_knowledge()
 corpus_obj = load_corpus(kb_obj)
 kb = json.dumps(kb_obj, ensure_ascii=False, separators=(",", ":"))
@@ -177,12 +178,13 @@ markers = {
     "corpus": '<!-- NAVI_CORPUS -->',
     "retrieval": '<script src="retrieval.js"></script>',
     "sources": '<script src="sources.js"></script>',
+    "ai": '<script src="ai-client.js"></script>',
 }
 for name, marker in markers.items():
     if html.count(marker) != 1:
         fail(f"expected exactly one {marker!r} in src/index.html")
 for name, code in (("engine.js", engine), ("app.js", app), ("guided.js", guided),
-                   ("retrieval.js", retrieval), ("sources.js", sources_ui)):
+                   ("retrieval.js", retrieval), ("sources.js", sources_ui), ("ai-client.js", ai_client)):
     if "</script" in code.lower():
         fail(f"{name} contains '</script', which would break inlining")
 kb = kb.replace("</", "<\\/")
@@ -196,6 +198,7 @@ html = html.replace(markers["guided"], f"<script>\n{guided}\n</script>")
 html = html.replace(markers["corpus"], f'<script id="navi-corpus" type="application/json">{corpus}</script>')
 html = html.replace(markers["retrieval"], f"<script>\n{retrieval}\n</script>")
 html = html.replace(markers["sources"], f"<script>\n{sources_ui}\n</script>")
+html = html.replace(markers["ai"], f"<script>\n{ai_client}\n</script>")
 
 # The source library is also written as a standalone file for the Phase 2 server and for tests.
 (ROOT / "corpus.json").write_text(json.dumps(corpus_obj, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -7,6 +7,7 @@ ahead, what safeguards it needs, who should be accountable, and how to record th
 Live: https://alphabazulu.github.io/Navi/
 
 - **Guided NAVI** (optional, for beginners) — *New to NAVI? Let us guide you.* One plain-language question at a time, with help, examples and an "I'm not sure" option, layered answers and plain-language results. Same engine and records as Standard NAVI; switch either way at any point. See [docs/GUIDED-EXPERIENCE.md](docs/GUIDED-EXPERIENCE.md)
+- **AI answers (optional)** — once you accept the notice, Ask NAVI and Guided NAVI can answer any AI governance question from NAVI's cited sources, through NAVI's own server (`worker/`); the rules engine still gives every risk classification
 - **Ask NAVI** — plain-language questions with targeted follow-up questions, answered from a documented rule set (not generative AI)
 - **Assess an AI use case** — a guided five-step assessment: requirements that may apply, inherent and residual risk, control gaps, actions, and a 12-section Decision & Action Report
 - **My decisions** — saved assessments on your device: reopen, download, delete
@@ -35,6 +36,7 @@ src/app.js          User interface, guide and reflection content
 src/guided.js       Optional Guided NAVI layer (uses the same engine via window.NAVI)
 src/retrieval.js    Source library search (shared with the planned AI server)
 src/sources.js      NAVI Sources page and related passages for the assistants
+src/ai-client.js    Optional AI answers: consent, masking, calls to the NAVI server, rendering
 src/corpus/         Source library: sources and passages beyond the knowledge base, as JSON
 corpus.json         Built source library (written by build.py; do not edit by hand)
 eval/               120-question evaluation set and the retrieval report
@@ -90,10 +92,11 @@ replace it), upload the newly built file, and commit. Upload the changed `src/`,
 
 ## Privacy and security
 
-- No personal information is needed to use NAVI.
+- No personal information is needed to use NAVI. AI answers are off until each person turns them on.
 - Feedback and enterprise-interest forms only *prepare* an email. You review it and send it from
   your own mail app.
-- A Content-Security-Policy blocks all external requests.
+- A Content-Security-Policy blocks all external requests except to NAVI's own server, which is used
+  only after someone turns on AI answers.
 - Local browser storage is not encrypted. Don't store confidential material on shared devices.
 - People who used the earlier version with a sign-up form can delete those saved sign-up details
   from *About NAVI*.

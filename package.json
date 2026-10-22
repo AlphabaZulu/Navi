@@ -1,6 +1,6 @@
 {
   "name": "navi",
-  "version": "2.2.0-worker",
+  "version": "2.3.0",
   "private": true,
   "description": "NAVI Free — AI governance decision support. Static site; no runtime dependencies.",
   "type": "module",

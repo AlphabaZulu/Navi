@@ -1,5 +1,5 @@
 {
- "libraryVersion": "2026.10.19",
+ "libraryVersion": "2026.10.22",
  "knowledgeBaseVersion": "2026.10.15",
  "sources": [
   {
@@ -158,8 +158,8 @@
    "binding": "voluntary",
    "status": "Published December 2023. Voluntary; organisations can choose to be certified.",
    "url": "https://www.iso.org/standard/81230.html",
-   "verified": "2026-10-15",
-   "verification": "pending",
+   "verified": "2026-10-22",
+   "verification": "secondary",
    "fromKnowledgeBase": true
   },
   {
@@ -174,8 +174,8 @@
    "binding": "voluntary",
    "status": "Published 2023. Voluntary guidance; not certifiable.",
    "url": "https://www.iso.org/standard/77304.html",
-   "verified": "2026-10-15",
-   "verification": "pending",
+   "verified": "2026-10-22",
+   "verification": "official-page",
    "fromKnowledgeBase": true
   },
   {
@@ -223,8 +223,8 @@
    "binding": "voluntary",
    "status": "Adopted November 2021 by UNESCO member states. Non-binding.",
    "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
-   "verified": "2026-10-15",
-   "verification": "pending",
+   "verified": "2026-10-22",
+   "verification": "official-page",
    "fromKnowledgeBase": true
   },
   {
@@ -1078,8 +1078,8 @@
    ],
    "binding": "voluntary",
    "url": "https://www.iso.org/standard/81230.html",
-   "verified": "2026-10-15",
-   "verification": "pending",
+   "verified": "2026-10-22",
+   "verification": "secondary",
    "fromKnowledgeBase": true
   },
   {
@@ -1087,15 +1087,15 @@
    "source": "iso23894",
    "section": "Guidance",
    "title": "AI risk management",
-   "text": "Guidance on identifying, analysing, evaluating and treating AI-specific risks across the lifecycle, building on ISO 31000.",
+   "text": "Guidance for organisations that develop, produce, deploy or use AI on managing AI-specific risk and building risk management into their AI activities, across the lifecycle.",
    "topics": [
     "strategy",
     "model-risk"
    ],
    "binding": "voluntary",
    "url": "https://www.iso.org/standard/77304.html",
-   "verified": "2026-10-15",
-   "verification": "pending",
+   "verified": "2026-10-22",
+   "verification": "official-page",
    "fromKnowledgeBase": true
   },
   {
@@ -1144,8 +1144,8 @@
    ],
    "binding": "voluntary",
    "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
-   "verified": "2026-10-15",
-   "verification": "pending",
+   "verified": "2026-10-22",
+   "verification": "official-page",
    "fromKnowledgeBase": true
   },
   {
@@ -1347,9 +1347,10 @@
     "fairness",
     "transparency"
    ],
-   "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-   "verification": "pending",
-   "text": "The NIST AI RMF describes trustworthy AI as valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; and fair, with harmful bias managed. Validity and reliability are the base for the others, and accountability and transparency apply across all of them. Trade-offs between them, such as accuracy against interpretability, should be decided deliberately and documented."
+   "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+   "verification": "official-text",
+   "text": "The NIST AI RMF describes trustworthy AI as valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; and fair, with harmful bias managed. Validity and reliability are the base for the others, and accountability and transparency apply across all of them. Trade-offs between them, such as accuracy against interpretability, should be decided deliberately and documented.",
+   "verified": "2026-10-22"
   },
   {
    "id": "nist-govern",
@@ -1361,9 +1362,10 @@
     "board",
     "third-party"
    ],
-   "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-   "verification": "pending",
-   "text": "GOVERN is the cross-cutting function: policies and processes for AI risk are in place and followed; roles, responsibilities and lines of accountability are clear, with senior leadership responsible; the workforce is trained; the culture supports raising and acting on risks; the organisation engages with affected stakeholders; and risks from third-party software, data and supply chains are addressed."
+   "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+   "verification": "official-text",
+   "text": "GOVERN is the cross-cutting function: policies and processes for AI risk are in place and followed; accountability structures make sure the right people are empowered, responsible and trained; workforce diversity, equity, inclusion and accessibility are prioritised in AI risk decisions; the culture supports raising and acting on risks; the organisation engages with relevant AI actors and outside feedback; and risks and benefits from third-party software, data and supply chains are addressed, including contingency plans.",
+   "verified": "2026-10-22"
   },
   {
    "id": "nist-map",
@@ -1375,9 +1377,10 @@
     "development",
     "fairness"
    ],
-   "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-   "verification": "pending",
-   "text": "MAP establishes the context before risks are measured: the intended purpose and setting, who uses and is affected by the system, its capabilities and limits, the benefits and costs, and the likely impacts on individuals, groups, organisations and society. Mapping well is what makes it possible to decide whether a system should be built or deployed at all."
+   "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+   "verification": "official-text",
+   "text": "MAP establishes the context before risks are measured: the intended purpose and setting, who uses and is affected by the system, its capabilities and limits, the benefits and costs, and the likely impacts on individuals, groups, organisations and society. Mapping well is what makes it possible to decide whether a system should be built or deployed at all.",
+   "verified": "2026-10-22"
   },
   {
    "id": "nist-measure",
@@ -1389,9 +1392,10 @@
     "fairness",
     "monitoring"
    ],
-   "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-   "verification": "pending",
-   "text": "MEASURE uses quantitative and qualitative methods to analyse and track AI risks: choosing appropriate metrics, testing before deployment and regularly in operation, evaluating the trustworthy characteristics (including bias, robustness, security and privacy), involving independent assessors where appropriate, and tracking risks that are hard to measure."
+   "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+   "verification": "official-text",
+   "text": "MEASURE uses quantitative and qualitative methods to analyse and track AI risks: choosing appropriate metrics, testing before deployment and regularly in operation, evaluating the trustworthy characteristics (including bias, robustness, security and privacy), involving independent assessors where appropriate, and tracking risks that are hard to measure.",
+   "verified": "2026-10-22"
   },
   {
    "id": "nist-manage",
@@ -1404,9 +1408,10 @@
     "incidents",
     "third-party"
    ],
-   "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-   "verification": "pending",
-   "text": "MANAGE allocates resources to the risks mapped and measured: deciding whether to proceed, treating prioritised risks, planning responses to and recovery from incidents, managing risks from third-party components, and monitoring systems after deployment, including mechanisms to capture user feedback, handle appeals, and decommission or override systems that perform badly."
+   "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+   "verification": "official-text",
+   "text": "MANAGE allocates resources to the risks mapped and measured: deciding whether to proceed, treating prioritised risks, planning responses to and recovery from incidents, managing risks from third-party components, and monitoring systems after deployment, including mechanisms to capture user feedback, handle appeals, and decommission or override systems that perform badly.",
+   "verified": "2026-10-22"
   },
   {
    "id": "nist600-risks",
@@ -1418,7 +1423,10 @@
     "strategy",
     "testing"
    ],
-   "text": "The NIST Generative AI Profile lists twelve risks: CBRN information or capabilities; confabulation (confident false output); dangerous, violent or hateful content; data privacy; environmental impacts; harmful bias and homogenisation; human-AI configuration (such as over-reliance and anthropomorphising); information integrity; information security; intellectual property; obscene, degrading or abusive content; and value chain and component integration (risks from third-party models and data)."
+   "text": "The NIST Generative AI Profile lists twelve risks: CBRN information or capabilities; confabulation (confident false output); dangerous, violent or hateful content; data privacy; environmental impacts; harmful bias and homogenisation; human-AI configuration (such as over-reliance and anthropomorphising); information integrity; information security; intellectual property; obscene, degrading or abusive content; and value chain and component integration (risks from third-party models and data).",
+   "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+   "verification": "official-text",
+   "verified": "2026-10-22"
   },
   {
    "id": "nist600-considerations",
@@ -1432,7 +1440,10 @@
     "incidents",
     "transparency"
    ],
-   "text": "The profile highlights four areas: governance (policies and oversight that cover generative AI, including third-party tools), content provenance (tracking where content came from and whether it was AI-generated), pre-deployment testing (including red-teaming and evaluation in realistic conditions), and incident disclosure (recording and sharing information about AI incidents)."
+   "text": "The profile highlights four areas: governance (policies and oversight that cover generative AI, including third-party tools), content provenance (tracking where content came from and whether it was AI-generated), pre-deployment testing (including red-teaming and evaluation in realistic conditions), and incident disclosure (recording and sharing information about AI incidents).",
+   "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+   "verification": "official-text",
+   "verified": "2026-10-22"
   },
   {
    "id": "iso42001-policy",
@@ -1443,8 +1454,9 @@
     "strategy",
     "board"
    ],
-   "verification": "pending",
-   "text": "ISO/IEC 42001 expects top management to demonstrate leadership of the AI management system, set an AI policy that fits the organisation's purpose and includes commitments to meet requirements and improve, and assign roles, responsibilities and authorities. Certification is voluntary; the clauses are also a useful checklist for organisations that do not seek certification."
+   "verification": "secondary",
+   "text": "ISO/IEC 42001 expects top management to demonstrate leadership of the AI management system, set an AI policy that fits the organisation's purpose and includes commitments to meet requirements and improve, and assign roles, responsibilities and authorities. Certification is voluntary; the clauses are also a useful checklist for organisations that do not seek certification.",
+   "verified": "2026-10-22"
   },
   {
    "id": "iso42001-impact",
@@ -1457,8 +1469,9 @@
     "development",
     "third-party"
    ],
-   "verification": "pending",
-   "text": "The standard requires an AI risk assessment, risk treatment and an AI system impact assessment that considers consequences for individuals, groups and society. Its Annex A reference controls cover areas such as AI policies, internal organisation, resources for AI systems, impact assessment, the AI system lifecycle, data for AI systems, information for interested parties, responsible use, and third-party and customer relationships."
+   "verification": "secondary",
+   "text": "The standard requires an AI risk assessment, risk treatment and an AI system impact assessment that considers consequences for individuals, groups and society. Its Annex A reference controls cover areas such as AI policies, internal organisation, resources for AI systems, impact assessment, the AI system lifecycle, data for AI systems, information for interested parties, responsible use, and third-party and customer relationships.",
+   "verified": "2026-10-22"
   },
   {
    "id": "kingv-board-ai",
@@ -1592,9 +1605,10 @@
     "regulation"
    ],
    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-15",
-   "verification": "pending",
+   "verification": "official-page",
    "text": "High-risk AI systems must achieve an appropriate level of accuracy, robustness and cybersecurity throughout their lifecycle, with accuracy levels declared in the instructions for use. They should be resilient to errors and to attempts to alter their use or performance, such as data poisoning, model poisoning, adversarial examples and confidentiality attacks. Systems that keep learning after deployment must manage the risk of biased feedback loops.",
-   "uncertainty": "Applies to high-risk AI systems; Annex III high-risk requirements apply from 2 December 2027."
+   "uncertainty": "Applies to high-risk AI systems; Annex III high-risk requirements apply from 2 December 2027.",
+   "verified": "2026-10-22"
   },
   {
    "id": "navi-deployment",
@@ -1630,8 +1644,10 @@
     "regulation"
    ],
    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-72",
-   "verification": "pending",
-   "text": "Providers of high-risk AI systems must have a post-market monitoring system that actively and systematically collects and analyses data on how the system performs throughout its life, so they can check continued compliance, based on a documented post-market monitoring plan."
+   "verification": "official-page",
+   "text": "Providers of high-risk AI systems must have a post-market monitoring system that actively and systematically collects and analyses data on how the system performs throughout its life, so they can check continued compliance, based on a documented post-market monitoring plan.",
+   "verified": "2026-10-22",
+   "uncertainty": "Paragraph 3 (the monitoring plan and the Commission's template, due by 2 September 2027) was amended by Regulation (EU) 2026/1744."
   },
   {
    "id": "navi-incidents",
@@ -1823,9 +1839,10 @@
     "strategy"
    ],
    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-2",
-   "verification": "pending",
+   "verification": "official-page",
    "text": "The Act applies to providers placing AI systems or general-purpose AI models on the EU market, wherever they are established, and to providers and deployers outside the EU where the output produced by the AI system is used in the EU. A South African organisation using AI only for South African customers is generally outside scope; one offering AI-enabled services to people in the EU, or whose AI outputs are used there, should check.",
-   "uncertainty": "Scope questions turn on facts; get legal advice for cross-border services."
+   "uncertainty": "Scope questions turn on facts; get legal advice for cross-border services.",
+   "verified": "2026-10-22"
   },
   {
    "id": "gdpr-art13-15",
@@ -1837,9 +1854,10 @@
     "transparency",
     "regulation"
    ],
-   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
-   "verification": "pending",
-   "text": "Where Article 22 automated decision-making, including profiling, takes place, people must be told it exists and be given meaningful information about the logic involved and the significance and envisaged consequences for them, both when data is collected and when they ask for access to their data."
+   "url": "https://www.legislation.gov.uk/eur/2016/679/article/15/data.htm",
+   "verification": "official-text",
+   "text": "Where Article 22 automated decision-making, including profiling, takes place, people must be told it exists and be given meaningful information about the logic involved and the significance and envisaged consequences for them, both when data is collected and when they ask for access to their data.",
+   "verified": "2026-10-22"
   },
   {
    "id": "gdpr-art25",
@@ -1851,9 +1869,10 @@
     "development",
     "data"
    ],
-   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
-   "verification": "pending",
-   "text": "Controllers must build data protection into the design of processing, for example through pseudonymisation and data minimisation, and by default process only the personal data necessary for each purpose. For AI this means deciding early what data the system truly needs, how long it is kept and who can see it."
+   "url": "https://www.legislation.gov.uk/eur/2016/679/article/25/adopted/data.htm",
+   "verification": "official-text",
+   "text": "Controllers must build data protection into the design of processing, for example through pseudonymisation and data minimisation, and by default process only the personal data necessary for each purpose. For AI this means deciding early what data the system truly needs, how long it is kept and who can see it.",
+   "verified": "2026-10-22"
   },
   {
    "id": "gdpr-art32-34",
@@ -1865,9 +1884,10 @@
     "security",
     "incidents"
    ],
-   "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
-   "verification": "pending",
-   "text": "Controllers and processors must secure personal data with measures appropriate to the risk. A personal data breach must be notified to the supervisory authority without undue delay and, where feasible, within 72 hours of becoming aware, unless it is unlikely to result in a risk to people. Where the risk to people is high, they must also be told without undue delay."
+   "url": "https://www.legislation.gov.uk/eur/2016/679/article/33/adopted/data.htm",
+   "verification": "official-text",
+   "text": "Controllers and processors must secure personal data with measures appropriate to the risk. A personal data breach must be notified to the supervisory authority without undue delay and, where feasible, within 72 hours of becoming aware, unless it is unlikely to result in a risk to people. Where the risk to people is high, they must also be told without undue delay.",
+   "verified": "2026-10-22"
   },
   {
    "id": "popia-scope",
@@ -1879,8 +1899,9 @@
     "regulation"
    ],
    "url": "https://www.justice.gov.za/legislation/acts/2013-004.pdf",
-   "verification": "pending",
-   "text": "POPIA applies to processing personal information entered in a record by a responsible party domiciled in South Africa, or by one not domiciled here that uses automated or non-automated means in South Africa (unless only to forward information through the country). Using an overseas AI service does not take processing outside POPIA; the South African organisation remains the responsible party."
+   "verification": "official-text",
+   "text": "POPIA applies to processing personal information entered in a record by a responsible party domiciled in South Africa, or by one not domiciled here that uses automated or non-automated means in South Africa (unless only to forward information through the country). Using an overseas AI service does not take processing outside POPIA; the South African organisation remains the responsible party.",
+   "verified": "2026-10-22"
   },
   {
    "id": "popia-s18",
@@ -1892,8 +1913,9 @@
     "transparency"
    ],
    "url": "https://www.justice.gov.za/legislation/acts/2013-004.pdf",
-   "verification": "pending",
-   "text": "When collecting personal information, a responsible party must take reasonable steps to make the person aware of matters such as what is collected, the purpose, whether supply is voluntary or mandatory, any law requiring it, any intended cross-border transfer, and their rights. If AI processing is a new purpose or involves sending data abroad, privacy notices may need updating."
+   "verification": "official-text",
+   "text": "When collecting personal information, a responsible party must take reasonable steps to make the person aware of matters such as what is collected, the purpose, whether supply is voluntary or mandatory, any law requiring it, any intended cross-border transfer, and their rights. If AI processing is a new purpose or involves sending data abroad, privacy notices may need updating.",
+   "verified": "2026-10-22"
   },
   {
    "id": "popia-s22-detail",
@@ -1906,8 +1928,9 @@
     "security"
    ],
    "url": "https://www.justice.gov.za/legislation/acts/2013-004.pdf",
-   "verification": "pending",
-   "text": "Where there are reasonable grounds to believe personal information has been accessed or acquired by an unauthorised person, the responsible party must notify the Information Regulator and the affected people as soon as reasonably possible. The notice to people should describe the possible consequences, the measures taken, what they can do to reduce harm, and, if known, who accessed the information. Operators (such as AI providers) must tell the responsible party immediately."
+   "verification": "official-text",
+   "text": "Where there are reasonable grounds to believe personal information has been accessed or acquired by an unauthorised person, the responsible party must notify the Information Regulator and the affected people as soon as reasonably possible. The notice to people should describe the possible consequences, the measures taken, what they can do to reduce harm, and, if known, who accessed the information. Operators (such as AI providers) must tell the responsible party immediately.",
+   "verified": "2026-10-22"
   },
   {
    "id": "popia-eportal",
@@ -1931,9 +1954,10 @@
     "finance",
     "transparency"
    ],
-   "url": "https://www.justice.gov.za/legislation/acts/2013-004.pdf",
-   "verification": "pending",
-   "text": "The section 71 prohibition does not apply where the decision is taken in connection with a contract and the person's request was met, or appropriate measures protect their legitimate interests; or where a law or code of conduct authorises it with such measures. Appropriate measures must give the person an opportunity to make representations about the decision and give them sufficient information about the underlying logic of the automated processing."
+   "url": "https://bowmanslaw.com/insights/south-africa-ai-in-the-workplace-2-of-6-popia-considerations/",
+   "verification": "secondary",
+   "text": "The section 71 prohibition does not apply where the decision is taken in connection with a contract and the person's request was met, or appropriate measures protect their legitimate interests; or where a law or code of conduct authorises it with such measures. Appropriate measures must give the person an opportunity to make representations about the decision and give them sufficient information about the underlying logic of the automated processing.",
+   "verified": "2026-10-22"
   },
   {
    "id": "popia-io",
@@ -1945,9 +1969,10 @@
     "board",
     "strategy"
    ],
-   "url": "https://www.justice.gov.za/legislation/acts/2013-004.pdf",
-   "verification": "pending",
-   "text": "Every responsible party has an Information Officer (by default the head of the organisation) who must encourage and ensure compliance with POPIA, deal with requests and work with the Regulator, and who must be registered with the Regulator. Deputy Information Officers can be designated. New AI uses of personal information should be brought to the Information Officer before they start."
+   "url": "https://inforegulator.org.za/wp-content/uploads/2025/07/Guidance_Note_on_Information_Officers_.pdf",
+   "verification": "official-page",
+   "text": "Every responsible party has an Information Officer (by default the head of the organisation) who must encourage and ensure compliance with POPIA, deal with requests and work with the Regulator, and who must be registered with the Regulator. Deputy Information Officers can be designated. New AI uses of personal information should be brought to the Information Officer before they start.",
+   "verified": "2026-10-22"
   },
   {
    "id": "popia-s109",
@@ -1959,9 +1984,10 @@
     "regulation",
     "board"
    ],
-   "url": "https://www.justice.gov.za/legislation/acts/2013-004.pdf",
-   "verification": "pending",
-   "text": "The Information Regulator may impose administrative fines of up to R10 million for certain offences under POPIA. Some offences also carry possible imprisonment. Regulators can also issue enforcement notices requiring processing to stop or change."
+   "url": "https://mjkinc.co.za/popia/fines-and-penalties",
+   "verification": "secondary",
+   "text": "The Information Regulator may impose administrative fines of up to R10 million for certain offences under POPIA. Some offences also carry possible imprisonment. Regulators can also issue enforcement notices requiring processing to stop or change.",
+   "verified": "2026-10-22"
   },
   {
    "id": "za-inforeg-ai-views",
@@ -2356,7 +2382,10 @@
     "security",
     "genai"
    ],
-   "text": "SP 800-218A adds AI-specific practices to NIST's Secure Software Development Framework, which is organised into four groups: prepare the organisation, protect the software, produce well-secured software, and respond to vulnerabilities. The AI additions cover protecting training data and model weights, tracking the provenance of data and models, testing for AI-specific weaknesses such as poisoning and prompt injection, and handling model vulnerabilities through normal vulnerability-response processes."
+   "text": "SP 800-218A (July 2024) adds AI-specific practices to NIST's Secure Software Development Framework, which is organised into four groups: prepare the organisation, protect software, produce well-secured software, and respond to vulnerabilities. The AI additions include protecting training, testing, fine-tuning and alignment data and model weights from unauthorised access and change; tracking the provenance of data and models; analysing data for poisoning, bias and tampering; testing models for vulnerabilities through red-teaming and adversarial testing; and handling model vulnerabilities through vulnerability response, including criteria for when to stop using a model or roll back.",
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+   "verification": "official-text",
+   "verified": "2026-10-22"
   },
   {
    "id": "nist218a-weights",
@@ -2368,7 +2397,10 @@
     "development",
     "data"
    ],
-   "text": "Model weights, training data and configuration are valuable assets and attack targets. Store them with access control and integrity protection, record where they came from and how they were changed, and include them in backup and incident-response plans."
+   "text": "Model weights, training data and configuration are valuable assets and attack targets. Store them with access control and integrity protection, record where they came from and how they were changed, and include them in backup and incident-response plans.",
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf",
+   "verification": "official-text",
+   "verified": "2026-10-22"
   },
   {
    "id": "atlas-overview",
@@ -2380,7 +2412,10 @@
     "testing",
     "development"
    ],
-   "text": "MITRE ATLAS catalogues tactics and techniques that adversaries use against AI-enabled systems, modelled on the MITRE ATT&CK framework and illustrated with case studies. Security teams use it to build threat models, plan red-team exercises and map detections to AI-specific attacks such as evasion, poisoning, model theft and prompt injection."
+   "text": "MITRE ATLAS is a publicly accessible, continuously updated knowledge base of tactics and techniques that adversaries use against AI-enabled systems, based on real-world attack observations and demonstrations by AI red teams and security groups. It is modelled on, and complements, MITRE ATT&CK. Teams use it for threat modelling, red-team planning, choosing mitigations and reporting real-world attacks, and it includes case studies.",
+   "url": "https://atlas.mitre.org/pdf-files/MITRE_ATLAS_Fact_Sheet.pdf",
+   "verification": "official-page",
+   "verified": "2026-10-22"
   },
   {
    "id": "navi-agent-controls",
